@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { SITE_CONTENT } from "@/data/content";
-import { CheckCircle2, ArrowRight } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 

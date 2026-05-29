@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { SITE_CONTENT } from "@/data/content";
 
 export const Hero = () => {
   return (

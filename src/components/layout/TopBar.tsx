@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, MapPin } from "lucide-react";
 import { SITE_CONTENT } from "@/data/content";
 
 export const TopBar = () => {
