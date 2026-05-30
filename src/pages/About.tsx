@@ -7,7 +7,7 @@ const About = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="bg-[#0F2C59] text-white py-24 relative overflow-hidden">
+      <section className="bg-[#2F4858] text-white py-24 relative overflow-hidden">
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -20,7 +20,7 @@ const About = () => {
             </p>
           </motion.div>
         </div>
-        <div className="absolute top-0 right-0 w-1/3 h-full bg-[#00A8CC]/10 skew-x-12 translate-x-1/2" />
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-[#9EE493]/10 skew-x-12 translate-x-1/2" />
       </section>
 
       {/* Main Content */}
@@ -28,7 +28,7 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div className="space-y-8">
-              <h2 className="text-3xl font-bold text-[#0F2C59]">Engineering Smarter Industries</h2>
+              <h2 className="text-3xl font-bold text-[#2F4858]">Engineering Smarter Industries</h2>
               <div className="space-y-6 text-slate-600 text-lg leading-relaxed">
                 <p>{SITE_CONTENT.company.description}</p>
                 <p>{SITE_CONTENT.company.aboutLong}</p>
@@ -39,23 +39,23 @@ const About = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <motion.div 
                 whileHover={{ y: -5 }}
-                className="p-8 rounded-2xl bg-[#F8F9FA] border border-slate-100 shadow-sm"
+                className="p-8 rounded-2xl bg-[#DAF7DC] border border-slate-100 shadow-sm"
               >
-                <div className="w-12 h-12 rounded-xl bg-[#00A8CC]/10 flex items-center justify-center text-[#00A8CC] mb-6">
+                <div className="w-12 h-12 rounded-xl bg-[#86BBD8]/10 flex items-center justify-center text-[#86BBD8] mb-6">
                   <Shield className="w-6 h-6" />
                 </div>
-                <h3 className="text-xl font-bold text-[#0F2C59] mb-4">Our Values</h3>
+                <h3 className="text-xl font-bold text-[#2F4858] mb-4">Our Values</h3>
                 <p className="text-slate-600 text-sm">Technical expertise, quality products, and reliable support are the pillars of our success.</p>
               </motion.div>
 
               <motion.div 
                 whileHover={{ y: -5 }}
-                className="p-8 rounded-2xl bg-[#F8F9FA] border border-slate-100 shadow-sm"
+                className="p-8 rounded-2xl bg-[#DAF7DC] border border-slate-100 shadow-sm"
               >
-                <div className="w-12 h-12 rounded-xl bg-[#00A8CC]/10 flex items-center justify-center text-[#00A8CC] mb-6">
+                <div className="w-12 h-12 rounded-xl bg-[#86BBD8]/10 flex items-center justify-center text-[#86BBD8] mb-6">
                   <Target className="w-6 h-6" />
                 </div>
-                <h3 className="text-xl font-bold text-[#0F2C59] mb-4">Our Mission</h3>
+                <h3 className="text-xl font-bold text-[#2F4858] mb-4">Our Mission</h3>
                 <p className="text-slate-600 text-sm">To deliver high-quality, reliable, and future-ready solutions tailored to our customers' needs.</p>
               </motion.div>
             </div>
@@ -64,27 +64,27 @@ const About = () => {
       </section>
 
       {/* Vision & Mission */}
-      <section className="py-24 bg-[#F8F9FA]">
+      <section className="py-24 bg-[#DAF7DC]">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div className="bg-white p-12 rounded-3xl shadow-xl">
               <div className="flex items-center space-x-4 mb-8">
-                <div className="w-12 h-12 rounded-full bg-[#0F2C59] flex items-center justify-center text-white">
+                <div className="w-12 h-12 rounded-full bg-[#2F4858] flex items-center justify-center text-white">
                   <Eye className="w-6 h-6" />
                 </div>
-                <h2 className="text-3xl font-bold text-[#0F2C59]">Vision Statement</h2>
+                <h2 className="text-3xl font-bold text-[#2F4858]">Vision Statement</h2>
               </div>
               <p className="text-slate-600 text-xl italic leading-relaxed">
                 "{SITE_CONTENT.company.vision}"
               </p>
             </div>
 
-            <div className="bg-white p-12 rounded-3xl shadow-xl border-t-4 border-[#00A8CC]">
+            <div className="bg-white p-12 rounded-3xl shadow-xl border-t-4 border-[#9EE493]">
               <div className="flex items-center space-x-4 mb-8">
-                <div className="w-12 h-12 rounded-full bg-[#00A8CC] flex items-center justify-center text-white">
+                <div className="w-12 h-12 rounded-full bg-[#9EE493] flex items-center justify-center text-[#2F4858]">
                   <Target className="w-6 h-6" />
                 </div>
-                <h2 className="text-3xl font-bold text-[#0F2C59]">Mission Statement</h2>
+                <h2 className="text-3xl font-bold text-[#2F4858]">Mission Statement</h2>
               </div>
               <ul className="space-y-6">
                 {SITE_CONTENT.company.mission.map((item, i) => (

@@ -15,12 +15,12 @@ export const FeaturedProducts = () => {
     : SITE_CONTENT.products.featured.filter(p => p.category === activeFilter);
 
   return (
-    <section className="py-32 bg-[#F8F9FA]">
+    <section className="py-32 bg-[#DAF7DC]">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row justify-between items-end mb-20 gap-8">
           <div className="max-w-2xl">
-            <div className="text-[#00A8CC] font-bold uppercase tracking-widest text-xs mb-4">Market Leading Solutions</div>
-            <h2 className="text-4xl md:text-5xl font-black text-[#0F2C59] mb-6">Featured Technical Products</h2>
+            <div className="text-[#336699] font-bold uppercase tracking-widest text-xs mb-4">Market Leading Solutions</div>
+            <h2 className="text-4xl md:text-5xl font-black text-[#2F4858] mb-6">Featured Technical Products</h2>
             <p className="text-slate-500 text-lg leading-relaxed font-medium">
               Precision-engineered components from global industry leaders, curated for the highest standards of reliability.
             </p>
@@ -32,8 +32,8 @@ export const FeaturedProducts = () => {
                 className={cn(
                   "px-6 py-2.5 rounded-xl text-sm font-bold transition-all whitespace-nowrap",
                   activeFilter === cat 
-                    ? "bg-white text-[#0F2C59] shadow-soft" 
-                    : "text-slate-500 hover:text-[#0F2C59]"
+                    ? "bg-white text-[#2F4858] shadow-soft" 
+                    : "text-slate-500 hover:text-[#2F4858]"
                 )}
                 onClick={() => setActiveFilter(cat)}
               >
@@ -59,13 +59,13 @@ export const FeaturedProducts = () => {
                 className="group relative flex flex-col bg-white rounded-[2rem] border border-slate-100 hover:shadow-corporate transition-all duration-500 p-3"
               >
                 <div className="relative aspect-square rounded-[1.7rem] bg-slate-100 overflow-hidden mb-6">
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#0F2C59]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#2F4858]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   <div className="absolute top-4 left-4 flex flex-col gap-2">
-                    <span className="px-3 py-1 bg-white/90 backdrop-blur-sm text-[10px] font-black text-[#0F2C59] rounded-full shadow-soft uppercase tracking-wider">
+                    <span className="px-3 py-1 bg-white/90 backdrop-blur-sm text-[10px] font-black text-[#2F4858] rounded-full shadow-soft uppercase tracking-wider">
                       {product.category}
                     </span>
                     {i < 3 && (
-                      <span className="px-3 py-1 bg-[#00A8CC] text-white text-[10px] font-black rounded-full shadow-soft uppercase tracking-wider">
+                      <span className="px-3 py-1 bg-[#9EE493] text-[#2F4858] text-[10px] font-black rounded-full shadow-soft uppercase tracking-wider">
                         Best Seller
                       </span>
                     )}
@@ -75,19 +75,19 @@ export const FeaturedProducts = () => {
                     {/* Visual representation of product */}
                     <div className="relative">
                        <div className="w-24 h-24 border-2 border-slate-200 rounded-lg transform rotate-12 group-hover:rotate-45 transition-transform" />
-                       <div className="absolute top-0 left-0 w-24 h-24 border-2 border-[#00A8CC]/20 rounded-lg transform -rotate-12 group-hover:rotate-0 transition-transform" />
+                       <div className="absolute top-0 left-0 w-24 h-24 border-2 border-[#86BBD8]/50 rounded-lg transform -rotate-12 group-hover:rotate-0 transition-transform" />
                     </div>
                   </div>
 
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
-                    <Button className="bg-white text-[#0F2C59] hover:bg-[#0F2C59] hover:text-white rounded-xl shadow-premium font-bold px-6">
+                    <Button className="bg-white text-[#2F4858] hover:bg-[#2F4858] hover:text-white rounded-xl shadow-premium font-bold px-6">
                       View Details
                     </Button>
                   </div>
                 </div>
 
                 <div className="px-5 pb-6 flex-grow flex flex-col">
-                  <h3 className="text-xl font-black text-[#0F2C59] mb-2 line-clamp-2 group-hover:text-[#0F2C59] transition-colors">
+                  <h3 className="text-xl font-black text-[#2F4858] mb-2 line-clamp-2 group-hover:text-[#2F4858] transition-colors">
                     {product.name}
                   </h3>
                   <p className="text-sm text-slate-500 font-medium mb-6 line-clamp-2">
@@ -96,7 +96,7 @@ export const FeaturedProducts = () => {
                   
                   <div className="mt-auto pt-4 border-t border-slate-50 flex items-center justify-between">
                     <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">Inquiry Only</span>
-                    <button className="flex items-center space-x-2 text-[#00A8CC] font-black text-sm group/btn">
+                    <button className="flex items-center space-x-2 text-[#86BBD8] font-black text-sm group/btn">
                       <span>Get Quote</span>
                       <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                     </button>

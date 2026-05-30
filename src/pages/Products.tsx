@@ -20,9 +20,9 @@ const Products = () => {
   return (
     <Layout>
       {/* Header */}
-      <section className="bg-[#F8F9FA] border-b py-16">
+      <section className="bg-[#DAF7DC] border-b py-16">
         <div className="container mx-auto px-4 text-center max-w-4xl">
-          <h1 className="text-4xl md:text-5xl font-bold text-[#0F2C59] mb-6">Our Products</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-[#2F4858] mb-6">Our Products</h1>
           <p className="text-slate-600 text-lg leading-relaxed">
             {SITE_CONTENT.products.intro}
           </p>
@@ -79,17 +79,17 @@ const Products = () => {
                 <div className="aspect-[4/3] bg-slate-100 relative overflow-hidden">
                   {/* Placeholder for product image */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-                  <div className="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-[#0F2C59] uppercase">
+                  <div className="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-[#2F4858] uppercase">
                     Category
                   </div>
                 </div>
                 <div className="p-8">
-                  <h3 className="text-2xl font-bold text-[#0F2C59] mb-4 group-hover:text-[#00A8CC] transition-colors">{category.title}</h3>
+                  <h3 className="text-2xl font-bold text-[#2F4858] mb-4 group-hover:text-[#86BBD8] transition-colors">{category.title}</h3>
                   <p className="text-slate-600 mb-8 line-clamp-3">
                     {category.description}
                   </p>
                   <Link to={`/products/${category.id}`}>
-                    <Button className="w-full bg-[#F8F9FA] hover:bg-[#0F2C59] hover:text-white text-[#0F2C59] border-none shadow-none group/btn">
+                    <Button className="w-full bg-[#DAF7DC] hover:bg-[#2F4858] hover:text-white text-[#2F4858] border-none shadow-none group/btn">
                       View Range
                       <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                     </Button>
@@ -100,12 +100,12 @@ const Products = () => {
           </div>
 
           <div className="mt-24 pt-24 border-t">
-            <h2 className="text-3xl font-bold text-[#0F2C59] mb-12 text-center">Featured Technical Solutions</h2>
+            <h2 className="text-3xl font-bold text-[#2F4858] mb-12 text-center">Featured Technical Solutions</h2>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {SITE_CONTENT.products.featured.map((item, i) => (
-                <div key={i} className="p-6 rounded-2xl bg-[#F8F9FA] border border-slate-100 hover:border-[#00A8CC] transition-colors">
-                  <div className="text-xs font-bold text-[#00A8CC] uppercase mb-2">{item.category}</div>
-                  <h4 className="font-bold text-[#0F2C59]">{item.name}</h4>
+                <div key={i} className="p-6 rounded-2xl bg-[#DAF7DC] border border-slate-100 hover:border-[#86BBD8] transition-colors">
+                  <div className="text-xs font-bold text-[#86BBD8] uppercase mb-2">{item.category}</div>
+                  <h4 className="font-bold text-[#2F4858]">{item.name}</h4>
                 </div>
               ))}
             </div>

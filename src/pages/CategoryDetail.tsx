@@ -25,21 +25,21 @@ const CategoryDetail = () => {
 
   return (
     <Layout>
-      <section className="bg-[#F8F9FA] border-b py-12">
+      <section className="bg-[#DAF7DC] border-b py-12">
         <div className="container mx-auto px-4">
-          <Link to="/products" className="inline-flex items-center text-slate-500 hover:text-[#0F2C59] mb-8 transition-colors">
+          <Link to="/products" className="inline-flex items-center text-slate-500 hover:text-[#2F4858] mb-8 transition-colors">
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Products
           </Link>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-4xl md:text-5xl font-bold text-[#0F2C59] mb-6">{category.title}</h1>
+              <h1 className="text-4xl md:text-5xl font-bold text-[#2F4858] mb-6">{category.title}</h1>
               <p className="text-xl text-slate-600 leading-relaxed mb-8">
                 {category.description}
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button size="lg" className="bg-[#00A8CC] text-white hover:bg-[#00A8CC]/90">Request Datasheet</Button>
-                <Button size="lg" variant="outline" className="border-[#0F2C59] text-[#0F2C59]">Technical Inquiry</Button>
+                <Button size="lg" className="bg-[#9EE493] text-[#2F4858] hover:bg-[#9EE493]/90">Request Datasheet</Button>
+                <Button size="lg" variant="outline" className="border-[#2F4858] text-[#2F4858]">Technical Inquiry</Button>
               </div>
             </div>
             <div className="aspect-video bg-white rounded-3xl shadow-xl border border-slate-100 flex items-center justify-center">
@@ -54,7 +54,7 @@ const CategoryDetail = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
             <div className="lg:col-span-2 space-y-12">
               <div>
-                <h2 className="text-3xl font-bold text-[#0F2C59] mb-8">Product Range & Features</h2>
+                <h2 className="text-3xl font-bold text-[#2F4858] mb-8">Product Range & Features</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {relatedProducts.length > 0 ? (
                     relatedProducts.map((product, i) => (
@@ -64,14 +64,14 @@ const CategoryDetail = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: i * 0.05 }}
-                        className="p-6 rounded-2xl bg-[#F8F9FA] border border-slate-100 flex items-center justify-between group"
+                        className="p-6 rounded-2xl bg-[#DAF7DC] border border-slate-100 flex items-center justify-between group"
                       >
-                        <span className="font-bold text-[#0F2C59]">{product.name}</span>
-                        <ArrowRight className="w-4 h-4 text-[#00A8CC] group-hover:translate-x-1 transition-transform" />
+                        <span className="font-bold text-[#2F4858]">{product.name}</span>
+                        <ArrowRight className="w-4 h-4 text-[#86BBD8] group-hover:translate-x-1 transition-transform" />
                       </motion.div>
                     ))
                   ) : (
-                    <div className="col-span-2 p-12 bg-[#F8F9FA] rounded-2xl text-center text-slate-400">
+                    <div className="col-span-2 p-12 bg-[#DAF7DC] rounded-2xl text-center text-slate-400">
                       Detailed product listings coming soon.
                     </div>
                   )}
@@ -79,7 +79,7 @@ const CategoryDetail = () => {
               </div>
 
               <div>
-                <h2 className="text-3xl font-bold text-[#0F2C59] mb-8">Why Choose Our {category.title}?</h2>
+                <h2 className="text-3xl font-bold text-[#2F4858] mb-8">Why Choose Our {category.title}?</h2>
                 <div className="space-y-4">
                   {[
                     "Precision-engineered for extreme industrial environments",
@@ -102,7 +102,7 @@ const CategoryDetail = () => {
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="bg-[#0F2C59] rounded-3xl p-8 text-white shadow-xl"
+                className="bg-[#2F4858] rounded-3xl p-8 text-white shadow-xl"
               >
                 <h3 className="text-2xl font-bold mb-6">Technical Resources</h3>
                 <div className="space-y-4">
@@ -114,11 +114,11 @@ const CategoryDetail = () => {
                   ].map((doc, i) => (
                     <button key={i} className="w-full flex items-center justify-between p-4 rounded-xl bg-white/10 hover:bg-white/20 transition-colors text-left group">
                       <span className="text-sm font-medium">{doc}</span>
-                      <Download className="w-4 h-4 text-[#00A8CC] group-hover:scale-110 transition-transform" />
+                      <Download className="w-4 h-4 text-[#86BBD8] group-hover:scale-110 transition-transform" />
                     </button>
                   ))}
                 </div>
-                <Button className="w-full mt-8 bg-[#00A8CC] hover:bg-[#00A8CC]/90 text-white">Download All Resources</Button>
+                <Button className="w-full mt-8 bg-[#9EE493] hover:bg-[#9EE493]/90 text-[#2F4858]">Download All Resources</Button>
               </motion.div>
 
               <motion.div 
@@ -126,19 +126,19 @@ const CategoryDetail = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
-                className="bg-[#0F2C59] rounded-3xl p-8 text-white"
+                className="bg-[#2F4858] rounded-3xl p-8 text-white"
               >
                 <h3 className="text-xl font-bold mb-4">Inquiry Support</h3>
                 <p className="text-slate-400 text-sm mb-6">Need specific technical specifications or a bulk quote?</p>
                 <div className="space-y-4 mb-8">
                   <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 rounded-full bg-[#00A8CC]/20 flex items-center justify-center text-[#00A8CC]">
+                    <div className="w-8 h-8 rounded-full bg-[#86BBD8]/20 flex items-center justify-center text-[#86BBD8]">
                       <ArrowRight className="w-4 h-4" />
                     </div>
                     <span className="text-sm">24-hour response time</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 rounded-full bg-[#00A8CC]/20 flex items-center justify-center text-[#00A8CC]">
+                    <div className="w-8 h-8 rounded-full bg-[#86BBD8]/20 flex items-center justify-center text-[#86BBD8]">
                       <ArrowRight className="w-4 h-4" />
                     </div>
                     <span className="text-sm">Technical expert consultation</span>
