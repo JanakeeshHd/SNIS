@@ -2,7 +2,7 @@ import { useParams, Link, useNavigate } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { SITE_CONTENT } from "@/data/content";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, ArrowRight, CheckCircle2, Download } from "lucide-react";
+import { ArrowLeft, CheckCircle2, Download } from "lucide-react";
 import { motion } from "framer-motion";
 
 const IndustryDetail = () => {
