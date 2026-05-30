@@ -141,7 +141,7 @@ export const Header = () => {
               className="h-10 w-64 rounded-md border border-input bg-background pl-10 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
             />
           </div>
-          <Button className="hidden md:flex bg-industrial-orange hover:bg-industrial-orange/90 text-white">
+          <Button className="hidden md:flex bg-[#00A8CC] hover:bg-[#00A8CC]/90 text-white">
             Get Quote
           </Button>
           <button
@@ -196,7 +196,7 @@ export const Header = () => {
             </div>
             <Link to="/about" className="text-lg font-medium" onClick={() => setIsMobileMenuOpen(false)}>About Us</Link>
             <Link to="/contact" className="text-lg font-medium" onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>
-            <Button className="w-full bg-industrial-orange text-white">Get Quote</Button>
+            <Button className="w-full bg-[#00A8CC] text-white">Get Quote</Button>
           </nav>
         </div>
       )}
