@@ -49,9 +49,10 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
         industrial: {
-          blue: "hsl(var(--industrial-blue))",
-          orange: "hsl(var(--industrial-orange))",
-          green: "hsl(var(--industrial-green))",
+          navy: "#0A192F",
+          blue: "#0066CC",
+          cyan: "#00D4FF",
+          light: "#F5F7FA",
         },
         steel: {
           blue: "hsl(var(--steel-blue))",
@@ -61,9 +62,17 @@ export default {
         },
       },
       boxShadow: {
-        'premium': '0 10px 30px -10px rgba(0, 59, 115, 0.1), 0 4px 10px -5px rgba(0, 59, 115, 0.05)',
+        'premium': '0 10px 30px -10px rgba(10, 25, 47, 0.1), 0 4px 10px -5px rgba(10, 25, 47, 0.05)',
         'corporate': '0 20px 50px -12px rgba(0, 0, 0, 0.08)',
         'soft': '0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+        'glow': '0 0 15px rgba(0, 212, 255, 0.3)',
+        'glow-blue': '0 0 20px rgba(0, 102, 204, 0.2)',
+        'card-hover': '0 15px 40px rgba(0, 212, 255, 0.15)',
+        'nav-glow': '0 4px 20px rgba(0, 212, 255, 0.1)',
+      },
+      backgroundImage: {
+        'cta-gradient': 'linear-gradient(135deg, #0066CC 0%, #00D4FF 100%)',
+        'tech-grid': "url(\"data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40' fill='%2300D4FF' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E\")",
       },
       borderRadius: {
         '2xl': '1rem',

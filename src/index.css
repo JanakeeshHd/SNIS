@@ -5,43 +5,43 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 215 33% 17%;
+    --foreground: 217 33% 17%;
 
     --card: 0 0% 100%;
-    --card-foreground: 215 33% 17%;
+    --card-foreground: 217 33% 17%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 215 33% 17%;
+    --popover-foreground: 217 33% 17%;
 
-    --primary: 209 100% 23%;
+    --primary: 217 65% 11%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 205 64% 34%;
+    --secondary: 210 100% 40%;
     --secondary-foreground: 0 0% 100%;
 
     --muted: 215 16% 47%;
     --muted-foreground: 215 16% 47%;
 
-    --accent: 197 100% 45%;
+    --accent: 190 100% 50%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 25 100% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 209 100% 23%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 190 100% 50%;
 
     --radius: 0.5rem;
 
     /* Custom industrial colors */
-    --industrial-blue: 209 100% 23%;
-    --steel-blue: 205 64% 34%;
-    --tech-cyan: 197 100% 45%;
+    --industrial-blue: 217 65% 11%;
+    --steel-blue: 210 100% 40%;
+    --tech-cyan: 190 100% 50%;
     --industrial-orange: 25 100% 50%;
     --industrial-green: 142 76% 36%;
-    --bg-light: 210 20% 98%;
-    --bg-soft: 204 33% 95%;
+    --bg-light: 214 32% 97%;
+    --bg-soft: 214 32% 97%;
   }
 
   .dark {

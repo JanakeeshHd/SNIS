@@ -67,7 +67,7 @@ export const SITE_CONTENT = {
     ]
   },
   industries: {
-    intro: "Nevertheless, independently of whether the sector is Automotive, Food & Beverage, Mobile Applications, Storage & Logistics, Robotics or Machine Tools: the pioneering products from Murrelektronik are exactly tailored in detail to the needs of these industrial sectors.",
+    intro: "Different sectors have completely different requirements",
     extra: "With its future-oriented technologies and extensive know-how from a wide range of applications, Murrelektronik is the right contact person for the development of innovative automation solutions in almost all sectors.",
     sectors: [
       {
