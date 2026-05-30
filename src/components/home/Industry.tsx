@@ -20,11 +20,11 @@ export const Industry = () => {
               {SITE_CONTENT.industries.intro}
             </p>
           </div>
-          <Button 
+            <Button 
             size="lg" 
             variant="cta"
             className="px-10 py-8 text-lg group"
-            onClick={() => navigate("/industry")}
+            onClick={() => navigate("/industries")}
           >
             All Industry Solutions
             <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -42,9 +42,18 @@ export const Industry = () => {
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className="group relative h-[450px] rounded-[2.5rem] overflow-hidden bg-white/5 border border-white/10"
             >
+              {sector.image && (
+                <img
+                  src={sector.image}
+                  alt={`${sector.title} visual`}
+                  className="absolute inset-0 w-full h-full object-cover z-0"
+                  loading="lazy"
+                />
+              )}
+
               <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/40 to-transparent z-10" />
               <div className="absolute inset-0 bg-secondary/20 group-hover:bg-secondary/10 transition-colors duration-500" />
-              
+
               <div className="absolute inset-0 flex items-center justify-center text-white/10 font-bold italic group-hover:scale-110 transition-transform duration-1000">
                 {sector.title} Visual
               </div>
@@ -54,7 +63,7 @@ export const Industry = () => {
                 <p className="text-white/60 font-medium leading-relaxed mb-8 opacity-0 group-hover:opacity-100 h-0 group-hover:h-auto overflow-hidden transition-all duration-500">
                   {sector.description}
                 </p>
-                <Link to={`/industry/${sector.id}`}>
+                <Link to={`/industries#${sector.id}`}>
                   <button className="flex items-center space-x-3 text-white font-black text-sm uppercase tracking-widest group/btn">
                     <span>Explore Sector</span>
                     <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center group-hover/btn:bg-accent transition-colors">

@@ -1,4 +1,55 @@
-export const SITE_CONTENT = {
+import automotiveImg from "@/assets/Automotive.png";
+
+export interface CompanyInfo {
+  name: string;
+  tagline: string;
+  description: string;
+  aboutLong: string;
+  aboutExtra: string;
+  vision: string;
+  mission: string[];
+}
+
+export interface ContactInfo {
+  phone: string;
+  email: string;
+  salesEmail: string;
+  address: string;
+  social: Record<string, string>;
+}
+
+export interface ProductCategory {
+  id: string;
+  title: string;
+  description: string;
+  image?: string;
+}
+
+export interface ProductsData {
+  intro: string;
+  categories: ProductCategory[];
+  featured: { name: string; category: string }[];
+}
+
+export interface IndustrySector {
+  id: string;
+  title: string;
+  description: string;
+  image?: string;
+}
+
+export interface SiteContent {
+  company: CompanyInfo;
+  contact: ContactInfo;
+  products: ProductsData;
+  industries: {
+    intro: string;
+    extra: string;
+    sectors: IndustrySector[];
+  };
+}
+
+export const SITE_CONTENT: SiteContent = {
   company: {
     name: "SNIS Industries",
     tagline: "Engineering Smarter Industries with Precision and Power",
@@ -31,26 +82,26 @@ export const SITE_CONTENT = {
         id: "electronics-in-cabinet",
         title: "Electronics in the Cabinet",
         description: "Murrelektronik views power management as the starting point for machine efficiency. Power conditioning, properly sized power supplies, current monitoring, redundancy and energy savings are all considered when we assemble a solution for our partners.",
-        image: "/assets/products/cabinet.jpg"
+        image: "/assets/products/cabinet.jpg",
       },
       {
         id: "interfaces",
         title: "Interfaces",
         description: "Connecting the cabinet with the field is a key part of many installations. Murrelektronik offers a comprehensive range of cable entry systems and programming ports for quick connections, easy separations and maintenance.",
-        image: "/assets/products/interfaces.jpg"
+        image: "/assets/products/interfaces.jpg",
       },
       {
         id: "io-systems",
         title: "I/O Systems",
         description: "I/O systems connect actuators and sensors of a system to the control. From our Exact12 family of passive distribution boxes to our Cube fieldbus products, we can accommodate your installation needs.",
-        image: "/assets/products/io-systems.jpg"
+        image: "/assets/products/io-systems.jpg",
       },
       {
         id: "connection-technology",
         title: "Connection Technology",
         description: "We are leading supplier of cordsets. With over 30,000 combinations to choose from, we can help you find the right cordset for your application. Our standard products are available by the piece in your choice of three jacket colors, five cable types and lengths from .1 to 100m.",
-        image: "/assets/products/cables.jpg"
-      }
+        image: "/assets/products/cables.jpg",
+      },
     ],
     featured: [
       { name: "MVK Fusion CIP Safety", category: "I/O Systems" },
@@ -63,8 +114,8 @@ export const SITE_CONTENT = {
       { name: "T-Couplers", category: "Connection Technology" },
       { name: "Lighting Elements", category: "Interfaces" },
       { name: "Modlink Heavy", category: "Interfaces" },
-      { name: "Modlink MSVD", category: "Interfaces" }
-    ]
+      { name: "Modlink MSVD", category: "Interfaces" },
+    ],
   },
   industries: {
     intro: "Different sectors have completely different requirements",
@@ -73,33 +124,40 @@ export const SITE_CONTENT = {
       {
         id: "automotive",
         title: "Automotive",
-        description: "From the press, body and paint shops, to aggregate production to the final assembly – all of the processes in an automotive factory must work well together and they must to be reliable so expensive downtimes can be avoided."
+        description:
+          "From the press, body and paint shops, to aggregate production to the final assembly – all of the processes in an automotive factory must work well together and they must to be reliable so expensive downtimes can be avoided.",
+        image: automotiveImg,
       },
       {
         id: "food-beverage",
         title: "Food & Beverage",
-        description: "This industry places extreme demands on all of its facilities and systems. Processes and products in the food sector must be clean and safe."
+        description:
+          "This industry places extreme demands on all of its facilities and systems. Processes and products in the food sector must be clean and safe.",
       },
       {
         id: "logistics",
         title: "Logistics",
-        description: "Together we can create connectivity solutions that make electrical systems more modular and easier to install - saving installation time, increasing productivity and adaptable to your future needs."
+        description:
+          "Together we can create connectivity solutions that make electrical systems more modular and easier to install - saving installation time, increasing productivity and adaptable to your future needs.",
       },
       {
         id: "mobile-applications",
         title: "Mobile Applications",
-        description: "Dried up fields where agricultural machinery is raising dust. Icy roads, which are cleared by gritting vehicles. Drenched forest floors, where loggers struggle with mud and dirt. We, the automation experts and co-founders of decentralized installation technology, offer a modular product system."
+        description:
+          "Dried up fields where agricultural machinery is raising dust. Icy roads, which are cleared by gritting vehicles. Drenched forest floors, where loggers struggle with mud and dirt. We, the automation experts and co-founders of decentralized installation technology, offer a modular product system.",
       },
       {
         id: "robotics",
         title: "Robotics",
-        description: "The smallest bus modules from Murrelektronik even fit on axis 6 of a robot arm this allows distributed installation."
+        description:
+          "The smallest bus modules from Murrelektronik even fit on axis 6 of a robot arm this allows distributed installation.",
       },
       {
         id: "machine-tools",
         title: "Machine tools",
-        description: "Machine tooling is a wide-ranging industry. Customers needs and wishes are as diverse as the machines and plants themselves."
-      }
-    ]
+        description:
+          "Machine tooling is a wide-ranging industry. Customers needs and wishes are as diverse as the machines and plants themselves.",
+      },
+    ],
   }
 };

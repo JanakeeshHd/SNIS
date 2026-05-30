@@ -41,17 +41,26 @@ export const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-6 border-l-4 border-accent pl-3">Quick Links</h4>
             <ul className="space-y-4">
-              {["Home", "About Us", "Products", "Industry", "Contact Us"].map((link) => (
-                <li key={link}>
-                  <Link 
-                    to={link === "Home" ? "/" : `/${link.toLowerCase().replace(" ", "-")}`} 
-                    className="text-white/70 hover:text-accent hover:translate-x-2 transition-all inline-flex items-center"
-                  >
-                    <ArrowRight className="w-3 h-3 mr-2 text-accent" />
-                    {link}
-                  </Link>
-                </li>
-              ))}
+              {["Home", "About Us", "Products", "Industries", "Contact Us"].map((link) => {
+                const to =
+                  link === "Home"
+                    ? "/"
+                    : link === "Industries"
+                    ? "/industries"
+                    : `/${link.toLowerCase().replace(" ", "-")}`;
+
+                return (
+                  <li key={link}>
+                    <Link
+                      to={to}
+                      className="text-white/70 hover:text-accent hover:translate-x-2 transition-all inline-flex items-center"
+                    >
+                      <ArrowRight className="w-3 h-3 mr-2 text-accent" />
+                      {link}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </div>
 

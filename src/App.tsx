@@ -1,10 +1,9 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import { ScrollToTop } from "./components/layout/ScrollToTop";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Products from "./pages/Products";
 import Industries from "./pages/Industries";
-import IndustryDetail from "./pages/IndustryDetail";
 import Contact from "./pages/Contact";
 import CategoryDetail from "./pages/CategoryDetail";
 
@@ -18,8 +17,7 @@ function App() {
         <Route path="/about-us" element={<About />} />
         <Route path="/products" element={<Products />} />
         <Route path="/products/:id" element={<CategoryDetail />} />
-        <Route path="/industry" element={<Industries />} />
-        <Route path="/industry/:id" element={<IndustryDetail />} />
+        <Route path="/industries" element={<Industries />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/contact-us" element={<Contact />} />
       </Routes>

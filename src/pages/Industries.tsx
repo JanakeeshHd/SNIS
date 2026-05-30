@@ -2,10 +2,24 @@ import { motion } from "framer-motion";
 import { Layout } from "@/components/layout/Layout";
 import { SITE_CONTENT } from "@/data/content";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Globe } from "lucide-react";
-import { Link } from "react-router-dom";
+import { CheckCircle2, Download, ArrowRight } from "lucide-react";
+import { Link, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import { cn } from "@/lib/utils";
 
 const Industries = () => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      const element = document.getElementById(hash.substring(1));
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, []);
+
   return (
     <Layout>
       {/* Header */}
@@ -16,7 +30,7 @@ const Industries = () => {
             animate={{ opacity: 1, y: 0 }}
             className="max-w-3xl"
           >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">Industrial Sectors</h1>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">Solutions by Sector</h1>
             <p className="text-xl text-white/80 leading-relaxed">
               {SITE_CONTENT.industries.intro}
             </p>
@@ -25,66 +39,112 @@ const Industries = () => {
         <div className="absolute top-0 right-0 w-1/3 h-full bg-accent/10 skew-x-12 translate-x-1/2" />
       </section>
 
-      {/* Industry List */}
+      {/* Full Content Industry List */}
       <section className="py-24 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {SITE_CONTENT.industries.sectors.map((sector, i) => (
-              <motion.div
-                key={sector.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="group relative h-[450px] rounded-[2.5rem] overflow-hidden bg-primary border border-white/10"
-              >
-                <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/40 to-transparent z-10" />
-                <div className="absolute inset-0 bg-secondary/20 group-hover:bg-secondary/10 transition-colors duration-500" />
-                
-                <div className="absolute inset-0 flex items-center justify-center text-white/10 font-bold italic group-hover:scale-110 transition-transform duration-1000">
-                  {sector.title} Visual
-                </div>
-
-                <div className="absolute bottom-0 left-0 w-full p-10 z-20">
-                  <h3 className="text-3xl font-black text-white mb-4 group-hover:text-accent transition-colors">{sector.title}</h3>
-                  <p className="text-white/60 font-medium leading-relaxed mb-8 opacity-0 group-hover:opacity-100 h-0 group-hover:h-auto overflow-hidden transition-all duration-500">
-                    {sector.description}
-                  </p>
-                  <Link to={`/industry/${sector.id}`}>
-                    <button className="flex items-center space-x-3 text-white font-black text-sm uppercase tracking-widest group/btn">
-                      <span>Explore Sector</span>
-                      <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center group-hover/btn:bg-accent transition-colors">
-                        <ArrowRight className="w-4 h-4" />
+        <div className="container mx-auto px-4 space-y-32">
+          {SITE_CONTENT.industries.sectors.map((sector, i) => (
+            <div 
+              key={sector.id} 
+              id={sector.id} 
+              className="scroll-mt-32"
+            >
+              <div className="flex flex-col lg:flex-row gap-16 items-center">
+                <motion.div
+                  initial={{ opacity: 0, x: i % 2 === 0 ? -30 : 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  className={cn(
+                    "flex-1 space-y-8",
+                    i % 2 === 1 ? "lg:order-2" : "lg:order-1"
+                  )}
+                >
+                  <div>
+                    <div className="inline-block px-4 py-1 rounded-full bg-accent/10 text-accent text-xs font-black uppercase tracking-widest mb-6">
+                      Industrial Sector
+                    </div>
+                    <h2 className="text-4xl font-black text-primary mb-6">{sector.title}</h2>
+                    <p className="text-xl text-muted-foreground leading-relaxed">
+                      {sector.description}
+                    </p>
+                  </div>
+                  
+                  <div className="space-y-4">
+                    {[
+                      "Custom-engineered automation concepts",
+                      "Reduction in installation & maintenance costs",
+                      "Modular and scalable architectures",
+                      "Compliance with global industrial standards"
+                    ].map((benefit, idx) => (
+                      <div key={idx} className="flex items-center space-x-3">
+                        <CheckCircle2 className="w-5 h-5 text-accent shrink-0" />
+                        <span className="text-foreground font-medium">{benefit}</span>
                       </div>
-                    </button>
-                  </Link>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+                    ))}
+                  </div>
+
+                  <div className="flex flex-wrap gap-4 pt-4">
+                    <Button variant="default" onClick={() => navigate("/contact")}>
+                      Get Sector Solution
+                    </Button>
+                    <Button variant="outline" className="group">
+                      <Download className="w-4 h-4 mr-2" />
+                      Technical Guide
+                    </Button>
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  className={cn(
+                    "flex-1 relative aspect-video rounded-[3rem] overflow-hidden bg-bg-light border border-secondary/10 shadow-xl",
+                    i % 2 === 1 ? "lg:order-1" : "lg:order-2"
+                  )}
+                >
+                  {sector.image ? (
+                    <img 
+                      src={sector.image} 
+                      alt={sector.title} 
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center text-muted-foreground/20 italic font-bold text-2xl">
+                      {sector.title} Visual
+                    </div>
+                  )}
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
+                </motion.div>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* Expertise Section */}
+      {/* CTA Section */}
       <section className="py-24 bg-bg-light">
         <div className="container mx-auto px-4">
-          <div className="bg-white rounded-[3rem] p-12 lg:p-24 shadow-xl relative overflow-hidden">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-              <div>
-                <h2 className="text-4xl font-bold text-primary mb-8">Technical Know-How & Experience</h2>
-                <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                  {SITE_CONTENT.industries.extra}
-                </p>
-                <div className="flex flex-wrap gap-4">
-                  <Link to="/contact">
-                    <Button size="lg" variant="cta">Consult an Expert</Button>
-                  </Link>
-                </div>
-              </div>
-              <div className="hidden lg:flex justify-center">
-                <Globe className="w-64 h-64 text-accent opacity-10 animate-pulse" />
+          <div className="bg-primary rounded-[3.5rem] p-12 lg:p-24 text-white text-center relative overflow-hidden bg-tech-grid">
+            <div className="relative z-10 max-w-3xl mx-auto">
+              <h2 className="text-4xl md:text-5xl font-black mb-8">Ready to Optimize Your Facility?</h2>
+              <p className="text-xl text-white/70 mb-12">
+                Our team of industrial experts is ready to help you implement the most efficient automation strategies for your specific sector.
+              </p>
+              <div className="flex flex-col sm:flex-row justify-center gap-6">
+                <Link to="/contact">
+                  <Button size="lg" variant="cta" className="px-12 py-8 text-lg">
+                    Consult an Expert
+                    <ArrowRight className="ml-2 w-5 h-5" />
+                  </Button>
+                </Link>
+                <Link to="/products">
+                  <Button size="lg" variant="outline" className="px-12 py-8 text-lg border-white/20 text-white hover:bg-white/10">
+                    Browse Products
+                  </Button>
+                </Link>
               </div>
             </div>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%] bg-[radial-gradient(circle_at_center,rgba(0,212,255,0.05)_0%,transparent_70%)] pointer-events-none" />
           </div>
         </div>
       </section>
@@ -93,3 +153,4 @@ const Industries = () => {
 };
 
 export default Industries;
+

@@ -100,7 +100,7 @@ export const Header = () => {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="text-white" onClick={() => navigate("/industry")}>
+                <NavigationMenuTrigger className="text-white" onClick={() => navigate("/industries")}>
                   Industries
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
@@ -109,7 +109,7 @@ export const Header = () => {
                       <ListItem
                         key={sector.id}
                         title={sector.title}
-                        onClick={() => navigate(`/industry/${sector.id}`)}
+                        href={`/industries#${sector.id}`}
                         className="hover:bg-industrial-light cursor-pointer"
                       >
                         {sector.description}
@@ -192,7 +192,7 @@ export const Header = () => {
                 {SITE_CONTENT.industries.sectors.map((sector) => (
                   <Link
                     key={sector.id}
-                    to={`/industry/${sector.id}`}
+                    to={`/industries#${sector.id}`}
                     className="text-white/70 hover:text-accent py-1"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
