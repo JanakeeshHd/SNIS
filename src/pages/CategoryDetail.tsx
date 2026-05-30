@@ -89,7 +89,7 @@ const CategoryDetail = () => {
                     "Certified for global industrial standards"
                   ].map((item, i) => (
                     <div key={i} className="flex items-center space-x-4">
-                      <CheckCircle2 className="w-6 h-6 text-industrial-green shrink-0" />
+                      <CheckCircle2 className="w-6 h-6 text-[#9EE493] shrink-0" />
                       <span className="text-slate-600 text-lg">{item}</span>
                     </div>
                   ))}

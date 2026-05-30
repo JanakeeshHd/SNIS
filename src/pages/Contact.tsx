@@ -10,7 +10,7 @@ const Contact = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="bg-industrial-blue text-white py-24 relative overflow-hidden">
+      <section className="bg-[#2F4858] text-white py-24 relative overflow-hidden">
         <div className="container mx-auto px-4 relative z-10 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -23,7 +23,7 @@ const Contact = () => {
             </p>
           </motion.div>
         </div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(0,168,232,0.1),transparent)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(158,228,147,0.1),transparent)]" />
       </section>
 
       <section className="py-24 bg-white">
@@ -31,24 +31,24 @@ const Contact = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Contact Info Cards */}
             <div className="lg:col-span-1 space-y-6">
-              <div className="p-8 rounded-3xl bg-slate-50 border border-slate-100">
-                <div className="w-12 h-12 rounded-xl bg-industrial-blue flex items-center justify-center text-white mb-6">
+              <div className="p-8 rounded-3xl bg-[#DAF7DC] border border-slate-100">
+                <div className="w-12 h-12 rounded-xl bg-[#2F4858] flex items-center justify-center text-white mb-6">
                   <Phone className="w-6 h-6" />
                 </div>
-                <h3 className="text-xl font-bold text-industrial-blue mb-2">Call Us</h3>
+                <h3 className="text-xl font-bold text-[#2F4858] mb-2">Call Us</h3>
                 <p className="text-slate-600 mb-1">Direct Line:</p>
-                <a href={`tel:${SITE_CONTENT.contact.phone}`} className="text-lg font-bold text-industrial-blue hover:text-tech-cyan transition-colors">
+                <a href={`tel:${SITE_CONTENT.contact.phone}`} className="text-lg font-bold text-[#2F4858] hover:text-[#86BBD8] transition-colors">
                   {SITE_CONTENT.contact.phone}
                 </a>
               </div>
 
-              <div className="p-8 rounded-3xl bg-slate-50 border border-slate-100">
-                <div className="w-12 h-12 rounded-xl bg-tech-cyan flex items-center justify-center text-white mb-6">
+              <div className="p-8 rounded-3xl bg-[#DAF7DC] border border-slate-100">
+                <div className="w-12 h-12 rounded-xl bg-[#86BBD8] flex items-center justify-center text-white mb-6">
                   <Mail className="w-6 h-6" />
                 </div>
-                <h3 className="text-xl font-bold text-industrial-blue mb-2">Email Us</h3>
+                <h3 className="text-xl font-bold text-[#2F4858] mb-2">Email Us</h3>
                 <p className="text-slate-600 mb-1">Inquiries:</p>
-                <a href={`mailto:${SITE_CONTENT.contact.email}`} className="text-lg font-bold text-industrial-blue hover:text-tech-cyan transition-colors block">
+                <a href={`mailto:${SITE_CONTENT.contact.email}`} className="text-lg font-bold text-[#2F4858] hover:text-[#86BBD8] transition-colors block">
                   {SITE_CONTENT.contact.email}
                 </a>
                 <a href={`mailto:${SITE_CONTENT.contact.salesEmail}`} className="text-slate-500 text-sm mt-1">
@@ -56,11 +56,11 @@ const Contact = () => {
                 </a>
               </div>
 
-              <div className="p-8 rounded-3xl bg-slate-50 border border-slate-100">
-                <div className="w-12 h-12 rounded-xl bg-industrial-green flex items-center justify-center text-white mb-6">
+              <div className="p-8 rounded-3xl bg-[#DAF7DC] border border-slate-100">
+                <div className="w-12 h-12 rounded-xl bg-[#9EE493] flex items-center justify-center text-[#2F4858] mb-6">
                   <MapPin className="w-6 h-6" />
                 </div>
-                <h3 className="text-xl font-bold text-industrial-blue mb-2">Our Office</h3>
+                <h3 className="text-xl font-bold text-[#2F4858] mb-2">Our Office</h3>
                 <p className="text-slate-600">{SITE_CONTENT.contact.address}</p>
               </div>
             </div>
@@ -68,33 +68,33 @@ const Contact = () => {
             {/* Contact Form */}
             <div className="lg:col-span-2">
               <div className="bg-white rounded-3xl p-8 md:p-12 shadow-2xl border border-slate-100">
-                <h2 className="text-3xl font-bold text-industrial-blue mb-8">Send a Detailed Inquiry</h2>
+                <h2 className="text-3xl font-bold text-[#2F4858] mb-8">Send a Detailed Inquiry</h2>
                 <form className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <label className="text-sm font-bold text-slate-700">Full Name</label>
-                      <Input placeholder="Enter your name" className="h-14 bg-slate-50 border-none focus:ring-2 focus:ring-industrial-blue" />
+                      <Input placeholder="Enter your name" className="h-14 bg-[#DAF7DC] border-none focus:ring-2 focus:ring-[#86BBD8]" />
                     </div>
                     <div className="space-y-2">
                       <label className="text-sm font-bold text-slate-700">Email Address</label>
-                      <Input type="email" placeholder="Enter your email" className="h-14 bg-slate-50 border-none focus:ring-2 focus:ring-industrial-blue" />
+                      <Input type="email" placeholder="Enter your email" className="h-14 bg-[#DAF7DC] border-none focus:ring-2 focus:ring-[#86BBD8]" />
                     </div>
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <label className="text-sm font-bold text-slate-700">Company Name</label>
-                      <Input placeholder="Your company" className="h-14 bg-slate-50 border-none focus:ring-2 focus:ring-industrial-blue" />
+                      <Input placeholder="Your company" className="h-14 bg-[#DAF7DC] border-none focus:ring-2 focus:ring-[#86BBD8]" />
                     </div>
                     <div className="space-y-2">
                       <label className="text-sm font-bold text-slate-700">Subject</label>
-                      <Input placeholder="How can we help?" className="h-14 bg-slate-50 border-none focus:ring-2 focus:ring-industrial-blue" />
+                      <Input placeholder="How can we help?" className="h-14 bg-[#DAF7DC] border-none focus:ring-2 focus:ring-[#86BBD8]" />
                     </div>
                   </div>
                   <div className="space-y-2">
                     <label className="text-sm font-bold text-slate-700">Message</label>
-                    <Textarea placeholder="Describe your requirements in detail..." className="min-h-[160px] bg-slate-50 border-none focus:ring-2 focus:ring-industrial-blue" />
+                    <Textarea placeholder="Describe your requirements in detail..." className="min-h-[160px] bg-[#DAF7DC] border-none focus:ring-2 focus:ring-[#86BBD8]" />
                   </div>
-                  <Button type="submit" size="lg" className="w-full bg-industrial-blue hover:bg-industrial-blue/90 text-white h-16 text-lg rounded-xl">
+                  <Button type="submit" size="lg" className="w-full bg-[#9EE493] hover:bg-[#9EE493]/90 text-[#2F4858] h-16 text-lg rounded-xl">
                     Submit Inquiry
                     <Send className="ml-2 w-5 h-5" />
                   </Button>
@@ -102,11 +102,11 @@ const Contact = () => {
 
                 <div className="mt-12 pt-8 border-t border-slate-100">
                   <div className="flex items-center gap-4 text-slate-600">
-                    <div className="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center text-industrial-blue">
+                    <div className="w-10 h-10 rounded-lg bg-[#DAF7DC] flex items-center justify-center text-[#2F4858]">
                       <Clock className="w-5 h-5" />
                     </div>
                     <div>
-                      <p className="text-sm font-bold text-industrial-blue">Business Hours</p>
+                      <p className="text-sm font-bold text-[#2F4858]">Business Hours</p>
                       <p className="text-sm">Mon - Fri: 8:00 AM - 6:00 PM</p>
                     </div>
                   </div>

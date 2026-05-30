@@ -89,7 +89,7 @@ const About = () => {
               <ul className="space-y-6">
                 {SITE_CONTENT.company.mission.map((item, i) => (
                   <li key={i} className="flex items-start space-x-4">
-                    <CheckCircle2 className="w-6 h-6 text-industrial-green shrink-0 mt-1" />
+                    <CheckCircle2 className="w-6 h-6 text-[#9EE493] shrink-0 mt-1" />
                     <span className="text-slate-600 text-lg">{item}</span>
                   </li>
                 ))}
