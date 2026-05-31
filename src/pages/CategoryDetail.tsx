@@ -2,8 +2,15 @@ import { useParams, Link, useNavigate } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { SITE_CONTENT } from "@/data/content";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, ArrowRight, CheckCircle2, Download } from "lucide-react";
+import { ArrowLeft, CheckCircle2, Download } from "lucide-react";
 import { motion } from "framer-motion";
+
+type ProductItem = {
+  name: string;
+  category: string;
+  description: string;
+  image?: string;
+};
 
 const CategoryDetail = () => {
   const { id } = useParams();
@@ -21,7 +28,9 @@ const CategoryDetail = () => {
     );
   }
 
-  const relatedProducts = SITE_CONTENT.products.featured.filter(p => p.category === category.title);
+  const relatedProducts = (SITE_CONTENT.products.items as ProductItem[]).filter(
+    (product) => product.category === category.title,
+  );
 
   return (
     <Layout>
@@ -55,27 +64,40 @@ const CategoryDetail = () => {
             <div className="lg:col-span-2 space-y-12">
               <div>
                 <h2 className="text-3xl font-bold text-primary mb-8">Product Range & Features</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {relatedProducts.length > 0 ? (
-                    relatedProducts.map((product, i) => (
+                {relatedProducts.length > 0 ? (
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {relatedProducts.map((product: ProductItem, i: number) => (
                       <motion.div
                         key={i}
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: i * 0.05 }}
-                        className="p-6 rounded-2xl bg-bg-light border border-secondary/10 flex items-center justify-between group hover:border-accent/30 transition-all duration-300"
+                        className="rounded-2xl overflow-hidden border bg-white shadow-sm hover:shadow-card-hover transition-all duration-300"
                       >
-                        <span className="font-bold text-primary group-hover:text-secondary transition-colors">{product.name}</span>
-                        <ArrowRight className="w-4 h-4 text-accent group-hover:translate-x-1 transition-transform" />
+                        <div className="aspect-[4/3] bg-slate-50 flex items-center justify-center">
+                          {product.image ? (
+                            <img src={product.image} alt={product.name} className="w-full h-full object-cover" />
+                          ) : (
+                            <div className="text-muted-foreground/40 font-bold italic">Image</div>
+                          )}
+                        </div>
+
+                        <div className="p-6">
+                          <h3 className="text-lg font-bold text-primary mb-2">{product.name}</h3>
+                          <p className="text-sm text-muted-foreground mb-4 line-clamp-3">{product.description}</p>
+                          <div className="pt-2">
+                            <Button size="sm" variant="cta" onClick={() => navigate('/contact')}>Inquiry</Button>
+                          </div>
+                        </div>
                       </motion.div>
-                    ))
-                  ) : (
-                    <div className="col-span-2 p-12 bg-bg-light rounded-2xl text-center text-muted-foreground/40">
-                      Detailed product listings coming soon.
-                    </div>
-                  )}
-                </div>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="col-span-2 p-12 bg-bg-light rounded-2xl text-center text-muted-foreground/40">
+                    Detailed product listings coming soon.
+                  </div>
+                )}
               </div>
 
               <div>

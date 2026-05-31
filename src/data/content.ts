@@ -28,6 +28,7 @@ export interface ProductCategory {
 export interface ProductsData {
   intro: string;
   categories: ProductCategory[];
+  items: { name: string; category: string; description: string; image?: string }[];
   featured: { name: string; category: string }[];
 }
 
@@ -102,6 +103,50 @@ export const SITE_CONTENT: SiteContent = {
         description: "We are leading supplier of cordsets. With over 30,000 combinations to choose from, we can help you find the right cordset for your application. Our standard products are available by the piece in your choice of three jacket colors, five cable types and lengths from .1 to 100m.",
         image: "/assets/products/cables.jpg",
       },
+    ],
+    items: [
+      { name: "Eco-Rail-2", category: "Electronics in the Cabinet", description: "Eco-Rail-2 power supply units offer flexible and economical power for machinery and control cabinets." },
+      { name: "EMC Filters", category: "Electronics in the Cabinet", description: "EMC filters prevent interferences in machines and systems." },
+      { name: "Emparro ACCUcontrol", category: "Electronics in the Cabinet", description: "External lead battery UPS modules for long-lasting bridging periods (20 A / 40 A)." },
+      { name: "Emparro HD – Heavy Duty", category: "Electronics in the Cabinet", description: "Robust power supplies for demanding cabinet applications." },
+      { name: "Emparro", category: "Electronics in the Cabinet", description: "High-efficiency switch mode power supplies with up to 95% efficiency." },
+      { name: "Emparro® 3", category: "Electronics in the Cabinet", description: "Three-phase power supplies for 24V applications." },
+      { name: "Emparro67", category: "Electronics in the Cabinet", description: "Field-ready power supplies built for extreme environmental conditions." },
+      { name: "MB Redundancy Balance", category: "Electronics in the Cabinet", description: "Redundancy solutions for maximum machine uptime." },
+      { name: "MICO Basic", category: "Electronics in the Cabinet", description: "Intelligent power distribution module for 24 V DC applications." },
+      { name: "MICO Classic", category: "Electronics in the Cabinet", description: "Power distribution module monitoring currents on multiple channels." },
+      { name: "MICO Fuse", category: "Electronics in the Cabinet", description: "Compact fused module with eight front-serviceable fuse sockets." },
+      { name: "Mico Pro", category: "Electronics in the Cabinet", description: "Current monitoring system for 12 and 24 VDC applications." },
+      { name: "MICO+", category: "Electronics in the Cabinet", description: "Advanced power distribution for 24 and 48 V DC applications." },
+      { name: "Optocouplers", category: "Electronics in the Cabinet", description: "Optoelectronic signal transfer for electrical isolation." },
+      { name: "Relays / Safety Relays", category: "Electronics in the Cabinet", description: "Compact relay modules with integrated status indication." },
+      { name: "Switches", category: "Electronics in the Cabinet", description: "Industrial network switches for flexible topologies." },
+      { name: "Transformers", category: "Electronics in the Cabinet", description: "Flexible transformers for various voltage requirements." },
+
+      { name: "MVK Fusion CIP Safety", category: "I/O Systems", description: "Combines digital standard sensors, safety sensors and IO-Link in one solution." },
+      { name: "MVK Pro and IMPACT67 Pro", category: "I/O Systems", description: "Compact IO-Link master modules with multifunctional ports." },
+      { name: "Modlink MPV", category: "I/O Systems", description: "Durable interface modules for connecting fieldbus systems to cabinets." },
+      { name: "IO-Link analog converter", category: "I/O Systems", description: "Integrates classic analog sensors and actuators into IO-Link systems." },
+      { name: "Cube20 / Cube20S", category: "I/O Systems", description: "Modular IP20 I/O systems in a compact form factor." },
+      { name: "Cube67", category: "I/O Systems", description: "Award-winning modular fieldbus system for flexible installations." },
+      { name: "Impact67", category: "I/O Systems", description: "Robust fieldbus modules for cost-effective digital signals." },
+      { name: "M12 Distribution Systems", category: "I/O Systems", description: "Distribution boxes for consistently plugged solutions from control to field." },
+      { name: "M12 Distribution Systems – Plastic", category: "I/O Systems", description: "Fully potted, sealed distribution boxes for harsh environments." },
+      { name: "M8 Distribution Systems", category: "I/O Systems", description: "Compact distribution systems for space-constrained installations." },
+      { name: "MASI20 / MASI67 / MASI68", category: "I/O Systems", description: "AS-Interface based installation solutions for economical signal connection." },
+      { name: "MVK Metal / MVK Metal POF", category: "I/O Systems", description: "IP67 rated fieldbus modules that replace complex wiring." },
+
+      { name: "Lighting Elements", category: "Interfaces", description: "Durable LED lighting systems for control cabinets and panels." },
+      { name: "Modlink Heavy", category: "Interfaces", description: "Heavy-duty plug connectors for secure transmission of signals, energy and data." },
+      { name: "Modlink MSDD / MSVD", category: "Interfaces", description: "Interface modules providing convenient access for diagnostics and service." },
+
+      { name: "Adapters", category: "Connection Technology", description: "Flexible adapter solutions for installation and connectivity needs." },
+      { name: "Cables by the Meter", category: "Connection Technology", description: "High-quality cables available on spools for custom lengths." },
+      { name: "Field-wireable connectors", category: "Connection Technology", description: "Durable, field-wireable connectors for easy maintenance." },
+      { name: "Fieldbus Cables", category: "Connection Technology", description: "Cables supporting industrial fieldbus protocols like EtherCAT and ProfiNet." },
+      { name: "Motor cables", category: "Connection Technology", description: "Power and servo motor cables in molded versions for reliable connections." },
+      { name: "Sensor Actuator Cables", category: "Connection Technology", description: "Extensive cordset lineup for sensors and valves, stocked or produced to order." },
+      { name: "T-Couplers", category: "Connection Technology", description: "T-Couplers double connection capacity and simplify installation." },
     ],
     featured: [
       { name: "MVK Fusion CIP Safety", category: "I/O Systems" },

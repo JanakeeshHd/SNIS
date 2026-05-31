@@ -4,10 +4,11 @@ import { Layout } from "@/components/layout/Layout";
 import { SITE_CONTENT } from "@/data/content";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Search } from "lucide-react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Input } from "@/components/ui/input";
 
 const Products = () => {
+  const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState("");
   const [activeCategory, setActiveCategory] = useState("All");
 
@@ -66,50 +67,59 @@ const Products = () => {
       {/* Product List */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+          <div className="space-y-24">
             {filteredCategories.map((category, i) => (
-              <motion.div
-                key={category.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="group border border-secondary/10 rounded-3xl overflow-hidden hover:shadow-card-hover hover:border-accent transition-all duration-300"
-              >
-                <div className="aspect-[4/3] bg-muted relative overflow-hidden">
-                  {/* Placeholder for product image */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-                  <div className="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-industrial-blue uppercase">
-                    Category
-                  </div>
+              <div key={category.id} id={category.id} className="scroll-mt-32">
+                <div className="flex flex-col lg:flex-row gap-12 items-center">
+                  <motion.div
+                    initial={{ opacity: 0, x: i % 2 === 0 ? -30 : 30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    className={`flex-1 space-y-6 ${i % 2 === 1 ? 'lg:order-2' : 'lg:order-1'}`}
+                  >
+                    <div>
+                      <div className="inline-block px-4 py-1 rounded-full bg-accent/10 text-accent text-xs font-black uppercase tracking-widest mb-4">
+                        Product Category
+                      </div>
+                      <h2 className="text-3xl font-black text-primary mb-4">{category.title}</h2>
+                      <p className="text-lg text-muted-foreground leading-relaxed">
+                        {category.description}
+                      </p>
+                    </div>
+
+                      <div className="mt-4">
+                        <Button variant="default" className="mr-4" onClick={() => navigate(`/products/${category.id}`)}>
+                          View Products
+                        </Button>
+                        <Button variant="outline" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+                          Back to Top
+                        </Button>
+                      </div>
+
+                      {/* products will be visible on the category detail page only */}
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    className={`flex-1 relative aspect-video rounded-[2rem] overflow-hidden bg-bg-light border border-secondary/10 shadow-md ${i % 2 === 1 ? 'lg:order-1' : 'lg:order-2'}`}
+                  >
+                    {category.image ? (
+                      <img src={category.image} alt={category.title} className="w-full h-full object-cover" />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center text-muted-foreground/20 italic font-bold text-2xl">
+                        {category.title} Visual
+                      </div>
+                    )}
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
+                  </motion.div>
                 </div>
-                <div className="p-8">
-                  <h3 className="text-2xl font-bold text-industrial-blue mb-4 group-hover:text-tech-cyan transition-colors">{category.title}</h3>
-                  <p className="text-slate-600 mb-8 line-clamp-3">
-                    {category.description}
-                  </p>
-                  <Link to={`/products/${category.id}`}>
-                    <Button className="w-full bg-slate-50 hover:bg-industrial-blue hover:text-white text-industrial-blue border-none shadow-none group/btn">
-                      View Range
-                      <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-                    </Button>
-                  </Link>
-                </div>
-              </motion.div>
+              </div>
             ))}
           </div>
 
-          <div className="mt-24 pt-24 border-t">
-            <h2 className="text-3xl font-bold text-industrial-blue mb-12 text-center">Featured Technical Solutions</h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-              {SITE_CONTENT.products.featured.map((item, i) => (
-                <div key={i} className="p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:border-tech-cyan transition-colors">
-                  <div className="text-xs font-bold text-tech-cyan uppercase mb-2">{item.category}</div>
-                  <h4 className="font-bold text-industrial-blue">{item.name}</h4>
-                </div>
-              ))}
-            </div>
-          </div>
+          
         </div>
       </section>
     </Layout>

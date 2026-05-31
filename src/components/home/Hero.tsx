@@ -43,7 +43,7 @@ export const Hero = () => {
             </h1>
             
             <p className="text-xl text-white/70 max-w-2xl leading-relaxed font-medium">
-              Authorized partner for <span className="text-white font-bold">Siemens, Murr Elektronik, and Schmersal</span>. Delivering premium automation infrastructure since 2011.
+              Authorized partner for <span className="text-white font-bold">Helukabel, Murr Elektronik, and Murrplastik</span>, delivering premium automation infrastructure since 2011.
             </p>
           </motion.div>
 

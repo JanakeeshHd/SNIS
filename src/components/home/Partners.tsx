@@ -1,12 +1,21 @@
 import { motion } from "framer-motion";
+import helukabelLogo from "@/assets/helukabel.png";
+import murrelektronikLogo from "@/assets/murrelektronik.png";
+import murrplasticLogo from "@/assets/murrplastic.png";
 
 const partners = [
-  "Siemens",
-  "Schneider Electric",
-  "Phoenix Contact",
-  "Murrelektronik",
-  "ABB",
-  "Rockwell Automation"
+  {
+    name: "Helukabel",
+    logo: helukabelLogo,
+  },
+  {
+    name: "Murrelektronik",
+    logo: murrelektronikLogo,
+  },
+  {
+    name: "Murrplastic",
+    logo: murrplasticLogo,
+  },
 ];
 
 export const Partners = () => {
@@ -14,8 +23,8 @@ export const Partners = () => {
   const duplicatedPartners = [...partners, ...partners];
 
   return (
-    <section className="py-20 bg-white border-y border-slate-50 overflow-hidden">
-      <div className="container mx-auto px-4">
+    <section className="py-16 md:py-20 bg-white border-y border-slate-50 overflow-hidden">
+      <div className="container mx-auto px-3 sm:px-4">
         <motion.div 
           className="text-center mb-12"
           initial={{ opacity: 0, y: -20 }}
@@ -28,28 +37,32 @@ export const Partners = () => {
         
         <div className="relative w-full overflow-hidden">
           {/* Gradient fade left */}
-          <div className="absolute left-0 top-0 bottom-0 w-8 md:w-20 bg-gradient-to-r from-white via-white to-transparent z-10 pointer-events-none" />
+          <div className="absolute left-0 top-0 bottom-0 w-6 sm:w-8 md:w-20 bg-gradient-to-r from-white via-white to-transparent z-10 pointer-events-none" />
           
           {/* Gradient fade right */}
-          <div className="absolute right-0 top-0 bottom-0 w-8 md:w-20 bg-gradient-to-l from-white via-white to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-6 sm:w-8 md:w-20 bg-gradient-to-l from-white via-white to-transparent z-10 pointer-events-none" />
           
           <motion.div
-            className="flex gap-12 md:gap-24 whitespace-nowrap"
-            animate={{ x: [-2000, 0] }}
+            className="flex w-max items-center gap-8 sm:gap-12 md:gap-24 whitespace-nowrap will-change-transform"
+            animate={{ x: ["-50%", 0] }}
             transition={{
               repeat: Infinity,
               repeatType: "loop",
               duration: 20,
-              ease: "linear"
-            } as any}
+              ease: "linear",
+            }}
           >
             {duplicatedPartners.map((partner, i) => (
               <motion.div
                 key={i}
-                className="text-lg md:text-2xl font-black text-foreground tracking-tighter flex-shrink-0 min-w-max cursor-pointer grayscale hover:grayscale-0 transition-all duration-500 opacity-60 hover:opacity-100"
+                className="flex-shrink-0 min-w-max cursor-pointer opacity-80 hover:opacity-100 transition-all duration-500"
                 whileHover={{ scale: 1.15 }}
               >
-                {partner}
+                <img
+                  src={partner.logo}
+                  alt={partner.name}
+                  className="h-8 sm:h-10 md:h-14 w-auto max-w-[130px] sm:max-w-[160px] object-contain"
+                />
               </motion.div>
             ))}
           </motion.div>
