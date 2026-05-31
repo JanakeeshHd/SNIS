@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Search, Menu, X } from "lucide-react";
+import { Search, Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
@@ -44,7 +44,15 @@ ListItem.displayName = "ListItem";
 export const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
   const [isScrolled, setIsScrolled] = React.useState(false);
+  const [expandedSections, setExpandedSections] = React.useState<{[key: string]: boolean}>({});
   const navigate = useNavigate();
+
+  const toggleSection = (section: string) => {
+    setExpandedSections(prev => ({
+      ...prev,
+      [section]: !prev[section]
+    }));
+  };
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -171,36 +179,63 @@ export const Header = () => {
             >
               Home
             </Link>
-            <div className="space-y-2">
-              <div className="text-lg font-medium text-white">Products</div>
-              <div className="grid grid-cols-1 gap-2 pl-4">
-                {SITE_CONTENT.products.categories.map((category) => (
-                  <Link
-                    key={category.id}
-                    to={`/products/${category.id}`}
-                    className="text-white/70 hover:text-accent py-1"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    {category.title}
-                  </Link>
-                ))}
-              </div>
+            
+            {/* Products Section - Collapsible */}
+            <div className="space-y-2 border-b border-white/10 pb-4">
+              <button
+                onClick={() => toggleSection('products')}
+                className="flex items-center justify-between w-full text-lg font-medium text-white hover:text-accent transition-colors"
+              >
+                <span>Products</span>
+                <ChevronDown 
+                  size={20} 
+                  className={`transition-transform duration-300 ${expandedSections.products ? 'rotate-180' : ''}`}
+                />
+              </button>
+              {expandedSections.products && (
+                <div className="grid grid-cols-1 gap-2 pl-4 pt-2">
+                  {SITE_CONTENT.products.categories.map((category) => (
+                    <Link
+                      key={category.id}
+                      to={`/products/${category.id}`}
+                      className="text-white/70 hover:text-accent py-1"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      {category.title}
+                    </Link>
+                  ))}
+                </div>
+              )}
             </div>
-            <div className="space-y-2">
-              <div className="text-lg font-medium text-white">Industries</div>
-              <div className="grid grid-cols-1 gap-2 pl-4">
-                {SITE_CONTENT.industries.sectors.map((sector) => (
-                  <Link
-                    key={sector.id}
-                    to={`/industries#${sector.id}`}
-                    className="text-white/70 hover:text-accent py-1"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    {sector.title}
-                  </Link>
-                ))}
-              </div>
+            
+            {/* Industries Section - Collapsible */}
+            <div className="space-y-2 border-b border-white/10 pb-4">
+              <button
+                onClick={() => toggleSection('industries')}
+                className="flex items-center justify-between w-full text-lg font-medium text-white hover:text-accent transition-colors"
+              >
+                <span>Industries</span>
+                <ChevronDown 
+                  size={20} 
+                  className={`transition-transform duration-300 ${expandedSections.industries ? 'rotate-180' : ''}`}
+                />
+              </button>
+              {expandedSections.industries && (
+                <div className="grid grid-cols-1 gap-2 pl-4 pt-2">
+                  {SITE_CONTENT.industries.sectors.map((sector) => (
+                    <Link
+                      key={sector.id}
+                      to={`/industries#${sector.id}`}
+                      className="text-white/70 hover:text-accent py-1"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      {sector.title}
+                    </Link>
+                  ))}
+                </div>
+              )}
             </div>
+            
             <Link 
               to="/about" 
               className="block text-lg font-medium text-white hover:text-accent"
