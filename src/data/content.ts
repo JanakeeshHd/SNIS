@@ -149,6 +149,10 @@ export const SITE_CONTENT: SiteContent = {
       { name: "T-Couplers", category: "Connection Technology", description: "T-Couplers double connection capacity and simplify installation." },
     ],
     featured: [
+      { name: "Eco-Rail-2", category: "Electronics in the Cabinet" },
+      { name: "EMC Filters", category: "Electronics in the Cabinet" },
+      { name: "Emparro ACCUcontrol", category: "Electronics in the Cabinet" },
+      { name: "Emparro HD – Heavy Duty", category: "Electronics in the Cabinet" },
       { name: "MVK Fusion CIP Safety", category: "I/O Systems" },
       { name: "MVK Pro and IMPACT67 Pro", category: "I/O Systems" },
       { name: "Modlink MPV", category: "Interfaces" },

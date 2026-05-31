@@ -7,12 +7,14 @@ import { cn } from "@/lib/utils";
 
 export const FeaturedProducts = () => {
   const [activeFilter, setActiveFilter] = useState("All");
+  const maxProductsToShow = 4;
   
   const categories = ["All", ...new Set(SITE_CONTENT.products.featured.map(p => p.category))];
   
-  const filteredProducts = activeFilter === "All" 
-    ? SITE_CONTENT.products.featured.slice(0, 8) 
-    : SITE_CONTENT.products.featured.filter(p => p.category === activeFilter);
+  const filteredProducts = (activeFilter === "All"
+    ? SITE_CONTENT.products.featured
+    : SITE_CONTENT.products.featured.filter(p => p.category === activeFilter)
+  ).slice(0, maxProductsToShow);
 
   return (
     <section className="py-32 bg-bg-light">
