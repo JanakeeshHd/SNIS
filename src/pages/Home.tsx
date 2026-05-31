@@ -27,9 +27,9 @@ const Home = () => {
     <Layout>
       <div id="hero"><Hero /></div>
       <Partners />
+      <div id="featured"><FeaturedProducts /></div>
       <div id="about"><CompanyOverview /></div>
       <div id="trust"><Trust /></div>
-      <div id="featured"><FeaturedProducts /></div>
       <div id="categories"><Categories /></div>
       <div id="industries"><Industry /></div>
       <div id="downloads"><Downloads /></div>
