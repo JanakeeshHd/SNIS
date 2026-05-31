@@ -25,25 +25,25 @@ const CategoryDetail = () => {
 
   return (
     <Layout>
-      <section className="bg-[#DAF7DC] border-b py-12">
+      <section className="bg-bg-light border-b py-12">
         <div className="container mx-auto px-4">
-          <Link to="/products" className="inline-flex items-center text-slate-500 hover:text-[#2F4858] mb-8 transition-colors">
+          <Link to="/products" className="inline-flex items-center text-muted-foreground hover:text-primary mb-8 transition-colors">
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Products
           </Link>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-4xl md:text-5xl font-bold text-[#2F4858] mb-6">{category.title}</h1>
-              <p className="text-xl text-slate-600 leading-relaxed mb-8">
+              <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">{category.title}</h1>
+              <p className="text-xl text-muted-foreground leading-relaxed mb-8">
                 {category.description}
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button size="lg" className="bg-[#9EE493] text-[#2F4858] hover:bg-[#9EE493]/90">Request Datasheet</Button>
-                <Button size="lg" variant="outline" className="border-[#2F4858] text-[#2F4858]">Technical Inquiry</Button>
+                <Button size="lg" variant="cta">Request Datasheet</Button>
+                <Button size="lg" variant="outline">Technical Inquiry</Button>
               </div>
             </div>
             <div className="aspect-video bg-white rounded-3xl shadow-xl border border-slate-100 flex items-center justify-center">
-               <span className="text-slate-400 font-medium italic">{category.title} Visual</span>
+               <span className="text-muted-foreground/40 font-medium italic">{category.title} Visual</span>
             </div>
           </div>
         </div>
@@ -54,7 +54,7 @@ const CategoryDetail = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
             <div className="lg:col-span-2 space-y-12">
               <div>
-                <h2 className="text-3xl font-bold text-[#2F4858] mb-8">Product Range & Features</h2>
+                <h2 className="text-3xl font-bold text-primary mb-8">Product Range & Features</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {relatedProducts.length > 0 ? (
                     relatedProducts.map((product, i) => (
@@ -64,14 +64,14 @@ const CategoryDetail = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: i * 0.05 }}
-                        className="p-6 rounded-2xl bg-[#DAF7DC] border border-slate-100 flex items-center justify-between group"
+                        className="p-6 rounded-2xl bg-bg-light border border-secondary/10 flex items-center justify-between group hover:border-accent/30 transition-all duration-300"
                       >
-                        <span className="font-bold text-[#2F4858]">{product.name}</span>
-                        <ArrowRight className="w-4 h-4 text-[#86BBD8] group-hover:translate-x-1 transition-transform" />
+                        <span className="font-bold text-primary group-hover:text-secondary transition-colors">{product.name}</span>
+                        <ArrowRight className="w-4 h-4 text-accent group-hover:translate-x-1 transition-transform" />
                       </motion.div>
                     ))
                   ) : (
-                    <div className="col-span-2 p-12 bg-[#DAF7DC] rounded-2xl text-center text-slate-400">
+                    <div className="col-span-2 p-12 bg-bg-light rounded-2xl text-center text-muted-foreground/40">
                       Detailed product listings coming soon.
                     </div>
                   )}
@@ -79,7 +79,7 @@ const CategoryDetail = () => {
               </div>
 
               <div>
-                <h2 className="text-3xl font-bold text-[#2F4858] mb-8">Why Choose Our {category.title}?</h2>
+                <h2 className="text-3xl font-bold text-primary mb-8">Why Choose Our {category.title}?</h2>
                 <div className="space-y-4">
                   {[
                     "Precision-engineered for extreme industrial environments",
@@ -89,8 +89,8 @@ const CategoryDetail = () => {
                     "Certified for global industrial standards"
                   ].map((item, i) => (
                     <div key={i} className="flex items-center space-x-4">
-                      <CheckCircle2 className="w-6 h-6 text-[#9EE493] shrink-0" />
-                      <span className="text-slate-600 text-lg">{item}</span>
+                      <CheckCircle2 className="w-6 h-6 text-accent shrink-0" />
+                      <span className="text-muted-foreground text-lg">{item}</span>
                     </div>
                   ))}
                 </div>
@@ -102,23 +102,17 @@ const CategoryDetail = () => {
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="bg-[#2F4858] rounded-3xl p-8 text-white shadow-xl"
+                className="bg-primary p-8 rounded-[2.5rem] text-white shadow-glow-blue border border-white/5 relative overflow-hidden group"
               >
-                <h3 className="text-2xl font-bold mb-6">Technical Resources</h3>
-                <div className="space-y-4">
-                  {[
-                    "Full Product Catalog 2024",
-                    "Installation Guide",
-                    "Technical Datasheets",
-                    "Safety Certifications"
-                  ].map((doc, i) => (
-                    <button key={i} className="w-full flex items-center justify-between p-4 rounded-xl bg-white/10 hover:bg-white/20 transition-colors text-left group">
-                      <span className="text-sm font-medium">{doc}</span>
-                      <Download className="w-4 h-4 text-[#86BBD8] group-hover:scale-110 transition-transform" />
-                    </button>
-                  ))}
-                </div>
-                <Button className="w-full mt-8 bg-[#9EE493] hover:bg-[#9EE493]/90 text-[#2F4858]">Download All Resources</Button>
+                 <div className="relative z-10">
+                    <h3 className="text-2xl font-black mb-4">Technical Catalog</h3>
+                    <p className="text-white/70 mb-8 text-sm leading-relaxed">Download the complete technical specifications for the {category.title} range.</p>
+                    <Button variant="cta" className="w-full">
+                       <Download className="w-4 h-4 mr-2" />
+                       Download Catalog
+                    </Button>
+                 </div>
+                 <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-accent/10 rounded-full blur-3xl group-hover:bg-accent/20 transition-all" />
               </motion.div>
 
               <motion.div 
@@ -126,25 +120,13 @@ const CategoryDetail = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
-                className="bg-[#2F4858] rounded-3xl p-8 text-white"
+                className="bg-bg-light p-8 rounded-[2.5rem] border border-secondary/10"
               >
-                <h3 className="text-xl font-bold mb-4">Inquiry Support</h3>
-                <p className="text-slate-400 text-sm mb-6">Need specific technical specifications or a bulk quote?</p>
-                <div className="space-y-4 mb-8">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 rounded-full bg-[#86BBD8]/20 flex items-center justify-center text-[#86BBD8]">
-                      <ArrowRight className="w-4 h-4" />
-                    </div>
-                    <span className="text-sm">24-hour response time</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 rounded-full bg-[#86BBD8]/20 flex items-center justify-center text-[#86BBD8]">
-                      <ArrowRight className="w-4 h-4" />
-                    </div>
-                    <span className="text-sm">Technical expert consultation</span>
-                  </div>
-                </div>
-                <Button className="w-full bg-white text-slate-900 hover:bg-slate-100" onClick={() => navigate("/contact")}>Send Technical Inquiry</Button>
+                 <h3 className="text-xl font-black text-primary mb-6">Need Support?</h3>
+                 <p className="text-muted-foreground text-sm mb-8">Our engineers are available for technical consultation and deployment support.</p>
+                 <Button variant="outline" className="w-full" onClick={() => navigate("/contact")}>
+                    Talk to an Engineer
+                 </Button>
               </motion.div>
             </div>
           </div>

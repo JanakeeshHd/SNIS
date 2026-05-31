@@ -14,15 +14,15 @@ export const Trust = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
           {/* Satisfaction Dashboard */}
           <div className="lg:col-span-4 space-y-8">
-            <div className="p-10 bg-[#DAF7DC] rounded-[3rem] border border-slate-100 shadow-soft">
-              <h2 className="text-3xl font-black text-[#2F4858] mb-6">Market Reputation</h2>
+            <div className="p-10 bg-bg-light rounded-[3rem] border border-slate-100 shadow-soft">
+              <h2 className="text-3xl font-black text-foreground mb-6">Market Reputation</h2>
               <div className="flex items-center space-x-4 mb-8">
-                <div className="text-6xl font-black text-[#2F4858]">4.8</div>
+                <div className="text-6xl font-black text-secondary">4.8</div>
                 <div>
-                   <div className="flex text-[#9EE493]">
+                   <div className="flex text-accent">
                       {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-current" />)}
                    </div>
-                   <div className="text-sm font-bold text-slate-400 mt-1 uppercase tracking-widest">Based on 500+ Clients</div>
+                   <div className="text-sm font-bold text-muted-foreground mt-1 uppercase tracking-widest">Based on 500+ Clients</div>
                 </div>
               </div>
               
@@ -34,15 +34,15 @@ export const Trust = () => {
                 ].map((stat) => (
                   <div key={stat.label}>
                     <div className="flex justify-between text-xs font-black uppercase tracking-wider mb-2">
-                      <span className="text-slate-500">{stat.label}</span>
-                      <span className="text-[#2F4858]">{stat.value}%</span>
+                      <span className="text-muted-foreground">{stat.label}</span>
+                      <span className="text-secondary">{stat.value}%</span>
                     </div>
-                    <div className="h-2 w-full bg-slate-200 rounded-full overflow-hidden">
+                    <div className="h-2 w-full bg-muted rounded-full overflow-hidden">
                       <motion.div 
                         initial={{ width: 0 }}
                         whileInView={{ width: `${stat.value}%` }}
                         transition={{ duration: 1, delay: 0.5 }}
-                        className="h-full bg-[#9EE493] rounded-full" 
+                        className="h-full bg-secondary rounded-full" 
                       />
                     </div>
                   </div>
@@ -54,8 +54,8 @@ export const Trust = () => {
           {/* Testimonials Grid */}
           <div className="lg:col-span-8 space-y-12">
             <div>
-              <div className="text-[#336699] font-bold uppercase tracking-widest text-xs mb-4">Client Testimonials</div>
-              <h3 className="text-4xl font-black text-[#2F4858] mb-10 tracking-tight">Voices of Industrial Excellence</h3>
+              <div className="text-accent font-bold uppercase tracking-widest text-xs mb-4">Client Testimonials</div>
+              <h3 className="text-4xl font-black text-foreground mb-10 tracking-tight">Voices of Industrial Excellence</h3>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -66,29 +66,29 @@ export const Trust = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.1 }}
                   viewport={{ once: true }}
-                  className="p-8 bg-white rounded-3xl border border-slate-100 shadow-premium hover:border-[#86BBD8] transition-colors"
+                  className="p-8 bg-white rounded-3xl border border-secondary/10 shadow-premium hover:border-accent transition-all duration-300"
                 >
-                  <div className="flex text-[#9EE493] mb-6">
+                  <div className="flex text-accent mb-6">
                     {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-current" />)}
                   </div>
-                  <p className="text-slate-600 font-medium leading-relaxed mb-8 italic">"{review.text}"</p>
+                  <p className="text-muted-foreground font-medium leading-relaxed mb-8 italic">"{review.text}"</p>
                   <div className="flex items-center justify-between pt-6 border-t border-slate-50">
                     <div>
-                      <div className="text-sm font-black text-[#2F4858]">{review.name}</div>
-                      <div className="text-[10px] font-black text-slate-400 uppercase tracking-widest">{review.company}</div>
+                      <div className="text-sm font-black text-foreground">{review.name}</div>
+                      <div className="text-[10px] font-black text-muted-foreground uppercase tracking-widest">{review.company}</div>
                     </div>
                     <div className="text-[10px] font-bold text-slate-300 uppercase tracking-tighter">{review.date}</div>
                   </div>
                 </motion.div>
               ))}
               
-              <div className="p-8 bg-[#2F4858] rounded-3xl flex flex-col justify-center items-center text-center text-white relative overflow-hidden group cursor-pointer">
+              <div className="p-8 bg-primary rounded-3xl flex flex-col justify-center items-center text-center text-white relative overflow-hidden group cursor-pointer shadow-glow-blue border border-white/5">
                  <div className="relative z-10">
-                    <MessageSquare className="w-12 h-12 mb-4 mx-auto text-[#9EE493]" />
+                    <MessageSquare className="w-12 h-12 mb-4 mx-auto text-accent" />
                     <h4 className="text-xl font-black mb-2">Write a Review</h4>
-                    <p className="text-blue-100 text-sm font-medium">Share your experience with us</p>
+                    <p className="text-white/60 text-sm font-medium">Share your experience with us</p>
                  </div>
-                 <div className="absolute inset-0 bg-[#9EE493] opacity-0 group-hover:opacity-10 transition-opacity" />
+                 <div className="absolute inset-0 bg-accent opacity-0 group-hover:opacity-10 transition-opacity" />
               </div>
             </div>
           </div>

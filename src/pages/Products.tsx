@@ -20,9 +20,9 @@ const Products = () => {
   return (
     <Layout>
       {/* Header */}
-      <section className="bg-[#DAF7DC] border-b py-16">
+      <section className="bg-slate-50 border-b py-16">
         <div className="container mx-auto px-4 text-center max-w-4xl">
-          <h1 className="text-4xl md:text-5xl font-bold text-[#2F4858] mb-6">Our Products</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-industrial-blue mb-6">Our Products</h1>
           <p className="text-slate-600 text-lg leading-relaxed">
             {SITE_CONTENT.products.intro}
           </p>
@@ -52,9 +52,9 @@ const Products = () => {
             ))}
           </div>
           <div className="relative w-full md:w-96">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
             <Input 
-              className="pl-10 h-12 rounded-full" 
+              className="pl-10 h-12 rounded-full bg-bg-light border-none focus:ring-2 focus:ring-accent/20" 
               placeholder="Search products..." 
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
@@ -74,22 +74,22 @@ const Products = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="group border border-slate-100 rounded-3xl overflow-hidden hover:shadow-2xl transition-all"
+                className="group border border-secondary/10 rounded-3xl overflow-hidden hover:shadow-card-hover hover:border-accent transition-all duration-300"
               >
-                <div className="aspect-[4/3] bg-slate-100 relative overflow-hidden">
+                <div className="aspect-[4/3] bg-muted relative overflow-hidden">
                   {/* Placeholder for product image */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-                  <div className="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-[#2F4858] uppercase">
+                  <div className="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-industrial-blue uppercase">
                     Category
                   </div>
                 </div>
                 <div className="p-8">
-                  <h3 className="text-2xl font-bold text-[#2F4858] mb-4 group-hover:text-[#86BBD8] transition-colors">{category.title}</h3>
+                  <h3 className="text-2xl font-bold text-industrial-blue mb-4 group-hover:text-tech-cyan transition-colors">{category.title}</h3>
                   <p className="text-slate-600 mb-8 line-clamp-3">
                     {category.description}
                   </p>
                   <Link to={`/products/${category.id}`}>
-                    <Button className="w-full bg-[#DAF7DC] hover:bg-[#2F4858] hover:text-white text-[#2F4858] border-none shadow-none group/btn">
+                    <Button className="w-full bg-slate-50 hover:bg-industrial-blue hover:text-white text-industrial-blue border-none shadow-none group/btn">
                       View Range
                       <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                     </Button>
@@ -100,12 +100,12 @@ const Products = () => {
           </div>
 
           <div className="mt-24 pt-24 border-t">
-            <h2 className="text-3xl font-bold text-[#2F4858] mb-12 text-center">Featured Technical Solutions</h2>
+            <h2 className="text-3xl font-bold text-industrial-blue mb-12 text-center">Featured Technical Solutions</h2>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {SITE_CONTENT.products.featured.map((item, i) => (
-                <div key={i} className="p-6 rounded-2xl bg-[#DAF7DC] border border-slate-100 hover:border-[#86BBD8] transition-colors">
-                  <div className="text-xs font-bold text-[#86BBD8] uppercase mb-2">{item.category}</div>
-                  <h4 className="font-bold text-[#2F4858]">{item.name}</h4>
+                <div key={i} className="p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:border-tech-cyan transition-colors">
+                  <div className="text-xs font-bold text-tech-cyan uppercase mb-2">{item.category}</div>
+                  <h4 className="font-bold text-industrial-blue">{item.name}</h4>
                 </div>
               ))}
             </div>

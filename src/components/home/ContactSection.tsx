@@ -7,8 +7,8 @@ import { SITE_CONTENT } from "@/data/content";
 
 export const ContactSection = () => {
   return (
-    <section className="py-24 bg-white">
-      <div className="container mx-auto px-4">
+    <section className="py-24 bg-primary relative overflow-hidden bg-tech-grid">
+      <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -17,51 +17,51 @@ export const ContactSection = () => {
             className="space-y-12"
           >
             <div>
-              <h2 className="text-4xl font-bold text-[#2F4858] mb-6">Have questions? Feel free to write us</h2>
-              <p className="text-slate-600 text-lg">
+              <h2 className="text-4xl font-bold text-white mb-6">Have questions? Feel free to write us</h2>
+              <p className="text-white/70 text-lg">
                 Get in touch with our experts for any industrial automation or electrical switchgear inquiries.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="flex items-start space-x-4 p-6 rounded-2xl bg-[#DAF7DC] border border-slate-100">
-                <div className="w-12 h-12 rounded-xl bg-[#2F4858]/10 flex items-center justify-center text-[#2F4858] shrink-0">
+              <div className="flex items-start space-x-4 p-6 rounded-2xl bg-white/5 border border-white/10 group hover:border-accent/50 transition-all duration-300">
+                <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent shrink-0 group-hover:bg-accent group-hover:text-white transition-all duration-300">
                   <Phone className="w-6 h-6" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-[#2F4858] mb-1">Call Expert</h4>
-                  <p className="text-slate-600 font-medium">{SITE_CONTENT.contact.phone}</p>
+                  <h4 className="font-bold text-white mb-1">Call Expert</h4>
+                  <p className="text-white/70 font-medium">{SITE_CONTENT.contact.phone}</p>
                 </div>
               </div>
 
-              <div className="flex items-start space-x-4 p-6 rounded-2xl bg-[#DAF7DC] border border-slate-100">
-                <div className="w-12 h-12 rounded-xl bg-[#336699]/10 flex items-center justify-center text-[#336699] shrink-0">
+              <div className="flex items-start space-x-4 p-6 rounded-2xl bg-white/5 border border-white/10 group hover:border-accent/50 transition-all duration-300">
+                <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent shrink-0 group-hover:bg-accent group-hover:text-white transition-all duration-300">
                   <Mail className="w-6 h-6" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-[#2F4858] mb-1">Write Email</h4>
-                  <p className="text-slate-600 font-medium">{SITE_CONTENT.contact.email}</p>
-                  <p className="text-slate-400 text-xs mt-1">{SITE_CONTENT.contact.salesEmail}</p>
+                  <h4 className="font-bold text-white mb-1">Write Email</h4>
+                  <p className="text-white/70 font-medium">{SITE_CONTENT.contact.email}</p>
+                  <p className="text-white/40 text-xs mt-1">{SITE_CONTENT.contact.salesEmail}</p>
                 </div>
               </div>
 
-              <div className="flex items-start space-x-4 p-6 rounded-2xl bg-[#DAF7DC] border border-slate-100">
-                <div className="w-12 h-12 rounded-xl bg-[#9EE493]/20 flex items-center justify-center text-[#2F4858] shrink-0">
+              <div className="flex items-start space-x-4 p-6 rounded-2xl bg-white/5 border border-white/10 group hover:border-accent/50 transition-all duration-300">
+                <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent shrink-0 group-hover:bg-accent group-hover:text-white transition-all duration-300">
                   <MapPin className="w-6 h-6" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-[#2F4858] mb-1">Visit Office</h4>
-                  <p className="text-slate-600 font-medium">{SITE_CONTENT.contact.address}</p>
+                  <h4 className="font-bold text-white mb-1">Visit Office</h4>
+                  <p className="text-white/70 font-medium">{SITE_CONTENT.contact.address}</p>
                 </div>
               </div>
 
-              <div className="flex items-start space-x-4 p-6 rounded-2xl bg-[#DAF7DC] border border-slate-100">
-                <div className="w-12 h-12 rounded-xl bg-[#86BBD8]/20 flex items-center justify-center text-[#2F4858] shrink-0">
+              <div className="flex items-start space-x-4 p-6 rounded-2xl bg-white/5 border border-white/10 group hover:border-accent/50 transition-all duration-300">
+                <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent shrink-0 group-hover:bg-accent group-hover:text-white transition-all duration-300">
                   <MessageSquare className="w-6 h-6" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-[#2F4858] mb-1">WhatsApp</h4>
-                  <p className="text-slate-600 font-medium">Instant Response</p>
+                  <h4 className="font-bold text-white mb-1">WhatsApp</h4>
+                  <p className="text-white/70 font-medium">Instant Response</p>
                 </div>
               </div>
             </div>
@@ -72,36 +72,36 @@ export const ContactSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="bg-white rounded-3xl p-8 md:p-12 shadow-2xl border border-slate-100 relative"
+            className="bg-white/5 backdrop-blur-xl rounded-3xl p-8 md:p-12 shadow-glow-blue border border-white/10 relative"
           >
-            <h3 className="text-2xl font-bold text-[#2F4858] mb-8">Send an Inquiry</h3>
+            <h3 className="text-2xl font-bold text-white mb-8">Send an Inquiry</h3>
             <form className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label className="text-sm font-bold text-slate-700">Your Name</label>
-                  <Input placeholder="John Doe" className="h-12" />
+                  <label className="text-sm font-bold text-white/70">Your Name</label>
+                  <Input placeholder="John Doe" className="h-12 bg-white/5 border-white/10 text-white placeholder:text-white/20 focus:border-accent/50 focus:ring-accent/20" />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-sm font-bold text-slate-700">Email Address</label>
-                  <Input type="email" placeholder="john@example.com" className="h-12" />
+                  <label className="text-sm font-bold text-white/70">Email Address</label>
+                  <Input type="email" placeholder="john@example.com" className="h-12 bg-white/5 border-white/10 text-white placeholder:text-white/20 focus:border-accent/50 focus:ring-accent/20" />
                 </div>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label className="text-sm font-bold text-slate-700">Phone Number</label>
-                  <Input placeholder="+91 00000 00000" className="h-12" />
+                  <label className="text-sm font-bold text-white/70">Phone Number</label>
+                  <Input placeholder="+91 00000 00000" className="h-12 bg-white/5 border-white/10 text-white placeholder:text-white/20 focus:border-accent/50 focus:ring-accent/20" />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-sm font-bold text-slate-700">Industry Sector</label>
-                  <Input placeholder="Automotive" className="h-12" />
+                  <label className="text-sm font-bold text-white/70">Industry Sector</label>
+                  <Input placeholder="Automotive" className="h-12 bg-white/5 border-white/10 text-white placeholder:text-white/20 focus:border-accent/50 focus:ring-accent/20" />
                 </div>
               </div>
               <div className="space-y-2">
-                <label className="text-sm font-bold text-slate-700">Your Message</label>
-                <Textarea placeholder="Tell us about your requirements..." className="min-h-[120px]" />
+                <label className="text-sm font-bold text-white/70">Your Message</label>
+                <Textarea placeholder="Tell us about your requirement..." className="min-h-[120px] bg-white/5 border-white/10 text-white placeholder:text-white/20 focus:border-accent/50 focus:ring-accent/20" />
               </div>
-              <Button size="lg" className="w-full bg-[#9EE493] hover:bg-[#9EE493]/90 text-[#2F4858] h-14 text-lg">
-                Send Message
+              <Button size="lg" variant="cta" className="w-full h-14 text-lg">
+                Submit Inquiry
                 <Send className="ml-2 w-5 h-5" />
               </Button>
             </form>

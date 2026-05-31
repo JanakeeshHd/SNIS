@@ -14,7 +14,7 @@ export const Partners = () => {
     <section className="py-20 bg-white border-y border-slate-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h4 className="text-xs font-black text-slate-400 uppercase tracking-[0.3em] mb-4">Our Technology Partners</h4>
+          <h4 className="text-xs font-black text-muted-foreground uppercase tracking-[0.3em] mb-4">Our Technology Partners</h4>
         </div>
         
         <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-40 grayscale hover:grayscale-0 transition-all duration-700">
@@ -25,7 +25,7 @@ export const Partners = () => {
               whileInView={{ opacity: 1 }}
               transition={{ delay: i * 0.1 }}
               viewport={{ once: true }}
-              className="text-2xl font-black text-slate-900 tracking-tighter"
+              className="text-2xl font-black text-foreground tracking-tighter"
             >
               {partner}
             </motion.div>
