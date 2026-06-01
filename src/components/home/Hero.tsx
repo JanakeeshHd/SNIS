@@ -98,9 +98,9 @@ export const Hero = () => {
             <motion.div 
               animate={{ y: [0, -20, 0] }}
               transition={{ duration: 4, repeat: Infinity }}
-              className="absolute -top-10 -right-10 bg-cta-gradient text-white p-10 rounded-[3rem] shadow-glow z-20 text-center border border-white/20"
+              className="absolute -top-6 -right-6 bg-orange-500 text-white p-6 rounded-3xl shadow-glow z-20 text-center border border-white/20"
             >
-              <div className="text-4xl font-black">15+</div>
+              <div className="text-3xl font-black">15+</div>
               <div className="text-[10px] font-black uppercase tracking-widest opacity-80 leading-tight">Years of<br />Excellence</div>
             </motion.div>
           </motion.div>
