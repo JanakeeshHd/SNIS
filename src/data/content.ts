@@ -1,4 +1,9 @@
 import automotiveImg from "@/assets/Automotive.png";
+import foodImg from "@/assets/food.png";
+import logisticImg from "@/assets/logistic.png";
+import mobileAppsImg from "@/assets/mobile applications.png";
+import machineToolImg from "@/assets/machine tool.png";
+import roboticsImg from "@/assets/robotics.png";
 
 export interface CompanyInfo {
   name: string;
@@ -182,30 +187,35 @@ export const SITE_CONTENT: SiteContent = {
         title: "Food & Beverage",
         description:
           "This industry places extreme demands on all of its facilities and systems. Processes and products in the food sector must be clean and safe.",
+        image: foodImg,
       },
       {
         id: "logistics",
         title: "Logistics",
         description:
           "Together we can create connectivity solutions that make electrical systems more modular and easier to install - saving installation time, increasing productivity and adaptable to your future needs.",
+        image: logisticImg,
       },
       {
         id: "mobile-applications",
         title: "Mobile Applications",
         description:
           "Dried up fields where agricultural machinery is raising dust. Icy roads, which are cleared by gritting vehicles. Drenched forest floors, where loggers struggle with mud and dirt. We, the automation experts and co-founders of decentralized installation technology, offer a modular product system.",
+        image: mobileAppsImg,
       },
       {
         id: "robotics",
         title: "Robotics",
         description:
           "The smallest bus modules from Murrelektronik even fit on axis 6 of a robot arm this allows distributed installation.",
+        image: roboticsImg,
       },
       {
         id: "machine-tools",
         title: "Machine tools",
         description:
           "Machine tooling is a wide-ranging industry. Customers needs and wishes are as diverse as the machines and plants themselves.",
+        image: machineToolImg,
       },
     ],
   }

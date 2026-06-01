@@ -3,6 +3,7 @@ import { CheckCircle2, Building2, Users, FileCheck, Landmark, Globe2 } from "luc
 import { SITE_CONTENT } from "@/data/content";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import aboutImage from "@/assets/about.png";
 
 const stats = [
   { label: "Nature of Business", value: "Wholesaler / Distributor", icon: <Building2 className="w-5 h-5" /> },
@@ -93,9 +94,11 @@ export const CompanyOverview = () => {
               className="relative"
             >
               <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl">
-                <div className="aspect-[4/3] bg-muted flex items-center justify-center">
-                  <span className="text-muted-foreground/40 font-medium italic">SNIS Industries Headquarters</span>
-                </div>
+                <img
+                  src={aboutImage}
+                  alt="SNIS Industries overview"
+                  className="aspect-[4/3] w-full object-cover"
+                />
               </div>
               <div className="absolute -bottom-10 -right-10 z-20 bg-accent text-white p-8 rounded-2xl shadow-glow hidden md:block">
                 <div className="text-4xl font-bold mb-1">15+</div>

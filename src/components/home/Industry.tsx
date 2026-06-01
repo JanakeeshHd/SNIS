@@ -54,13 +54,9 @@ export const Industry = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/40 to-transparent z-10" />
               <div className="absolute inset-0 bg-secondary/20 group-hover:bg-secondary/10 transition-colors duration-500" />
 
-              <div className="absolute inset-0 flex items-center justify-center text-white/10 font-bold italic group-hover:scale-110 transition-transform duration-1000">
-                {sector.title} Visual
-              </div>
-
               <div className="absolute bottom-0 left-0 w-full p-10 z-20">
                 <h3 className="text-3xl font-black text-white mb-4 group-hover:text-accent transition-colors">{sector.title}</h3>
-                <p className="text-white/60 font-medium leading-relaxed mb-8 opacity-0 group-hover:opacity-100 h-0 group-hover:h-auto overflow-hidden transition-all duration-500">
+                <p className="text-white font-medium leading-relaxed mb-8 opacity-0 group-hover:opacity-100 h-0 group-hover:h-auto overflow-hidden transition-all duration-500">
                   {sector.description}
                 </p>
                 <Link to={`/industries#${sector.id}`}>

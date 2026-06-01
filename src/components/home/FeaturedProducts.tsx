@@ -2,19 +2,19 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { SITE_CONTENT } from "@/data/content";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export const FeaturedProducts = () => {
-  const [activeFilter, setActiveFilter] = useState("All");
   const maxProductsToShow = 4;
-  
-  const categories = ["All", ...new Set(SITE_CONTENT.products.featured.map(p => p.category))];
-  
-  const filteredProducts = (activeFilter === "All"
-    ? SITE_CONTENT.products.featured
-    : SITE_CONTENT.products.featured.filter(p => p.category === activeFilter)
-  ).slice(0, maxProductsToShow);
+
+  const categories = [...new Set(SITE_CONTENT.products.featured.map(p => p.category))];
+  const [activeFilter, setActiveFilter] = useState(categories[0] || "");
+
+  const filteredProducts = SITE_CONTENT.products.featured
+    .filter(p => !activeFilter || p.category === activeFilter)
+    .slice(0, maxProductsToShow);
 
   return (
     <section className="py-32 bg-bg-light">
@@ -27,7 +27,8 @@ export const FeaturedProducts = () => {
               Precision-engineered components from global industry leaders, curated for the highest standards of reliability.
             </p>
           </div>
-          <div className="flex flex-wrap items-center gap-2 p-1 bg-slate-200/50 rounded-2xl">
+          <div className="flex items-center gap-4">
+            <div className="flex flex-wrap items-center gap-2 p-1 bg-slate-200/50 rounded-2xl">
             {categories.map(cat => (
               <button
                 key={cat}
@@ -42,6 +43,7 @@ export const FeaturedProducts = () => {
                 {cat}
               </button>
             ))}
+            </div>
           </div>
         </div>
 
@@ -100,11 +102,11 @@ export const FeaturedProducts = () => {
                   </p>
                   
                   <div className="mt-auto pt-4 border-t border-slate-50 flex items-center justify-between">
-                    <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">Inquiry Only</span>
-                    <button className="flex items-center space-x-2 text-secondary font-black text-sm group/btn hover:text-accent transition-colors">
-                      <span>Get Quote</span>
-                      <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-                    </button>
+                    <div className="flex items-center gap-3">
+                      <Button variant="default" className="rounded-xl font-bold px-6">
+                        Inquiry
+                      </Button>
+                    </div>
                   </div>
                 </div>
               </motion.div>

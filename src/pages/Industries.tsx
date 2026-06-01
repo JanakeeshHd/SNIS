@@ -6,6 +6,12 @@ import { CheckCircle2, Download, ArrowRight } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { cn } from "@/lib/utils";
+import automotiveImage from "@/assets/Automotive2.png";
+import foodImage from "@/assets/food2.png";
+import logisticImage from "@/assets/logistic2.png";
+import roboticsImage2 from "@/assets/robotics2.png";
+import mobileAppsImage2 from "@/assets/mobile application2.png";
+import machineToolImage2 from "@/assets/machine tool2.png";
 
 const Industries = () => {
   const navigate = useNavigate();
@@ -19,6 +25,16 @@ const Industries = () => {
       }
     }
   }, []);
+
+  const sectors = SITE_CONTENT.industries.sectors.map((sector) => {
+    if (sector.id === "automotive") return { ...sector, image: automotiveImage };
+    if (sector.id === "food-beverage") return { ...sector, image: foodImage };
+    if (sector.id === "logistics") return { ...sector, image: logisticImage };
+    if (sector.id === "robotics") return { ...sector, image: roboticsImage2 };
+    if (sector.id === "mobile-applications") return { ...sector, image: mobileAppsImage2 };
+    if (sector.id === "machine-tools") return { ...sector, image: machineToolImage2 };
+    return sector;
+  });
 
   return (
     <Layout>
@@ -42,7 +58,7 @@ const Industries = () => {
       {/* Full Content Industry List */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 space-y-32">
-          {SITE_CONTENT.industries.sectors.map((sector, i) => (
+          {sectors.map((sector, i) => (
             <div 
               key={sector.id} 
               id={sector.id} 
