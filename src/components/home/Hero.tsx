@@ -56,7 +56,7 @@ export const Hero = () => {
             <Button 
               size="lg" 
               variant="cta"
-              className="px-12 py-8 text-lg group"
+              className="px-12 py-8 text-lg rounded-full group"
             >
               Browse Product Range
               <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" />
