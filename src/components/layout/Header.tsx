@@ -71,12 +71,15 @@ export const Header = () => {
     )}>
       <div className="container mx-auto px-4 flex h-16 items-center justify-between">
         <div className="flex items-center gap-8">
-          <Link to="/" className="flex items-center space-x-2">
+        <Link to="/" className="flex items-center space-x-2 md:space-x-3">
             <img 
               src={logo} 
               alt="SNIS Industries Logo" 
-              className="h-12 w-auto object-contain"
+            className="h-12 w-auto object-contain shrink-0"
             />
+          <span className="text-white font-bold text-lg md:text-xl lg:hidden truncate">
+            SNIS Industries
+          </span>
           </Link>
 
           <NavigationMenu className="hidden lg:flex">
