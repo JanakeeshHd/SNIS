@@ -44,7 +44,7 @@ export const Industry = () => {
             >
               {/* Mobile Image - appears first on mobile */}
               {sector.image && (
-                <div className="lg:hidden w-full h-64 sm:h-72 rounded-2xl overflow-hidden">
+                <div className="order-1 lg:hidden w-full h-64 sm:h-72 rounded-2xl overflow-hidden">
                   <img src={sector.image} alt={`${sector.title} visual`} className="w-full h-full object-cover" loading="lazy" />
                 </div>
               )}
@@ -67,7 +67,7 @@ export const Industry = () => {
               )}
 
               {/* Content Wrapper - absolute overlay on desktop, flex container on mobile */}
-              <div className="relative flex flex-col flex-1 p-8 lg:p-10 lg:absolute lg:bottom-0 lg:left-0 lg:w-full z-20 bg-primary/20 lg:bg-transparent">
+              <div className="relative flex flex-col order-2 lg:order-none lg:flex-1 p-8 lg:p-10 lg:absolute lg:bottom-0 lg:left-0 lg:w-full z-20 bg-primary/20 lg:bg-transparent">
                 <h3 className="text-2xl lg:text-3xl font-black text-white mb-4 lg:group-hover:text-accent transition-colors">{sector.title}</h3>
 
                 <p className="text-white/60 font-medium leading-relaxed mb-6 lg:mb-8 lg:opacity-0 lg:group-hover:opacity-100 lg:h-0 lg:group-hover:h-auto overflow-hidden transition-all duration-500">
