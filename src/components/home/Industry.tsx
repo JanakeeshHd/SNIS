@@ -42,6 +42,13 @@ export const Industry = () => {
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className="group relative flex flex-col lg:block h-auto lg:h-[450px] rounded-[2.5rem] overflow-hidden bg-white/5 border border-white/10"
             >
+              {/* Mobile Image - appears first on mobile */}
+              {sector.image && (
+                <div className="lg:hidden w-full h-64 sm:h-72 rounded-2xl overflow-hidden">
+                  <img src={sector.image} alt={`${sector.title} visual`} className="w-full h-full object-cover" loading="lazy" />
+                </div>
+              )}
+
               {/* Desktop Image - as a background */}
               {sector.image && (
                 <div className="hidden lg:block absolute inset-0 w-full h-full z-0">
@@ -61,20 +68,13 @@ export const Industry = () => {
 
               {/* Content Wrapper - absolute overlay on desktop, flex container on mobile */}
               <div className="relative flex flex-col flex-1 p-8 lg:p-10 lg:absolute lg:bottom-0 lg:left-0 lg:w-full z-20 bg-primary/20 lg:bg-transparent">
-                {/* Mobile Image - in content flow */}
-                {sector.image && (
-                  <div className="relative order-1 lg:hidden w-full h-64 sm:h-72 my-4 rounded-2xl overflow-hidden">
-                    <img src={sector.image} alt={`${sector.title} visual`} className="w-full h-full object-cover" loading="lazy" />
-                  </div>
-                )}
+                <h3 className="text-2xl lg:text-3xl font-black text-white mb-4 lg:group-hover:text-accent transition-colors">{sector.title}</h3>
 
-                <h3 className="order-2 lg:order-none text-2xl lg:text-3xl font-black text-white mb-4 lg:group-hover:text-accent transition-colors">{sector.title}</h3>
-
-                <p className="order-3 lg:order-none text-white/60 font-medium leading-relaxed mb-6 lg:mb-8 lg:opacity-0 lg:group-hover:opacity-100 lg:h-0 lg:group-hover:h-auto overflow-hidden transition-all duration-500">
+                <p className="text-white/60 font-medium leading-relaxed mb-6 lg:mb-8 lg:opacity-0 lg:group-hover:opacity-100 lg:h-0 lg:group-hover:h-auto overflow-hidden transition-all duration-500">
                   {sector.description}
                 </p>
 
-                <div className="order-4 lg:order-none mt-auto">
+                <div className="mt-auto">
                   <Link to={`/industries#${sector.id}`}>
                     <button className="flex items-center space-x-3 text-white font-black text-sm uppercase tracking-widest group/btn">
                       <span>Explore Sector</span>
