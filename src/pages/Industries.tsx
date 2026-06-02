@@ -78,9 +78,6 @@ const Industries = () => {
                   )}
                 >
                   <div>
-                    <div className="inline-block px-4 py-1 rounded-full bg-accent/10 text-accent text-xs font-black uppercase tracking-widest mb-6">
-                      Industrial Sector
-                    </div>
                     <h2 className="text-4xl font-black text-primary mb-6">{sector.title}</h2>
                     <p className="text-xl text-muted-foreground leading-relaxed">
                       {sector.description}
