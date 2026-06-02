@@ -1,8 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Cpu, Network, Cable, Box } from "lucide-react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { SITE_CONTENT } from "@/data/content";
-import { cn } from "@/lib/utils";
 
 const iconMap = {
   "electronics-in-cabinet": <Cpu className="w-8 h-8" />,
@@ -12,7 +11,6 @@ const iconMap = {
 };
 
 export const Categories = () => {
-  const navigate = useNavigate();
   return (
     <section className="py-32 bg-white relative overflow-hidden">
       {/* Decorative background element */}
