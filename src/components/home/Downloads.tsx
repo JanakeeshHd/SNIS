@@ -79,35 +79,32 @@ export const Downloads = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: i * 0.06 }}
                     viewport={{ once: true }}
-                    className="p-5 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-md transition-all duration-200 group"
+                    className="p-5 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-md transition-all duration-200 group flex flex-col"
                   >
-                    <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                    <div className="flex flex-col sm:flex-row items-start gap-4">
                       <div className="flex-shrink-0 w-20 h-20 sm:w-24 sm:h-24 rounded-lg bg-bg-light border border-slate-100 flex items-center justify-center">
                         <FileText className="w-6 h-6 text-muted-foreground" />
                       </div>
 
                       <div className="flex-1 w-full">
-                        <div className="flex items-start justify-between gap-4">
-                          <div>
-                            <div className="text-xs uppercase font-black text-accent mb-2">
-                              {res.url?.includes('murrelektronik') ? 'Murrelektronik' : res.url?.includes('helukabel') ? 'Helukabel' : res.url?.includes('oxomi') ? 'Oxomi' : 'External'}
-                            </div>
-                            <h4 className="font-black text-foreground group-hover:text-secondary transition-colors text-lg">{res.title}</h4>
-                            <p className="text-sm text-muted-foreground mt-2 line-clamp-2">{res.description}</p>
+                        <div>
+                          <div className="text-xs uppercase font-black text-accent mb-2">
+                            {res.url?.includes('murrelektronik') ? 'Murrelektronik' : res.url?.includes('helukabel') ? 'Helukabel' : res.url?.includes('oxomi') ? 'Oxomi' : 'External'}
                           </div>
-
-                          <div className="ml-2 flex-shrink-0">
-                            {res.url ? (
-                              <a href={res.url} target="_blank" rel="noopener noreferrer">
-                                <Button variant="cta" className="px-4 py-2">Download</Button>
-                              </a>
-                            ) : (
-                              <Button variant="outline" className="px-4 py-2">Unavailable</Button>
-                            )}
-                          </div>
+                          <h4 className="font-black text-foreground group-hover:text-secondary transition-colors text-lg">{res.title}</h4>
+                          <p className="text-sm text-muted-foreground mt-2 line-clamp-2">{res.description}</p>
                         </div>
                         <div className="mt-3 text-xs text-muted-foreground/60">{res.type}{res.size ? ` • ${res.size}` : ''}</div>
                       </div>
+                    </div>
+                    <div className="mt-4">
+                      {res.url ? (
+                        <a href={res.url} target="_blank" rel="noopener noreferrer" className="block">
+                          <Button variant="cta" className="w-full px-4 py-2 hover:scale-105 hover:shadow-lg transition-all duration-300">Downloads</Button>
+                        </a>
+                      ) : (
+                        <Button variant="outline" className="w-full px-4 py-2 hover:scale-105 hover:shadow-lg transition-all duration-300">Unavailable</Button>
+                      )}
                     </div>
                   </motion.div>
                 ))}
