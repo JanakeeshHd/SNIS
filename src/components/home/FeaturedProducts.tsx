@@ -101,10 +101,10 @@ export const FeaturedProducts = () => {
                     <img
                       src={getProductImage(product.name, product.category)}
                       alt={product.name}
-                      className="w-full h-full object-contain p-6 group-hover:scale-110 transition-transform duration-700"
+                      className="w-full h-full object-contain p-6 group-hover:scale-125 group-hover:brightness-110 transition-all duration-700 cursor-pointer"
                     />
                   ) : (
-                    <div className="w-full h-full flex items-center justify-center text-slate-300 group-hover:scale-110 transition-transform duration-700">
+                    <div className="w-full h-full flex items-center justify-center text-slate-300 group-hover:scale-125 transition-transform duration-700 cursor-pointer">
                       <div className="relative">
                          <div className="w-24 h-24 border-2 border-slate-200 rounded-lg transform rotate-12 group-hover:rotate-45 transition-transform" />
                          <div className="absolute top-0 left-0 w-24 h-24 border-2 border-accent/20 rounded-lg transform -rotate-12 group-hover:rotate-0 transition-transform" />
