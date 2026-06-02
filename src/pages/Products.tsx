@@ -81,9 +81,6 @@ const Products = () => {
                     className={`flex-1 space-y-6 order-2 ${i % 2 === 1 ? 'lg:order-2' : 'lg:order-1'}`}
                   >
                     <div>
-                      <div className="inline-block px-4 py-1 rounded-full bg-accent/10 text-accent text-xs font-black uppercase tracking-widest mb-4">
-                        Product Category
-                      </div>
                       <h2 className="text-3xl font-black text-primary mb-4">{category.title}</h2>
                       <p className="text-lg text-muted-foreground leading-relaxed">
                         {category.description}

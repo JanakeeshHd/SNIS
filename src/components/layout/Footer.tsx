@@ -41,7 +41,7 @@ export const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-6 border-l-4 border-accent pl-3">Quick Links</h4>
             <ul className="space-y-4">
-              {["Home", "About Us", "Products", "Industries", "Contact Us"].map((link) => {
+              {["Home", "About Us", "Products", "Industries", "Downloads", "Contact Us"].map((link) => {
                 const to =
                   link === "Home"
                     ? "/"
