@@ -65,13 +65,16 @@ const Industries = () => {
               className="scroll-mt-32"
             >
               <div className="flex flex-col lg:flex-row gap-16 items-center">
+                
+                {/* TEXT CONTAINER */}
                 <motion.div
                   initial={{ opacity: 0, x: i % 2 === 0 ? -30 : 30 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   className={cn(
                     "flex-1 space-y-8",
-                    i % 2 === 1 ? "lg:order-2" : "lg:order-1"
+                    "order-2", /* Forces text below the image on mobile */
+                    i % 2 === 1 ? "lg:order-2" : "lg:order-1" /* Alternates on desktop */
                   )}
                 >
                   <div>
@@ -109,13 +112,15 @@ const Industries = () => {
                   </div>
                 </motion.div>
 
+                {/* IMAGE CONTAINER */}
                 <motion.div
                   initial={{ opacity: 0, scale: 0.9 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   className={cn(
                     "flex-1 relative aspect-video rounded-[3rem] overflow-hidden bg-bg-light border border-secondary/10 shadow-xl",
-                    i % 2 === 1 ? "lg:order-1" : "lg:order-2"
+                    "order-1", /* Forces image to the top on mobile */
+                    i % 2 === 1 ? "lg:order-1" : "lg:order-2" /* Alternates on desktop */
                   )}
                 >
                   {sector.image ? (
@@ -169,4 +174,3 @@ const Industries = () => {
 };
 
 export default Industries;
-
