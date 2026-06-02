@@ -18,6 +18,7 @@ const Products = () => {
     const matchesCategory = activeCategory === "All" || cat.title === activeCategory;
     return matchesSearch && matchesCategory;
   });
+  
   return (
     <Layout>
       {/* Header */}
@@ -71,11 +72,13 @@ const Products = () => {
             {filteredCategories.map((category, i) => (
               <div key={category.id} id={category.id} className="scroll-mt-32">
                 <div className="flex flex-col lg:flex-row gap-12 items-center">
+                  
+                  {/* TEXT CONTAINER */}
                   <motion.div
                     initial={{ opacity: 0, x: i % 2 === 0 ? -30 : 30 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
-                    className={`flex-1 space-y-6 ${i % 2 === 1 ? 'lg:order-2' : 'lg:order-1'}`}
+                    className={`flex-1 space-y-6 order-2 ${i % 2 === 1 ? 'lg:order-2' : 'lg:order-1'}`}
                   >
                     <div>
                       <div className="inline-block px-4 py-1 rounded-full bg-accent/10 text-accent text-xs font-black uppercase tracking-widest mb-4">
@@ -87,20 +90,19 @@ const Products = () => {
                       </p>
                     </div>
 
-                      <div className="mt-4">
-                        <Button variant="default" className="mr-4" onClick={() => navigate(`/products/${category.id}`)}>
-                          View Products
-                        </Button>
-                      </div>
-
-                      {/* products will be visible on the category detail page only */}
+                    <div className="mt-4">
+                      <Button variant="default" className="mr-4" onClick={() => navigate(`/products/${category.id}`)}>
+                        View Products
+                      </Button>
+                    </div>
                   </motion.div>
 
+                  {/* IMAGE CONTAINER */}
                   <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
-                    className={`flex-1 relative aspect-video rounded-[2rem] overflow-hidden bg-bg-light border border-secondary/10 shadow-md ${i % 2 === 1 ? 'lg:order-1' : 'lg:order-2'}`}
+                    className={`flex-1 relative aspect-video rounded-[2rem] overflow-hidden bg-bg-light border border-secondary/10 shadow-md order-1 ${i % 2 === 1 ? 'lg:order-1' : 'lg:order-2'}`}
                   >
                     {category.image ? (
                       <img src={category.image} alt={category.title} className="w-full h-full object-contain p-6" />
@@ -111,12 +113,11 @@ const Products = () => {
                     )}
                     <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
                   </motion.div>
+                  
                 </div>
               </div>
             ))}
           </div>
-
-          
         </div>
       </section>
     </Layout>
