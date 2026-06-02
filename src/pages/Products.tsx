@@ -91,9 +91,6 @@ const Products = () => {
                         <Button variant="default" className="mr-4" onClick={() => navigate(`/products/${category.id}`)}>
                           View Products
                         </Button>
-                        <Button variant="outline" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-                          Back to Top
-                        </Button>
                       </div>
 
                       {/* products will be visible on the category detail page only */}
@@ -106,7 +103,7 @@ const Products = () => {
                     className={`flex-1 relative aspect-video rounded-[2rem] overflow-hidden bg-bg-light border border-secondary/10 shadow-md ${i % 2 === 1 ? 'lg:order-1' : 'lg:order-2'}`}
                   >
                     {category.image ? (
-                      <img src={category.image} alt={category.title} className="w-full h-full object-cover" />
+                      <img src={category.image} alt={category.title} className="w-full h-full object-contain p-6" />
                     ) : (
                       <div className="w-full h-full flex items-center justify-center text-muted-foreground/20 italic font-bold text-2xl">
                         {category.title} Visual

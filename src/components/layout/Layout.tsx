@@ -5,6 +5,7 @@ import { Footer } from "./Footer";
 import { WhatsAppButton } from "../ui/WhatsAppButton";
 import { SchemaMarkup } from "./SchemaMarkup";
 import logo from "@/assets/snis-logo.png";
+import { GoToTop } from "../ui/GoToTop";
 
 interface LayoutProps {
   children: ReactNode;
@@ -30,6 +31,7 @@ export const Layout = ({ children }: LayoutProps) => {
       <main className="flex-grow">{children}</main>
       <Footer />
       <WhatsAppButton />
+      <GoToTop />
     </div>
   );
 };

@@ -8,7 +8,6 @@ import { FeaturedProducts } from "@/components/home/FeaturedProducts";
 import { CompanyOverview } from "@/components/home/CompanyOverview";
 import { Partners } from "@/components/home/Partners";
 import { Industry } from "@/components/home/Industry";
-import { Downloads } from "@/components/home/Downloads";
 import { ContactSection } from "@/components/home/ContactSection";
 
 const Home = () => {
@@ -29,10 +28,9 @@ const Home = () => {
       <Partners />
       <div id="featured"><FeaturedProducts /></div>
       <div id="about"><CompanyOverview /></div>
-      <div id="trust"><Trust /></div>
       <div id="categories"><Categories /></div>
       <div id="industries"><Industry /></div>
-      <div id="downloads"><Downloads /></div>
+      <div id="trust"><Trust /></div>
       <div id="contact"><ContactSection /></div>
     </Layout>
   );

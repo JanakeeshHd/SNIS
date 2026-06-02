@@ -1,10 +1,12 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 import heroImage from "@/assets/hero.jpg";
 import experienceImg from "@/assets/15+.png";
 
 export const Hero = () => {
+  const navigate = useNavigate();
   return (
     <section className="relative min-h-[90vh] w-full overflow-hidden flex items-center pt-8">
       {/* Background Image with Overlay */}
@@ -47,28 +49,22 @@ export const Hero = () => {
             </p>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="flex flex-wrap gap-5"
-          >
-            <Button 
-              size="lg" 
-              variant="cta"
-              className="px-12 py-8 text-lg rounded-full group"
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="flex flex-wrap gap-5"
             >
-              Browse Product Range
-              <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="border-white/20 bg-transparent text-white hover:bg-white/10 px-12 py-8 text-lg rounded-full"
-            >
-              Download Catalog
-            </Button>
-          </motion.div>
+              <Button
+                size="lg"
+                variant="cta"
+                className="px-12 py-8 text-lg rounded-full group"
+                onClick={() => navigate('/products')}
+              >
+                Browse Product
+                <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </motion.div>
         </div>
 
         <div className="lg:col-span-5 relative">

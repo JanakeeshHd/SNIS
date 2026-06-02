@@ -37,9 +37,17 @@ export const Categories = () => {
             >
               <div className="w-full md:w-2/5 aspect-square md:aspect-auto bg-muted relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-secondary/20 to-transparent" />
-                <div className="w-full h-full flex items-center justify-center text-muted-foreground/40 font-bold italic p-8 text-center group-hover:scale-110 transition-transform duration-700">
-                  {category.title} Illustration
-                </div>
+                {category.image ? (
+                  <img
+                    src={category.image}
+                    alt={category.title}
+                    className="w-full h-full object-contain p-6 group-hover:scale-110 transition-transform duration-700"
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center text-muted-foreground/40 font-bold italic p-8 text-center group-hover:scale-110 transition-transform duration-700">
+                    {category.title} Illustration
+                  </div>
+                )}
               </div>
               
               <div className="flex-1 p-10 md:p-12 flex flex-col justify-center">

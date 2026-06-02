@@ -22,18 +22,18 @@ export const Footer = () => {
               {SITE_CONTENT.company.description}
             </p>
             <div className="flex space-x-4">
-              <a href={SITE_CONTENT.contact.social.twitter} className="bg-white/10 p-2 rounded-full hover:bg-accent transition-colors">
-                <Twitter className="w-4 h-4" />
-              </a>
-              <a href={SITE_CONTENT.contact.social.facebook} className="bg-white/10 p-2 rounded-full hover:bg-accent transition-colors">
-                <Facebook className="w-4 h-4" />
-              </a>
-              <a href={SITE_CONTENT.contact.social.instagram} className="bg-white/10 p-2 rounded-full hover:bg-accent transition-colors">
-                <Instagram className="w-4 h-4" />
-              </a>
-              <a href={SITE_CONTENT.contact.social.linkedin} className="bg-white/10 p-2 rounded-full hover:bg-accent transition-colors">
-                <Linkedin className="w-4 h-4" />
-              </a>
+                <a href={SITE_CONTENT.contact.social.twitter} className="p-2 rounded-full hover:bg-accent/10 transition-colors">
+                  <Twitter className="w-4 h-4 text-[#1DA1F2]" />
+                </a>
+                <a href={SITE_CONTENT.contact.social.facebook} className="p-2 rounded-full hover:bg-accent/10 transition-colors">
+                  <Facebook className="w-4 h-4 text-[#1877F2]" />
+                </a>
+                <a href={SITE_CONTENT.contact.social.instagram} className="p-2 rounded-full hover:bg-accent/10 transition-colors">
+                  <Instagram className="w-4 h-4 text-[#E1306C]" />
+                </a>
+                <a href={SITE_CONTENT.contact.social.linkedin} className="p-2 rounded-full hover:bg-accent/10 transition-colors">
+                  <Linkedin className="w-4 h-4 text-[#0A66C2]" />
+                </a>
             </div>
           </div>
 

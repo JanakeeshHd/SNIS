@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { SITE_CONTENT } from "@/data/content";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
 
 export const FeaturedProducts = () => {
@@ -13,6 +14,29 @@ export const FeaturedProducts = () => {
   const filteredProducts = SITE_CONTENT.products.featured
     .filter(p => !activeFilter || p.category === activeFilter)
     .slice(0, maxProductsToShow);
+
+  const getProductImage = (name: string, category: string) => {
+    return SITE_CONTENT.products.items.find(item => item.name === name && item.category === category)?.image;
+  };
+
+  const getProductDescription = (name: string, category: string) => {
+    return SITE_CONTENT.products.items.find(item => item.name === name && item.category === category)?.description;
+  };
+
+  const getCategoryLabel = (category: string) => {
+    switch (category) {
+      case "Featured Technical Products":
+        return "Featured";
+      case "Electronics in the Cabinet":
+        return "Electronics in the Cabinet";
+      case "Connection Technology":
+        return "Connection Technology";
+      case "I/O Systems":
+        return "I/O Systems";
+      default:
+        return category;
+    }
+  };
 
   return (
     <section className="py-32 bg-bg-light">
@@ -38,10 +62,15 @@ export const FeaturedProducts = () => {
                 )}
                 onClick={() => setActiveFilter(cat)}
               >
-                {cat}
+                {getCategoryLabel(cat)}
               </button>
             ))}
             </div>
+            <Link to="/products">
+              <Button variant="outline" className="ml-4">
+                View All Products
+              </Button>
+            </Link>
           </div>
         </div>
 
@@ -64,31 +93,25 @@ export const FeaturedProducts = () => {
                   <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   <div className="absolute top-4 left-4 flex flex-col gap-2">
                     <span className="px-3 py-1 bg-white/90 backdrop-blur-sm text-[10px] font-black text-secondary rounded-full shadow-soft uppercase tracking-wider">
-                      {product.category}
+                      {getCategoryLabel(product.category)}
                     </span>
-                    {i < 3 && (
-                      <span className="px-3 py-1 bg-accent text-white text-[10px] font-black rounded-full shadow-soft uppercase tracking-wider">
-                        Best Seller
-                      </span>
-                    )}
                   </div>
                   
-                  <div className="w-full h-full flex items-center justify-center text-slate-300 group-hover:scale-110 transition-transform duration-700">
-                    {/* Visual representation of product */}
-                    <div className="relative">
-                       <div className="w-24 h-24 border-2 border-slate-200 rounded-lg transform rotate-12 group-hover:rotate-45 transition-transform" />
-                       <div className="absolute top-0 left-0 w-24 h-24 border-2 border-accent/20 rounded-lg transform -rotate-12 group-hover:rotate-0 transition-transform" />
+                  {getProductImage(product.name, product.category) ? (
+                    <img
+                      src={getProductImage(product.name, product.category)}
+                      alt={product.name}
+                      className="w-full h-full object-contain p-6 group-hover:scale-110 transition-transform duration-700"
+                    />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center text-slate-300 group-hover:scale-110 transition-transform duration-700">
+                      <div className="relative">
+                         <div className="w-24 h-24 border-2 border-slate-200 rounded-lg transform rotate-12 group-hover:rotate-45 transition-transform" />
+                         <div className="absolute top-0 left-0 w-24 h-24 border-2 border-accent/20 rounded-lg transform -rotate-12 group-hover:rotate-0 transition-transform" />
+                      </div>
                     </div>
-                  </div>
+                  )}
 
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
-                    <Button 
-                      variant="default"
-                      className="rounded-xl font-bold px-6"
-                    >
-                      View Details
-                    </Button>
-                  </div>
                 </div>
 
                 <div className="px-5 pb-6 flex-grow flex flex-col">
@@ -96,7 +119,7 @@ export const FeaturedProducts = () => {
                     {product.name}
                   </h3>
                   <p className="text-sm text-muted-foreground font-medium mb-6 line-clamp-2">
-                    High-performance solution for industrial networking and cabinet management.
+                    {getProductDescription(product.name, product.category) || "High-performance solution for industrial networking and cabinet management."}
                   </p>
                   
                   <div className="mt-auto pt-4 border-t border-slate-50 flex items-center justify-between">

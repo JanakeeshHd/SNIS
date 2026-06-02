@@ -5,6 +5,7 @@ import About from "./pages/About";
 import Products from "./pages/Products";
 import Industries from "./pages/Industries";
 import Contact from "./pages/Contact";
+import DownloadsPage from "./pages/Downloads";
 import CategoryDetail from "./pages/CategoryDetail";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path="/about-us" element={<About />} />
         <Route path="/products" element={<Products />} />
         <Route path="/products/:id" element={<CategoryDetail />} />
+        <Route path="/downloads" element={<DownloadsPage />} />
         <Route path="/industries" element={<Industries />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/contact-us" element={<Contact />} />

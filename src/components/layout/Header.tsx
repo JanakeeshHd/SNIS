@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { Search, Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -46,6 +46,7 @@ export const Header = () => {
   const [isScrolled, setIsScrolled] = React.useState(false);
   const [expandedSections, setExpandedSections] = React.useState<{[key: string]: boolean}>({});
   const navigate = useNavigate();
+  const { pathname } = useLocation();
 
   const toggleSection = (section: string) => {
     setExpandedSections(prev => ({
@@ -71,7 +72,15 @@ export const Header = () => {
     )}>
       <div className="container mx-auto px-4 flex h-16 items-center justify-between">
         <div className="flex items-center gap-8">
-        <Link to="/" className="flex items-center space-x-2 md:space-x-3">
+        <Link
+            to="/"
+            className="flex items-center space-x-2 md:space-x-3"
+            onClick={() => {
+              if (pathname === "/") {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }
+            }}
+          >
             <img 
               src={logo} 
               alt="SNIS Industries Logo" 
@@ -137,6 +146,12 @@ export const Header = () => {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
+                <Link to="/downloads" className={cn(navigationMenuTriggerStyle(), "text-white")}>
+                  Downloads
+                </Link>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
                 <Link to="/contact" className={cn(navigationMenuTriggerStyle(), "text-white")}>
                   Contact
                 </Link>
@@ -178,7 +193,12 @@ export const Header = () => {
             <Link 
               to="/" 
               className="block text-lg font-medium text-white hover:text-accent"
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+                if (pathname === "/") {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }
+              }}
             >
               Home
             </Link>
@@ -245,6 +265,13 @@ export const Header = () => {
               onClick={() => setIsMobileMenuOpen(false)}
             >
               About
+            </Link>
+            <Link 
+              to="/downloads" 
+              className="block text-lg font-medium text-white hover:text-accent"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Downloads
             </Link>
             <Link 
               to="/contact" 

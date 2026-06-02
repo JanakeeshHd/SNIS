@@ -1,89 +1,122 @@
 import { motion } from "framer-motion";
-import { Download, FileText, ArrowRight } from "lucide-react";
+import { FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const resources = [
-  { title: "Main Product Catalog", size: "12.4 MB", type: "PDF" },
-  { title: "Industrial Automation Guide", size: "8.2 MB", type: "PDF" },
-  { title: "Switchgear Technical Specs", size: "5.1 MB", type: "PDF" },
-  { title: "Installation Best Practices", size: "3.7 MB", type: "PDF" },
+  {
+    title: "HELUEVENT® – Solutions for Event and Media Technology",
+    url: "https://online.helukabel.de/onlinecatalog/",
+    type: "Link",
+    size: "",
+    description: "Product range and catalog for event and media cabling solutions.",
+  },
+  {
+    title: "HELUEVENT® – Industrial Ethernet Cables",
+    url: "https://oxomi.com/p/2024602/document/10607266",
+    type: "PDF",
+    size: "",
+    description: "Industrial Ethernet cable datasheet and specifications.",
+  },
+  {
+    title: "F&B Connectors – Food & Beverage Connectors",
+    url: "https://www.murrelektronik.com/wd_downloads/0d23d57890b5c1d72c1700cf101a870b73d44df9/fileadmin/user_upload/Headquarter_en_DE/Downloads/Brochures/C_Connectors_F_B_4-pager_06-25_EN.pdf",
+    type: "PDF",
+    size: "",
+    description: "Hygienic connector solutions for food & beverage applications.",
+  },
+  {
+    title: "IO-Link I/O Modules (Analog & Digital)",
+    url: "https://www.murrelektronik.com/wd_downloads/e9b5161b56f7edf238f6f965f9b139565f92b98e/fileadmin/user_upload/Headquarter_en_DE/Downloads/Brochures/B_IO-Link-Module_06-25_EN.pdf",
+    type: "PDF",
+    size: "",
+    description: "IO-Link and field I/O modules brochure.",
+  },
+  {
+    title: "Bring Your Machine To Life – Connectivity",
+    url: "https://www.murrelektronik.com/wd_downloads/23c1e7efc6634b4293234732e455c155702534d7/fileadmin/user_upload/Headquarter_en_DE/Downloads/Brochures/B_Bring-your-machine-to-life_Connectivity_04-2025_EN.pdf",
+    type: "PDF",
+    size: "",
+    description: "Connectivity solutions to bring machines to life.",
+  },
+  {
+    title: "Vario-X connected – Automation Solutions",
+    url: "https://www.murrelektronik.com/wd_downloads/58075e92ec933af9a6abb21bbfb136fe02c39f62/fileadmin/user_upload/Headquarter_en_DE/Downloads/Brochures/Vario-X_Broschu%CC%88re_EN.pdf",
+    type: "PDF",
+    size: "",
+    description: "Vario-X connectivity and distribution solutions.",
+  },
+  {
+    title: "Machine Vision – Application Solutions",
+    url: "https://www.murrelektronik.com/wd_downloads/7565831a0bc61a14c9a975ea42bc4de0cc0efa03/fileadmin/user_upload/Headquarter_en_DE/Downloads/Brochures/B_Machine-Vision_01-25_EN.pdf",
+    type: "PDF",
+    size: "",
+    description: "Modular machine vision solutions for fast deployment.",
+  },
 ];
 
 export const Downloads = () => {
+  
+
   return (
     <section className="py-32 bg-white overflow-hidden relative">
       <div className="container mx-auto px-4 relative z-10">
-        <div className="bg-bg-light rounded-[3.5rem] p-12 lg:p-24 overflow-hidden relative border border-slate-100">
+        <div className="bg-bg-light rounded-[3.5rem] p-8 lg:p-20 overflow-hidden relative border border-slate-100">
           {/* Decorative background element */}
           <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_top_right,rgba(0,102,204,0.05),transparent)] pointer-events-none" />
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center relative z-10">
+          <div className="grid grid-cols-1 gap-12 relative z-10">
             <div>
               <div className="text-secondary font-bold uppercase tracking-widest text-xs mb-4">Technical Library</div>
-              <h2 className="text-4xl md:text-5xl font-black text-foreground mb-8 leading-tight">Resources & Technical Documentation</h2>
+              <h2 className="text-4xl md:text-5xl font-black text-foreground mb-6 leading-tight">Resources & Technical Documentation</h2>
               <p className="text-muted-foreground text-lg leading-relaxed font-medium mb-12">
                 Access our comprehensive library of technical documentation, globally-certified product catalogs, and expert industrial guides.
               </p>
-              
-              <div className="space-y-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {resources.map((res, i) => (
                   <motion.div
                     key={i}
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ delay: i * 0.1 }}
+                    transition={{ delay: i * 0.06 }}
                     viewport={{ once: true }}
-                    className="flex items-center justify-between p-6 rounded-3xl bg-white border border-secondary/10 hover:shadow-card-hover transition-all duration-300 group cursor-pointer"
+                    className="p-5 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-md transition-all duration-200 group"
                   >
-                    <div className="flex items-center space-x-6">
-                      <div className="w-14 h-14 rounded-2xl bg-muted flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-white transition-all duration-500">
-                        <FileText className="w-6 h-6" />
+                    <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                      <div className="flex-shrink-0 w-20 h-20 sm:w-24 sm:h-24 rounded-lg bg-bg-light border border-slate-100 flex items-center justify-center">
+                        <FileText className="w-6 h-6 text-muted-foreground" />
                       </div>
-                      <div>
-                        <h4 className="font-black text-foreground group-hover:text-secondary transition-colors">{res.title}</h4>
-                        <div className="flex items-center space-x-3 mt-1">
-                          <span className="px-2 py-0.5 bg-muted text-[10px] font-black text-muted-foreground rounded uppercase tracking-wider">{res.type}</span>
-                          <span className="text-xs text-muted-foreground/60 font-bold">{res.size}</span>
+
+                      <div className="flex-1 w-full">
+                        <div className="flex items-start justify-between gap-4">
+                          <div>
+                            <div className="text-xs uppercase font-black text-accent mb-2">
+                              {res.url?.includes('murrelektronik') ? 'Murrelektronik' : res.url?.includes('helukabel') ? 'Helukabel' : res.url?.includes('oxomi') ? 'Oxomi' : 'External'}
+                            </div>
+                            <h4 className="font-black text-foreground group-hover:text-secondary transition-colors text-lg">{res.title}</h4>
+                            <p className="text-sm text-muted-foreground mt-2 line-clamp-2">{res.description}</p>
+                          </div>
+
+                          <div className="ml-2 flex-shrink-0">
+                            {res.url ? (
+                              <a href={res.url} target="_blank" rel="noopener noreferrer">
+                                <Button variant="cta" className="px-4 py-2">Download</Button>
+                              </a>
+                            ) : (
+                              <Button variant="outline" className="px-4 py-2">Unavailable</Button>
+                            )}
+                          </div>
                         </div>
+                        <div className="mt-3 text-xs text-muted-foreground/60">{res.type}{res.size ? ` • ${res.size}` : ''}</div>
                       </div>
                     </div>
-                    <Button variant="ghost" size="icon" className="text-muted-foreground/30 group-hover:text-accent transition-colors">
-                      <Download className="w-6 h-6" />
-                    </Button>
                   </motion.div>
                 ))}
               </div>
               
-              <Button 
-                size="lg" 
-                variant="default"
-                className="mt-12 px-10 py-8 text-lg rounded-2xl group"
-              >
-                Access Full Library
-                <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
+              
             </div>
             
-            <div className="relative hidden lg:block">
-              <div className="aspect-square bg-white rounded-[3rem] shadow-corporate border-8 border-slate-100 flex items-center justify-center relative overflow-hidden group">
-                 <div className="absolute inset-0 bg-bg-light opacity-50 group-hover:opacity-0 transition-opacity" />
-                 <Download className="w-40 h-40 text-muted-foreground/10 group-hover:text-accent/20 group-hover:scale-110 transition-all duration-700" />
-                 
-                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full flex flex-col items-center justify-center p-12 text-center pointer-events-none">
-                    <div className="text-muted-foreground/30 italic font-medium">Technical Resource Visual</div>
-                 </div>
-              </div>
-              
-              {/* Floating badges */}
-              <motion.div 
-                animate={{ y: [0, -15, 0] }}
-                transition={{ duration: 4, repeat: Infinity }}
-                className="absolute -top-8 -right-8 bg-accent text-white p-6 rounded-3xl shadow-glow font-black text-center"
-              >
-                <div className="text-2xl">2026</div>
-                <div className="text-[10px] uppercase tracking-widest">Edition</div>
-              </motion.div>
-            </div>
+            {/* Right-side visual box removed */}
           </div>
         </div>
       </div>

@@ -10,10 +10,7 @@ export const TopBar = () => {
             <MapPin className="w-3.5 h-3.5 mr-2" />
             <span>{SITE_CONTENT.contact.address}, India</span>
           </div>
-          <div className="flex items-center text-white/60">
-            <span className="mr-2 opacity-50">GST NO:</span>
-            <span className="text-white">29AAAAA0000A1Z5</span>
-          </div>
+          {/* GST number removed as requested */}
         </div>
         <div className="flex items-center space-x-8">
           <a href={`tel:${SITE_CONTENT.contact.phone}`} className="flex items-center hover:text-accent transition-colors">
