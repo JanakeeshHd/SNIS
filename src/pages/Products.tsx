@@ -3,9 +3,8 @@ import { motion } from "framer-motion";
 import { Layout } from "@/components/layout/Layout";
 import { SITE_CONTENT } from "@/data/content";
 import { Button } from "@/components/ui/button";
-import { Search } from "lucide-react";
+import { Search, ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import { Input } from "@/components/ui/input";
 
 const Products = () => {
   const navigate = useNavigate();
@@ -22,10 +21,10 @@ const Products = () => {
   return (
     <Layout>
       {/* Header */}
-      <section className="bg-slate-50 border-b py-16">
+      <section className="bg-bg-light border-b py-16">
         <div className="container mx-auto px-4 text-center max-w-4xl">
-          <h1 className="text-4xl md:text-5xl font-bold text-industrial-blue mb-6">Our Products</h1>
-          <p className="text-slate-600 text-lg leading-relaxed">
+          <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">Our Products</h1>
+          <p className="text-muted-foreground text-lg leading-relaxed">
             {SITE_CONTENT.products.intro}
           </p>
         </div>
@@ -55,8 +54,8 @@ const Products = () => {
           </div>
           <div className="relative w-full md:w-96">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
-            <Input 
-              className="pl-10 h-12 rounded-full bg-bg-light border-none focus:ring-2 focus:ring-accent/20" 
+            <input 
+              className="flex h-12 w-full rounded-full border-none bg-bg-light px-3 py-2 text-sm pl-10 focus:ring-2 focus:ring-accent/20 outline-none" 
               placeholder="Search products..." 
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}

@@ -46,29 +46,52 @@ const CategoryDetail = () => {
           <div className="space-y-12">
             <h2 className="text-3xl font-bold text-primary mb-8">Product Range & Features</h2>
             {relatedProducts.length > 0 ? (
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 {relatedProducts.map((product: ProductItem, i: number) => (
                   <motion.div
                     key={i}
-                    initial={{ opacity: 0, y: 10 }}
+                    initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ delay: i * 0.05 }}
-                    className="rounded-2xl overflow-hidden border bg-white shadow-sm hover:shadow-card-hover transition-all duration-300"
+                    transition={{ duration: 0.4, delay: i * 0.05 }}
+                    className="group relative flex flex-col bg-white rounded-[2rem] border border-secondary/15 hover:border-accent hover:shadow-card-hover transition-all duration-500 p-3"
                   >
-                    <div className="aspect-[4/3] bg-slate-50 flex items-center justify-center">
+                    <div className="relative aspect-square rounded-[1.7rem] bg-bg-light overflow-hidden mb-6">
+                      <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                      <div className="absolute top-4 left-4 flex flex-col gap-2 z-10">
+                        <span className="px-3 py-1 bg-white/90 backdrop-blur-sm text-[10px] font-black text-secondary rounded-full shadow-soft uppercase tracking-wider">
+                          Product
+                        </span>
+                      </div>
+                      
                       {product.image ? (
-                        <img src={product.image} alt={product.name} className="w-full h-full object-contain p-6" />
+                        <img
+                          src={product.image}
+                          alt={product.name}
+                          className="w-full h-full object-contain p-6 group-hover:scale-110 transition-all duration-700"
+                        />
                       ) : (
-                        <div className="text-muted-foreground/40 font-bold italic">Image</div>
+                        <div className="w-full h-full flex items-center justify-center text-slate-300 group-hover:scale-110 transition-transform duration-700">
+                          <div className="relative">
+                             <div className="w-24 h-24 border-2 border-slate-200 rounded-lg transform rotate-12 group-hover:rotate-45 transition-transform" />
+                             <div className="absolute top-0 left-0 w-24 h-24 border-2 border-accent/20 rounded-lg transform -rotate-12 group-hover:rotate-0 transition-transform" />
+                          </div>
+                        </div>
                       )}
                     </div>
 
-                    <div className="p-6">
-                      <h3 className="text-lg font-bold text-primary mb-2">{product.name}</h3>
-                      <p className="text-sm text-muted-foreground mb-4 line-clamp-3">{product.description}</p>
-                      <div className="pt-2">
-                        <Button size="sm" variant="cta" onClick={() => navigate('/contact')}>Inquiry</Button>
+                    <div className="px-5 pb-6 flex-grow flex flex-col">
+                      <h3 className="text-xl font-black text-foreground mb-2 line-clamp-2 group-hover:text-secondary transition-colors">
+                        {product.name}
+                      </h3>
+                      <p className="text-sm text-muted-foreground font-medium mb-6 line-clamp-3">
+                        {product.description}
+                      </p>
+                      
+                      <div className="mt-auto pt-4 border-t border-slate-50 flex items-center justify-between">
+                        <Button variant="default" className="rounded-xl font-bold px-6" onClick={() => navigate('/contact')}>
+                          Inquiry
+                        </Button>
                       </div>
                     </div>
                   </motion.div>
