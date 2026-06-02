@@ -91,7 +91,7 @@ export const CompanyOverview = () => {
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="relative"
+              className="relative order-2 lg:order-1 mt-12 lg:mt-0"
             >
               <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl">
                 <img
@@ -111,7 +111,7 @@ export const CompanyOverview = () => {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="space-y-8"
+              className="space-y-8 order-1 lg:order-2"
             >
               <div>
                 <span className="text-accent font-bold tracking-widest uppercase text-sm mb-4 block">About SNIS Industries</span>
