@@ -144,13 +144,7 @@ export const CompanyOverview = () => {
                     Learn More About Us
                   </Button>
                 </Link>
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 rounded-full bg-muted" />
-                  <div>
-                    <div className="text-sm font-bold text-primary">Director's Message</div>
-                    <div className="text-xs text-muted-foreground font-medium uppercase tracking-wider">SNIS Industries</div>
-                  </div>
-                </div>
+                
               </div>
             </motion.div>
           </div>
