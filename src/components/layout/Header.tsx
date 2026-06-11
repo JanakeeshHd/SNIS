@@ -74,7 +74,7 @@ export const Header = () => {
         <div className="flex items-center gap-8">
         <Link
             to="/"
-            className="flex items-center space-x-2 md:space-x-3"
+            className="flex items-center"
             onClick={() => {
               if (pathname === "/") {
                 window.scrollTo({ top: 0, behavior: "smooth" });
@@ -84,11 +84,8 @@ export const Header = () => {
             <img 
               src={logo} 
               alt="SNIS Logo" 
-            className="h-12 w-auto object-contain shrink-0"
+              className="h-12 w-auto object-contain shrink-0"
             />
-          <span className="text-white font-bold text-lg md:text-xl lg:hidden truncate">
-            SNIS
-          </span>
           </Link>
 
           <NavigationMenu className="hidden lg:flex">
