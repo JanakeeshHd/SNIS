@@ -2,7 +2,7 @@ import { useParams, Link, useNavigate } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { SITE_CONTENT } from "@/data/content";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
 
 type ProductItem = {
@@ -88,10 +88,19 @@ const CategoryDetail = () => {
                         {product.description}
                       </p>
                       
-                      <div className="mt-auto pt-4 border-t border-slate-50 flex items-center justify-between">
+                      <div className="mt-auto pt-4 border-t border-slate-50 flex items-center gap-3">
                         <Button variant="default" className="rounded-xl font-bold px-6" onClick={() => navigate('/contact')}>
                           Inquiry
                         </Button>
+                        <a
+                          href={`https://wa.me/${SITE_CONTENT.contact.phone.replace(/\s+/g, '')}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20BA5C] text-white font-bold px-6 py-2.5 rounded-xl transition-colors"
+                        >
+                          <MessageCircle className="w-4 h-4" />
+                          WhatsApp
+                        </a>
                       </div>
                     </div>
                   </motion.div>
