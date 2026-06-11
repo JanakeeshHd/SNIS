@@ -7,23 +7,23 @@ import { SITE_CONTENT } from "@/data/content";
 
 export const ContactSection = () => {
   return (
-    <section className="py-16 bg-primary relative overflow-hidden bg-tech-grid">
+    <section className="py-8 bg-primary relative overflow-hidden bg-tech-grid">
       <div className="container mx-auto px-4 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="space-y-8"
+            className="space-y-4"
           >
             <div>
-              <h2 className="text-4xl font-bold text-white mb-6">Have questions? Feel free to write us</h2>
+              <h2 className="text-4xl font-bold text-white mb-3">Have questions? Feel free to write us</h2>
               <p className="text-white/70 text-lg">
                 Get in touch with our experts for any industrial automation or electrical switchgear inquiries.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               <div className="flex items-start space-x-4 p-6 rounded-2xl bg-white/5 border border-white/10 group hover:border-accent/50 transition-all duration-300">
                 <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent shrink-0 group-hover:bg-accent group-hover:text-white transition-all duration-300">
                   <Phone className="w-6 h-6" />
@@ -72,9 +72,9 @@ export const ContactSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="bg-white/5 backdrop-blur-xl rounded-3xl p-6 md:p-8 shadow-glow-blue border border-white/10 relative"
+            className="bg-white/5 backdrop-blur-xl rounded-3xl p-4 md:p-5 shadow-glow-blue border border-white/10 relative"
           >
-            <h3 className="text-2xl font-bold text-white mb-8">Send an Inquiry</h3>
+            <h3 className="text-2xl font-bold text-white mb-4">Send an Inquiry</h3>
             <form className="space-y-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">

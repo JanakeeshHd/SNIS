@@ -7,7 +7,7 @@ import heroImage from "@/assets/hero.jpg";
 export const Hero = () => {
   const navigate = useNavigate();
   return (
-    <section className="relative min-h-[78vh] w-full overflow-hidden flex items-center pt-4 pb-8">
+    <section className="relative min-h-[64vh] w-full overflow-hidden flex items-center pt-1 pb-4">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <img 
@@ -25,19 +25,19 @@ export const Hero = () => {
       <div className="absolute top-1/4 -left-20 w-[500px] h-[500px] bg-accent/10 rounded-full blur-[120px] animate-pulse pointer-events-none z-10" />
       <div className="absolute bottom-1/4 -right-20 w-[500px] h-[500px] bg-secondary/10 rounded-full blur-[120px] animate-pulse pointer-events-none z-10" />
 
-      <div className="container relative z-10 mx-auto px-4 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        <div className="lg:col-span-12 space-y-10">
+      <div className="container relative z-10 mx-auto px-4 grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+        <div className="lg:col-span-12 space-y-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center space-x-3 px-4 py-2 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 text-accent text-xs font-black uppercase tracking-widest mb-10 shadow-glow">
+            <div className="inline-flex items-center space-x-3 px-4 py-2 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 text-accent text-xs font-black uppercase tracking-widest mb-4 shadow-glow">
               <span className="flex h-2 w-2 rounded-full bg-accent animate-ping" />
               <span>Leading Distributor in Karnataka</span>
             </div>
             
-            <h1 className="text-6xl md:text-[90px] font-black text-white leading-[0.9] tracking-tighter mb-8">
+            <h1 className="text-6xl md:text-[90px] font-black text-white leading-[0.9] tracking-tighter mb-3">
               Industrial <br />
               <span className="text-secondary">Power & Control</span> <br />
               <span className="text-accent">Systems</span>

@@ -23,10 +23,10 @@ export const Partners = () => {
   const duplicatedPartners = [...partners, ...partners];
 
   return (
-    <section className="py-16 md:py-20 bg-white border-y border-slate-50 overflow-hidden">
+    <section className="py-8 md:py-10 bg-white border-y border-slate-50 overflow-hidden">
       <div className="container mx-auto px-3 sm:px-4">
         <motion.div 
-          className="text-center mb-12"
+          className="text-center mb-6"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}

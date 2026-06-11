@@ -17,18 +17,18 @@ export const CompanyOverview = () => {
   return (
     <div className="space-y-0">
       {/* Corporate Overview Section */}
-      <section className="py-20 bg-bg-light">
+      <section className="py-10 bg-bg-light">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="space-y-6"
+              className="space-y-4"
             >
               <div>
-                <div className="text-accent font-bold uppercase tracking-widest text-xs mb-4 text-center lg:text-left">Corporate Overview</div>
-                <h2 className="text-4xl md:text-5xl font-black text-foreground mb-4 text-center lg:text-left">Leading the Industrial Automation Ecosystem</h2>
+                <div className="text-accent font-bold uppercase tracking-widest text-xs mb-3 text-center lg:text-left">Corporate Overview</div>
+                <h2 className="text-4xl md:text-5xl font-black text-foreground mb-3 text-center lg:text-left">Leading the Industrial Automation Ecosystem</h2>
                 <p className="text-muted-foreground text-lg leading-relaxed font-medium text-center lg:text-left">
                   {SITE_CONTENT.company.description}
                 </p>
@@ -55,10 +55,10 @@ export const CompanyOverview = () => {
               viewport={{ once: true }}
               className="relative"
             >
-               <div className="bg-primary rounded-[3rem] p-12 text-white shadow-glow-blue relative overflow-hidden border border-white/5">
-                  <div className="relative z-10 space-y-8">
-                     <h3 className="text-3xl font-black mb-6">Why Partner With Us?</h3>
-                     <div className="space-y-6">
+               <div className="bg-primary rounded-[3rem] p-6 text-white shadow-glow-blue relative overflow-hidden border border-white/5">
+                  <div className="relative z-10 space-y-4">
+                     <h3 className="text-3xl font-black mb-3">Why Partner With Us?</h3>
+                     <div className="space-y-3">
                         {[
                           "Authorized Channel Partner for Global Brands",
                           "Comprehensive Technical Support & Consultation",
@@ -83,14 +83,14 @@ export const CompanyOverview = () => {
       </section>
 
       {/* About Summary Section */}
-      <section className="py-16 bg-white">
+      <section className="py-8 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="relative order-2 lg:order-1 mt-12 lg:mt-0"
+              className="relative order-2 lg:order-1 mt-6 lg:mt-0"
             >
               <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl">
                 <img
@@ -99,10 +99,6 @@ export const CompanyOverview = () => {
                   className="aspect-[4/3] w-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-10 -right-10 z-20 bg-accent text-white p-8 rounded-2xl shadow-glow hidden md:block">
-                <div className="text-4xl font-bold mb-1">15+</div>
-                <div className="text-sm font-medium uppercase tracking-wider">Years of Industrial<br />Excellence</div>
-              </div>
               <div className="absolute -top-10 -left-10 w-40 h-40 bg-accent/10 rounded-full blur-3xl" />
             </motion.div>
 
@@ -110,11 +106,11 @@ export const CompanyOverview = () => {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="space-y-8 order-1 lg:order-2"
+              className="space-y-4 order-1 lg:order-2"
             >
               <div>
-                <span className="text-accent font-bold tracking-widest uppercase text-sm mb-4 block">About SNIS Industries</span>
-                <h2 className="text-4xl md:text-5xl font-bold text-primary leading-tight mb-6">
+                <span className="text-accent font-bold tracking-widest uppercase text-sm mb-2 block">About SNIS Industries</span>
+                <h2 className="text-4xl md:text-5xl font-bold text-primary leading-tight mb-3">
                   Empowering Industry Through Automation & Electrical Excellence
                 </h2>
                 <p className="text-muted-foreground text-lg leading-relaxed">
@@ -138,7 +134,7 @@ export const CompanyOverview = () => {
                 ))}
               </div>
 
-              <div className="pt-4 flex flex-col sm:flex-row gap-6">
+              <div className="pt-3 flex flex-col sm:flex-row gap-4">
                 <Link to="/about">
                   <Button size="lg" className="px-8">
                     Learn More About Us

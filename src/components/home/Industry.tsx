@@ -7,15 +7,15 @@ import { Link, useNavigate } from "react-router-dom";
 export const Industry = () => {
   const navigate = useNavigate();
   return (
-    <section className="py-20 bg-primary overflow-hidden relative">
+    <section className="py-10 bg-primary overflow-hidden relative">
       {/* Background abstract element */}
       <div className="absolute top-0 right-0 w-[50%] h-full bg-secondary/10 skew-x-12 translate-x-1/2 pointer-events-none" />
 
       <div className="container mx-auto px-4 relative z-10 flex flex-col">
-        <div className="flex justify-between items-end mb-8 lg:mb-12 gap-12">
+        <div className="flex justify-between items-end mb-4 lg:mb-6 gap-8">
           <div className="max-w-2xl">
-            <div className="text-accent font-bold uppercase tracking-widest text-xs mb-4">Sector Expertise</div>
-            <h2 className="text-4xl md:text-5xl font-black text-white mb-8">Solutions by Sector</h2>
+            <div className="text-accent font-bold uppercase tracking-widest text-xs mb-2">Sector Expertise</div>
+            <h2 className="text-4xl md:text-5xl font-black text-white mb-3">Solutions by Sector</h2>
             <p className="text-white/60 text-lg leading-relaxed font-medium">
               {SITE_CONTENT.industries.intro}
             </p>
@@ -31,7 +31,7 @@ export const Industry = () => {
           </Button>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {SITE_CONTENT.industries.sectors.map((sector, i) => (
             <motion.div
               key={sector.id}
@@ -67,10 +67,10 @@ export const Industry = () => {
               )}
 
               {/* Content Wrapper - absolute overlay on desktop, flex container on mobile */}
-              <div className="relative flex flex-col order-2 lg:order-none lg:flex-1 p-8 lg:p-10 lg:absolute lg:bottom-0 lg:left-0 lg:w-full z-20 bg-primary/20 lg:bg-transparent">
-                <h3 className="text-2xl lg:text-3xl font-black text-white mb-4 lg:group-hover:text-accent transition-colors">{sector.title}</h3>
+              <div className="relative flex flex-col order-2 lg:order-none lg:flex-1 p-6 lg:p-8 lg:absolute lg:bottom-0 lg:left-0 lg:w-full z-20 bg-primary/20 lg:bg-transparent">
+                <h3 className="text-2xl lg:text-3xl font-black text-white mb-3 lg:group-hover:text-accent transition-colors">{sector.title}</h3>
 
-                <p className="text-white/60 font-medium leading-relaxed mb-6 lg:mb-8 lg:opacity-0 lg:group-hover:opacity-100 lg:h-0 lg:group-hover:h-auto overflow-hidden transition-all duration-500">
+                <p className="text-white/60 font-medium leading-relaxed mb-4 lg:mb-6 lg:opacity-0 lg:group-hover:opacity-100 lg:h-0 lg:group-hover:h-auto overflow-hidden transition-all duration-500">
                   {sector.description}
                 </p>
 
@@ -90,7 +90,7 @@ export const Industry = () => {
         </div>
 
         {/* Mobile Button at the bottom */}
-        <div className="mt-8 flex justify-center lg:hidden">
+        <div className="mt-4 flex justify-center lg:hidden">
           <Button 
             size="lg" 
             variant="cta"

@@ -58,20 +58,20 @@ export const Downloads = () => {
   
 
   return (
-    <section className="py-20 bg-white overflow-hidden relative">
+    <section className="py-10 bg-white overflow-hidden relative">
       <div className="container mx-auto px-4 relative z-10">
-        <div className="bg-bg-light rounded-[3.5rem] p-8 lg:p-20 overflow-hidden relative border border-slate-100">
+        <div className="bg-bg-light rounded-[3.5rem] p-4 lg:p-8 overflow-hidden relative border border-slate-100">
           {/* Decorative background element */}
           <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_top_right,rgba(0,102,204,0.05),transparent)] pointer-events-none" />
 
-          <div className="grid grid-cols-1 gap-8 relative z-10">
+          <div className="grid grid-cols-1 gap-4 relative z-10">
             <div>
-              <div className="text-secondary font-bold uppercase tracking-widest text-xs mb-4">Technical Library</div>
-              <h2 className="text-4xl md:text-5xl font-black text-foreground mb-6 leading-tight">Resources & Technical Documentation</h2>
-              <p className="text-muted-foreground text-lg leading-relaxed font-medium mb-8">
+              <div className="text-secondary font-bold uppercase tracking-widest text-xs mb-2">Technical Library</div>
+              <h2 className="text-4xl md:text-5xl font-black text-foreground mb-3 leading-tight">Resources & Technical Documentation</h2>
+              <p className="text-muted-foreground text-lg leading-relaxed font-medium mb-4">
                 Access our comprehensive library of technical documentation, globally-certified product catalogs, and expert industrial guides.
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {resources.map((res, i) => (
                   <motion.div
                     key={i}
