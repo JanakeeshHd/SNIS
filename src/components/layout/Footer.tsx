@@ -90,10 +90,10 @@ export const Footer = () => {
                 <MapPin className="w-5 h-5 text-accent shrink-0" />
                 <span>{SITE_CONTENT.contact.address}</span>
               </div>
-              <div className="flex items-center space-x-3 text-white/70">
+              <a href={`tel:${SITE_CONTENT.contact.phone.replace(/\s+/g, "")}`} className="flex items-center space-x-3 text-white font-bold hover:text-accent transition-colors">
                 <Phone className="w-5 h-5 text-accent shrink-0" />
                 <span>{SITE_CONTENT.contact.phone}</span>
-              </div>
+              </a>
               <div className="flex flex-col space-y-2 text-white/70">
                 <a href={`mailto:${SITE_CONTENT.contact.salesEmail}`} className="flex items-center space-x-3 text-white font-semibold hover:text-accent transition-colors">
                   <Mail className="w-5 h-5 text-accent shrink-0" />

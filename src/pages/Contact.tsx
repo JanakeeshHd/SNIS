@@ -68,7 +68,7 @@ const Contact = () => {
                 </div>
                 <h3 className="text-xl font-bold text-primary mb-2">Call Us</h3>
                 <p className="text-muted-foreground mb-1">Direct Line:</p>
-                <a href={`tel:${SITE_CONTENT.contact.phone}`} className="text-lg font-bold text-primary hover:text-secondary transition-colors">
+                <a href={`tel:${SITE_CONTENT.contact.phone.replace(/\s+/g, "")}`} className="text-lg font-extrabold text-primary hover:text-secondary transition-colors inline-block">
                   {SITE_CONTENT.contact.phone}
                 </a>
               </div>

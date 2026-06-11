@@ -63,7 +63,9 @@ export const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-bold text-white mb-1">Call Expert</h4>
-                  <p className="text-white/70 font-medium">{SITE_CONTENT.contact.phone}</p>
+                  <a href={`tel:${SITE_CONTENT.contact.phone.replace(/\s+/g, "")}`} className="text-white font-bold hover:text-accent transition-colors inline-block">
+                    {SITE_CONTENT.contact.phone}
+                  </a>
                 </div>
               </div>
 

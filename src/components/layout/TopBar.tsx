@@ -13,7 +13,7 @@ export const TopBar = () => {
           {/* GST number removed as requested */}
         </div>
         <div className="flex items-center space-x-8">
-          <a href={`tel:${SITE_CONTENT.contact.phone}`} className="flex items-center hover:text-accent transition-colors">
+          <a href={`tel:${SITE_CONTENT.contact.phone.replace(/\s+/g, "")}`} className="flex items-center font-semibold hover:text-accent transition-colors">
             <Phone className="w-3.5 h-3.5 mr-2 text-accent" />
             <span>Call: {SITE_CONTENT.contact.phone}</span>
           </a>
