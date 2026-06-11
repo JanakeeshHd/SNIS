@@ -121,10 +121,10 @@ export const SITE_CONTENT: SiteContent = {
     salesEmail: "sales@snisindia.in",
     address: "Bangalore",
     social: {
-      twitter: "https://twitter.com/envato/",
-      facebook: "https://www.facebook.com/envato/",
-      instagram: "https://www.instagram.com/envato/",
-      linkedin: "https://www.pinterest.com/envato/",
+      twitter: "https://twitter.com/i/flow/login",
+      facebook: "https://www.facebook.com/login/",
+      instagram: "https://www.instagram.com/accounts/login/",
+      linkedin: "https://www.linkedin.com/login",
     },
   },
   products: {
