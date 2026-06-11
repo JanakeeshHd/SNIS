@@ -83,11 +83,11 @@ export const Header = () => {
           >
             <img 
               src={logo} 
-              alt="SNIS Industries Logo" 
+              alt="SNIS Logo" 
             className="h-12 w-auto object-contain shrink-0"
             />
           <span className="text-white font-bold text-lg md:text-xl lg:hidden truncate">
-            SNIS Industries
+            SNIS
           </span>
           </Link>
 

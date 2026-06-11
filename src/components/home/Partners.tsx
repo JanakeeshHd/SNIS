@@ -1,13 +1,8 @@
 import { motion } from "framer-motion";
-import helukabelLogo from "@/assets/helukabel.png";
 import murrelektronikLogo from "@/assets/murrelektronik.png";
 import murrplasticLogo from "@/assets/murrplastic.png";
 
 const partners = [
-  {
-    name: "Helukabel",
-    logo: helukabelLogo,
-  },
   {
     name: "Murrelektronik",
     logo: murrelektronikLogo,
@@ -61,7 +56,7 @@ export const Partners = () => {
                 <img
                   src={partner.logo}
                   alt={partner.name}
-                  className="h-8 sm:h-10 md:h-14 w-auto max-w-[130px] sm:max-w-[160px] object-contain"
+                  className="h-12 sm:h-14 md:h-20 w-auto max-w-[180px] sm:max-w-[220px] md:max-w-[260px] object-contain"
                 />
               </motion.div>
             ))}

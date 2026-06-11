@@ -7,14 +7,14 @@ const About = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="bg-primary text-white py-24 relative overflow-hidden bg-tech-grid">
+      <section className="bg-primary text-white py-16 relative overflow-hidden bg-tech-grid">
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="max-w-3xl"
           >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">About SNIS Industries</h1>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">About SNIS</h1>
             <p className="text-xl text-white/80 leading-relaxed">
               Karnataka’s leading solution provider in Industrial Automation and Electrical Switchgear Marketing.
             </p>
@@ -24,12 +24,12 @@ const About = () => {
       </section>
 
       {/* Main Content */}
-      <section className="py-24 bg-white">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-            <div className="space-y-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+            <div className="space-y-6">
               <h2 className="text-3xl font-bold text-primary">Engineering Smarter Industries</h2>
-              <div className="space-y-6 text-muted-foreground text-lg leading-relaxed">
+              <div className="space-y-6 text-muted-foreground text-lg leading-relaxed text-justify">
                 <p>{SITE_CONTENT.company.description}</p>
                 <p>{SITE_CONTENT.company.aboutLong}</p>
                 <p>{SITE_CONTENT.company.aboutExtra}</p>
@@ -64,11 +64,11 @@ const About = () => {
       </section>
 
       {/* Vision & Mission */}
-      <section className="py-24 bg-bg-light">
+      <section className="py-16 bg-bg-light">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div className="bg-white p-12 rounded-3xl shadow-xl">
-              <div className="flex items-center space-x-4 mb-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="bg-white p-8 rounded-3xl shadow-xl">
+              <div className="flex items-center space-x-4 mb-6">
                 <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-white">
                   <Eye className="w-6 h-6" />
                 </div>
@@ -79,14 +79,14 @@ const About = () => {
               </p>
             </div>
 
-            <div className="bg-white p-12 rounded-3xl shadow-xl border-t-4 border-accent">
-              <div className="flex items-center space-x-4 mb-8">
+            <div className="bg-white p-8 rounded-3xl shadow-xl border-t-4 border-accent">
+              <div className="flex items-center space-x-4 mb-6">
                 <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center text-white">
                   <Target className="w-6 h-6" />
                 </div>
                 <h2 className="text-3xl font-bold text-primary">Mission Statement</h2>
               </div>
-              <ul className="space-y-6">
+              <ul className="space-y-4">
                 {SITE_CONTENT.company.mission.map((item, i) => (
                   <li key={i} className="flex items-start space-x-4">
                     <CheckCircle2 className="w-6 h-6 text-accent shrink-0 mt-1" />

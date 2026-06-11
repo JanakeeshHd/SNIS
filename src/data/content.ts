@@ -103,11 +103,11 @@ export interface SiteContent {
 
 export const SITE_CONTENT: SiteContent = {
   company: {
-    name: "SNIS Industries",
+    name: "SNIS",
     tagline: "Engineering Smarter Industries with Precision and Power",
-    description: "SNIS Industries is one of Karnataka’s leading solution providers in the field of Industrial Automation and Electrical Switchgear Marketing. With a strong legacy of delivering value-driven, high-performance solutions, we cater to a wide spectrum of industries and clients across the region.",
-    aboutLong: "Our customer base includes Panel Builders, Electrical Contractors, and a wide array of industrial segments such as Steel, Paper, Water Treatment, and more. We also closely collaborate with OEMs, including Machine Tool Manufacturers, Special Purpose Machine (SPM) Builders, and Industrial Process Automation Companies, ensuring that our products and services seamlessly integrate with their engineering and automation needs.",
-    aboutExtra: "At SNIS Industries, our commitment lies in combining technical expertise, quality-assured products, and reliable after-sales support to empower industries with smarter, safer, and more efficient electrical and automation systems. With strong partnerships and a customer-centric approach, we continue to play a key role in driving the growth and innovation of India’s industrial ecosystem.",
+    description: "SNIS is one of Karnataka’s leading solution providers in the field of Industrial Automation and Electrical Switchgear Marketing. With a strong legacy of delivering value-driven, high-performance solutions, we cater to a wide spectrum of industries and clients across the region.",
+    aboutLong: "Our customer base includes Panel Builders and a wide array of industrial segments such as Steel, Paper, Water Treatment, and more. We also closely collaborate with OEMs, including Machine Tool Manufacturers, Special Purpose Machine (SPM) Builders, and Industrial Process Automation Companies, ensuring that our products and services seamlessly integrate with their engineering and automation needs.",
+    aboutExtra: "At SNIS, our commitment lies in combining technical expertise, quality-assured products, and reliable after-sales support to empower industries with smarter, safer, and more efficient electrical and automation systems. With strong partnerships and a customer-centric approach, we continue to play a key role in driving the growth and innovation of India’s industrial ecosystem.",
     vision: "To be the most trusted partner in driving industrial growth through innovative automation and electrical solutions, enabling industries to operate smarter, safer, and more efficiently.",
     mission: [
       "To deliver high-quality, reliable, and future-ready industrial automation and electrical solutions tailored to the unique needs of our customers.",
@@ -131,6 +131,18 @@ export const SITE_CONTENT: SiteContent = {
     intro: "All our products are engineered for seamless integration, both with each other and with your existing systems. Our comprehensive product portfolio empowers you to design solutions that align with your specific installation requirements—whether your goal is to reduce installation and operating costs or to build a more efficient and high-performing machine.",
     categories: [
       {
+        id: "connection-technology",
+        title: "Connection Technology",
+        description: "We are a leading supplier of cordsets. With over 30,000 combinations to choose from, we can help you find the right cordset for your application.",
+        image: sensorActuatorCablesImg,
+      },
+      {
+        id: "io-systems",
+        title: "I/O Systems",
+        description: "I/O systems connect actuators and sensors of a system to the control. From our Exact12 family of passive distribution boxes to our Cube fieldbus products, we can accommodate your installation needs.",
+        image: cube67Img,
+      },
+      {
         id: "electronics-in-cabinet",
         title: "Electronics in the Cabinet",
         description: "Murrelektronik views power management as the starting point for machine efficiency. Power conditioning, properly sized power supplies, current monitoring, redundancy and energy savings are all considered when we assemble a solution for our partners.",
@@ -141,18 +153,6 @@ export const SITE_CONTENT: SiteContent = {
         title: "Interfaces",
         description: "Connecting the cabinet with the field is a key part of many installations. Murrelektronik offers a comprehensive range of cable entry systems and programming ports for quick connections, easy separations and maintenance.",
         image: modlinkHeavyImg,
-      },
-      {
-        id: "io-systems",
-        title: "I/O Systems",
-        description: "I/O systems connect actuators and sensors of a system to the control. From our Exact12 family of passive distribution boxes to our Cube fieldbus products, we can accommodate your installation needs.",
-        image: cube67Img,
-      },
-      {
-        id: "connection-technology",
-        title: "Connection Technology",
-        description: "We are a leading supplier of cordsets. With over 30,000 combinations to choose from, we can help you find the right cordset for your application.",
-        image: sensorActuatorCablesImg,
       },
     ],
     items: [
@@ -208,21 +208,21 @@ export const SITE_CONTENT: SiteContent = {
       { name: "T-Couplers", category: "Connection Technology", description: "The T-Coupler doubles connection capacity by providing two connectors and simplifies installation with fixed coupling nuts.", image: tCouplersImg },
     ],
     featured: [
-      { name: "Eco-Rail-2", category: "Electronics in the Cabinet" },
-      { name: "EMC Filters", category: "Electronics in the Cabinet" },
-      { name: "Emparro ACCUcontrol", category: "Electronics in the Cabinet" },
-      { name: "Emparro HD – Heavy Duty", category: "Electronics in the Cabinet" },
-      { name: "MVK Fusion CIP Safety", category: "I/O Systems" },
-      { name: "MVK Pro and IMPACT67 Pro", category: "I/O Systems" },
-      { name: "Modlink MPV", category: "Interfaces" },
-      { name: "IO-Link analog converter", category: "I/O Systems" },
       { name: "Fieldbus Cables", category: "Connection Technology" },
       { name: "Motor cables", category: "Connection Technology" },
       { name: "Sensor Actuator Cables", category: "Connection Technology" },
       { name: "T-Couplers", category: "Connection Technology" },
+      { name: "MVK Fusion CIP Safety", category: "I/O Systems" },
+      { name: "MVK Pro and IMPACT67 Pro", category: "I/O Systems" },
+      { name: "IO-Link analog converter", category: "I/O Systems" },
+      { name: "Eco-Rail-2", category: "Electronics in the Cabinet" },
+      { name: "EMC Filters", category: "Electronics in the Cabinet" },
+      { name: "Emparro ACCUcontrol", category: "Electronics in the Cabinet" },
+      { name: "Emparro HD – Heavy Duty", category: "Electronics in the Cabinet" },
       { name: "Lighting Elements", category: "Interfaces" },
       { name: "Modlink Heavy", category: "Interfaces" },
       { name: "Modlink MSVD", category: "Interfaces" },
+      { name: "Modlink MPV", category: "Interfaces" },
     ],
   },
   industries: {
@@ -230,10 +230,22 @@ export const SITE_CONTENT: SiteContent = {
     extra: "With its future-oriented technologies and extensive know-how from a wide range of applications, Murrelektronik is the right contact person for the development of innovative automation solutions in almost all sectors.",
     sectors: [
       {
+        id: "machine-tools",
+        title: "Machine tools",
+        description: "Machine tooling is a wide-ranging industry. Customers needs and wishes are as diverse as the machines and plants themselves.",
+        image: machineToolImg,
+      },
+      {
         id: "automotive",
         title: "Automotive",
         description: "From the press, body and paint shops, to aggregate production to the final assembly, automation must be reliable to avoid expensive downtimes.",
         image: automotiveImg,
+      },
+      {
+        id: "robotics",
+        title: "Robotics",
+        description: "Distributed installation technology that even fits on axis 6 of a robot arm.",
+        image: roboticsImg,
       },
       {
         id: "food-beverage",
@@ -252,18 +264,6 @@ export const SITE_CONTENT: SiteContent = {
         title: "Mobile Applications",
         description: "Automation technology for agricultural machinery, gritting vehicles and loggers working in harsh conditions.",
         image: mobileAppsImg,
-      },
-      {
-        id: "robotics",
-        title: "Robotics",
-        description: "Distributed installation technology that even fits on axis 6 of a robot arm.",
-        image: roboticsImg,
-      },
-      {
-        id: "machine-tools",
-        title: "Machine tools",
-        description: "Machine tooling is a wide-ranging industry. Customers needs and wishes are as diverse as the machines and plants themselves.",
-        image: machineToolImg,
       },
     ],
   },

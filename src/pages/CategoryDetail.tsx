@@ -20,7 +20,7 @@ const CategoryDetail = () => {
   if (!category) {
     return (
       <Layout>
-        <div className="container mx-auto py-24 text-center">
+        <div className="container mx-auto py-16 text-center">
           <h1 className="text-4xl font-bold mb-8">Category Not Found</h1>
           <Button onClick={() => navigate("/products")}>Back to Products</Button>
         </div>
@@ -41,12 +41,12 @@ const CategoryDetail = () => {
         </Link>
       </div>
 
-      <section className="py-24 bg-white">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="space-y-12">
-            <h2 className="text-3xl font-bold text-primary mb-8">Product Range & Features</h2>
+          <div className="space-y-8">
+            <h2 className="text-3xl font-bold text-primary mb-6">Product Range & Features</h2>
             {relatedProducts.length > 0 ? (
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {relatedProducts.map((product: ProductItem, i: number) => (
                   <motion.div
                     key={i}
@@ -98,7 +98,7 @@ const CategoryDetail = () => {
                 ))}
               </div>
             ) : (
-              <div className="p-12 bg-bg-light rounded-2xl text-center text-muted-foreground/40">
+              <div className="p-8 bg-bg-light rounded-2xl text-center text-muted-foreground/40">
                 Detailed product listings coming soon.
               </div>
             )}

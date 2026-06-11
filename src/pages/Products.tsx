@@ -21,7 +21,7 @@ const Products = () => {
   return (
     <Layout>
       {/* Header */}
-      <section className="bg-bg-light border-b py-16">
+      <section className="bg-bg-light border-b py-10">
         <div className="container mx-auto px-4 text-center max-w-4xl">
           <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">Our Products</h1>
           <p className="text-muted-foreground text-lg leading-relaxed">
@@ -65,19 +65,19 @@ const Products = () => {
       </section>
 
       {/* Product List */}
-      <section className="py-24 bg-white">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="space-y-24">
+          <div className="space-y-16">
             {filteredCategories.map((category, i) => (
               <div key={category.id} id={category.id} className="scroll-mt-32">
-                <div className="flex flex-col lg:flex-row gap-12 items-center">
+                <div className="flex flex-col lg:flex-row gap-8 items-center">
                   
                   {/* TEXT CONTAINER */}
                   <motion.div
                     initial={{ opacity: 0, x: i % 2 === 0 ? -30 : 30 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
-                    className={`flex-1 space-y-6 order-2 ${i % 2 === 1 ? 'lg:order-2' : 'lg:order-1'}`}
+                    className={`flex-1 space-y-5 order-2 ${i % 2 === 1 ? 'lg:order-2' : 'lg:order-1'}`}
                   >
                     <div>
                       <h2 className="text-3xl font-black text-primary mb-4">{category.title}</h2>

@@ -39,7 +39,7 @@ const Industries = () => {
   return (
     <Layout>
       {/* Header */}
-      <section className="bg-primary text-white py-24 relative overflow-hidden bg-tech-grid">
+      <section className="bg-primary text-white py-16 relative overflow-hidden bg-tech-grid">
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -56,15 +56,15 @@ const Industries = () => {
       </section>
 
       {/* Full Content Industry List */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-4 space-y-32">
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 space-y-16">
           {sectors.map((sector, i) => (
             <div 
               key={sector.id} 
               id={sector.id} 
               className="scroll-mt-32"
             >
-              <div className="flex flex-col lg:flex-row gap-16 items-center">
+              <div className="flex flex-col lg:flex-row gap-10 items-center">
                 
                 {/* TEXT CONTAINER */}
                 <motion.div
@@ -72,14 +72,14 @@ const Industries = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   className={cn(
-                    "flex-1 space-y-8",
+                    "flex-1 space-y-6",
                     "order-2", /* Forces text below the image on mobile */
                     i % 2 === 1 ? "lg:order-2" : "lg:order-1" /* Alternates on desktop */
                   )}
                 >
                   <div>
-                    <h2 className="text-4xl font-black text-primary mb-6">{sector.title}</h2>
-                    <p className="text-xl text-muted-foreground leading-relaxed">
+                    <h2 className="text-4xl font-black text-primary mb-4">{sector.title}</h2>
+                    <p className="text-xl text-muted-foreground leading-relaxed text-justify">
                       {sector.description}
                     </p>
                   </div>
@@ -98,7 +98,7 @@ const Industries = () => {
                     ))}
                   </div>
 
-                  <div className="flex flex-wrap gap-4 pt-4">
+                  <div className="flex flex-wrap gap-4 pt-2">
                     <Button variant="default" onClick={() => navigate("/contact")}>
                       Get Sector Solution
                     </Button>
@@ -140,12 +140,12 @@ const Industries = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-bg-light">
+      <section className="py-16 bg-bg-light">
         <div className="container mx-auto px-4">
-          <div className="bg-primary rounded-[3.5rem] p-12 lg:p-24 text-white text-center relative overflow-hidden bg-tech-grid">
+          <div className="bg-primary rounded-[3.5rem] p-8 lg:p-16 text-white text-center relative overflow-hidden bg-tech-grid">
             <div className="relative z-10 max-w-3xl mx-auto">
-              <h2 className="text-4xl md:text-5xl font-black mb-8">Ready to Optimize Your Facility?</h2>
-              <p className="text-xl text-white/70 mb-12">
+              <h2 className="text-4xl md:text-5xl font-black mb-6">Ready to Optimize Your Facility?</h2>
+              <p className="text-xl text-white/70 mb-8 text-justify">
                 Our team of industrial experts is ready to help you implement the most efficient automation strategies for your specific sector.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-6">

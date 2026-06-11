@@ -8,13 +8,13 @@ export const Footer = () => {
   return (
     <footer className="bg-primary text-white pt-16 pb-8 border-t-2 border-secondary">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
           {/* Company Info */}
           <div className="space-y-6">
             <Link to="/" className="inline-block">
               <img 
                 src={logo} 
-                alt="SNIS Industries Logo" 
+                alt="SNIS Logo" 
                 className="h-16 w-auto object-contain" 
               />
             </Link>
@@ -94,12 +94,15 @@ export const Footer = () => {
                 <Phone className="w-5 h-5 text-accent shrink-0" />
                 <span>{SITE_CONTENT.contact.phone}</span>
               </div>
-              <div className="flex flex-col space-y-1 text-white/70">
-                <div className="flex items-center space-x-3">
+              <div className="flex flex-col space-y-2 text-white/70">
+                <a href={`mailto:${SITE_CONTENT.contact.salesEmail}`} className="flex items-center space-x-3 text-white font-semibold hover:text-accent transition-colors">
+                  <Mail className="w-5 h-5 text-accent shrink-0" />
+                  <span>{SITE_CONTENT.contact.salesEmail}</span>
+                </a>
+                <a href={`mailto:${SITE_CONTENT.contact.email}`} className="flex items-center space-x-3 text-white font-semibold hover:text-accent transition-colors">
                   <Mail className="w-5 h-5 text-accent shrink-0" />
                   <span>{SITE_CONTENT.contact.email}</span>
-                </div>
-                <div className="pl-8 text-xs">{SITE_CONTENT.contact.salesEmail}</div>
+                </a>
               </div>
             </div>
             <Button 
@@ -112,7 +115,7 @@ export const Footer = () => {
         </div>
 
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-medium text-white/40 uppercase tracking-widest">
-          <p>© {new Date().getFullYear()} SNIS Industries. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} SNIS. All rights reserved.</p>
           <div className="flex space-x-8">
             <Link to="/privacy" className="hover:text-accent transition-colors">Privacy Policy</Link>
             <Link to="/terms" className="hover:text-accent transition-colors">Terms of Service</Link>

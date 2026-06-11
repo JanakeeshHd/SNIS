@@ -7,10 +7,10 @@ import aboutImage from "@/assets/about.png";
 
 const stats = [
   { label: "Nature of Business", value: "Wholesaler / Distributor", icon: <Building2 className="w-5 h-5" /> },
-  { label: "Total Employees", value: "Upto 50 People", icon: <Users className="w-5 h-5" /> },
+  { label: "Total Employees", value: "Upto 10 People", icon: <Users className="w-5 h-5" /> },
   { label: "Year of Est.", value: "2011", icon: <FileCheck className="w-5 h-5" /> },
   { label: "Legal Status", value: "Proprietorship", icon: <Landmark className="w-5 h-5" /> },
-  { label: "Service Area", value: "Pan India", icon: <Globe2 className="w-5 h-5" /> },
+  { label: "Service Area", value: "Karnataka & Part of Tamil Nadu", icon: <Globe2 className="w-5 h-5" /> },
 ];
 
 export const CompanyOverview = () => {
@@ -28,8 +28,8 @@ export const CompanyOverview = () => {
             >
               <div>
                 <div className="text-accent font-bold uppercase tracking-widest text-xs mb-3 text-center lg:text-left">Corporate Overview</div>
-                <h2 className="text-4xl md:text-5xl font-black text-foreground mb-3 text-center lg:text-left">Leading the Industrial Automation Ecosystem</h2>
-                <p className="text-muted-foreground text-lg leading-relaxed font-medium text-center lg:text-left">
+                <h2 className="text-4xl md:text-5xl font-black text-foreground mb-3 text-center lg:text-left">Leading the Industrial Automation Partner</h2>
+                <p className="text-muted-foreground text-lg leading-relaxed font-medium text-justify lg:text-left">
                   {SITE_CONTENT.company.description}
                 </p>
               </div>
@@ -95,7 +95,7 @@ export const CompanyOverview = () => {
               <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl">
                 <img
                   src={aboutImage}
-                  alt="SNIS Industries overview"
+                  alt="SNIS overview"
                   className="aspect-[4/3] w-full object-cover"
                 />
               </div>
@@ -109,11 +109,11 @@ export const CompanyOverview = () => {
               className="space-y-4 order-1 lg:order-2"
             >
               <div>
-                <span className="text-accent font-bold tracking-widest uppercase text-sm mb-2 block">About SNIS Industries</span>
+                <span className="text-accent font-bold tracking-widest uppercase text-sm mb-2 block">About SNIS</span>
                 <h2 className="text-4xl md:text-5xl font-bold text-primary leading-tight mb-3">
                   Empowering Industry Through Automation & Electrical Excellence
                 </h2>
-                <p className="text-muted-foreground text-lg leading-relaxed">
+                <p className="text-muted-foreground text-lg leading-relaxed text-justify">
                   {SITE_CONTENT.company.aboutLong}
                 </p>
               </div>
