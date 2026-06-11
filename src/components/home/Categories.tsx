@@ -12,12 +12,12 @@ const iconMap = {
 
 export const Categories = () => {
   return (
-    <section className="py-32 bg-white relative overflow-hidden">
+    <section className="py-20 bg-white relative overflow-hidden">
       {/* Decorative background element */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%] bg-[radial-gradient(circle_at_center,rgba(0,212,255,0.03)_0%,transparent_70%)] pointer-events-none" />
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center max-w-3xl mx-auto mb-20">
+        <div className="text-center max-w-3xl mx-auto mb-12">
           <div className="text-accent font-bold uppercase tracking-widest text-xs mb-4">Industrial Ecosystem</div>
           <h2 className="text-4xl md:text-5xl font-black text-foreground mb-6">Explore Our Product Range</h2>
           <p className="text-muted-foreground text-lg leading-relaxed font-medium">

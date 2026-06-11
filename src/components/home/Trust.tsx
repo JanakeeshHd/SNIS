@@ -9,14 +9,14 @@ const reviews = [
 
 export const Trust = () => {
   return (
-    <section className="py-32 bg-white relative">
+    <section className="py-20 bg-white relative">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Satisfaction Dashboard */}
-          <div className="lg:col-span-4 space-y-8">
+          <div className="lg:col-span-4 space-y-6">
             <div className="p-10 bg-bg-light rounded-[3rem] border border-slate-100 shadow-soft">
-              <h2 className="text-3xl font-black text-foreground mb-6">Market Reputation</h2>
-              <div className="flex items-center space-x-4 mb-8">
+              <h2 className="text-3xl font-black text-foreground mb-4">Market Reputation</h2>
+              <div className="flex items-center space-x-4 mb-6">
                 <div className="text-6xl font-black text-secondary">4.8</div>
                 <div>
                    <div className="flex text-accent">
@@ -52,10 +52,10 @@ export const Trust = () => {
           </div>
 
           {/* Testimonials Grid */}
-          <div className="lg:col-span-8 space-y-12">
+          <div className="lg:col-span-8 space-y-8">
             <div>
               <div className="text-accent font-bold uppercase tracking-widest text-xs mb-4">Client Testimonials</div>
-              <h3 className="text-4xl font-black text-foreground mb-10 tracking-tight">Voices of Industrial Excellence</h3>
+              <h3 className="text-4xl font-black text-foreground mb-6 tracking-tight">Voices of Industrial Excellence</h3>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -66,12 +66,12 @@ export const Trust = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.1 }}
                   viewport={{ once: true }}
-                  className="p-8 bg-white rounded-3xl border border-secondary/10 shadow-premium hover:border-accent transition-all duration-300"
+                  className="p-6 bg-white rounded-3xl border border-secondary/10 shadow-premium hover:border-accent transition-all duration-300"
                 >
                   <div className="flex text-accent mb-6">
                     {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-current" />)}
                   </div>
-                  <p className="text-muted-foreground font-medium leading-relaxed mb-8 italic">"{review.text}"</p>
+                  <p className="text-muted-foreground font-medium leading-relaxed mb-6 italic">"{review.text}"</p>
                   <div className="flex items-center justify-between pt-6 border-t border-slate-50">
                     <div>
                       <div className="text-sm font-black text-foreground">{review.name}</div>

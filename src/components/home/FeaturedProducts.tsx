@@ -39,9 +39,9 @@ export const FeaturedProducts = () => {
   };
 
   return (
-    <section className="py-32 bg-bg-light">
+    <section className="py-20 bg-bg-light">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-12 lg:mb-20 gap-8">
+        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-8 lg:mb-12 gap-8">
           <div className="max-w-2xl">
             <div className="text-accent font-bold uppercase tracking-widest text-xs mb-4">Market Leading Solutions</div>
             <h2 className="text-4xl md:text-5xl font-black text-foreground mb-6">Featured Technical Products</h2>
@@ -76,7 +76,7 @@ export const FeaturedProducts = () => {
 
         <motion.div 
           layout
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
         >
           <AnimatePresence mode="popLayout">
             {filteredProducts.map((product, i) => (
@@ -135,7 +135,7 @@ export const FeaturedProducts = () => {
           </AnimatePresence>
         </motion.div>
 
-        <div className="mt-12 flex justify-center lg:hidden">
+        <div className="mt-8 flex justify-center lg:hidden">
           <Link to="/products" className="w-full sm:w-auto">
             <Button variant="outline" className="w-full px-8 py-6 text-base">
               View All Products

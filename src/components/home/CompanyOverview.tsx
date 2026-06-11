@@ -17,18 +17,18 @@ export const CompanyOverview = () => {
   return (
     <div className="space-y-0">
       {/* Corporate Overview Section */}
-      <section className="py-32 bg-bg-light">
+      <section className="py-20 bg-bg-light">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="space-y-10"
+              className="space-y-6"
             >
               <div>
                 <div className="text-accent font-bold uppercase tracking-widest text-xs mb-4 text-center lg:text-left">Corporate Overview</div>
-                <h2 className="text-4xl md:text-5xl font-black text-foreground mb-8 text-center lg:text-left">Leading the Industrial Automation Ecosystem</h2>
+                <h2 className="text-4xl md:text-5xl font-black text-foreground mb-4 text-center lg:text-left">Leading the Industrial Automation Ecosystem</h2>
                 <p className="text-muted-foreground text-lg leading-relaxed font-medium text-center lg:text-left">
                   {SITE_CONTENT.company.description}
                 </p>
@@ -61,7 +61,6 @@ export const CompanyOverview = () => {
                      <div className="space-y-6">
                         {[
                           "Authorized Channel Partner for Global Brands",
-                          "IndiaMART Trust Seal Verified Vendor",
                           "Comprehensive Technical Support & Consultation",
                           "High Inventory Levels for Rapid Deployment",
                           "Custom Engineered Cabinet Solutions"
@@ -84,9 +83,9 @@ export const CompanyOverview = () => {
       </section>
 
       {/* About Summary Section */}
-      <section className="py-24 bg-white">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}

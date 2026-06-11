@@ -7,14 +7,14 @@ import { SITE_CONTENT } from "@/data/content";
 
 export const ContactSection = () => {
   return (
-    <section className="py-24 bg-primary relative overflow-hidden bg-tech-grid">
+    <section className="py-16 bg-primary relative overflow-hidden bg-tech-grid">
       <div className="container mx-auto px-4 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="space-y-12"
+            className="space-y-8"
           >
             <div>
               <h2 className="text-4xl font-bold text-white mb-6">Have questions? Feel free to write us</h2>
@@ -72,10 +72,10 @@ export const ContactSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="bg-white/5 backdrop-blur-xl rounded-3xl p-8 md:p-12 shadow-glow-blue border border-white/10 relative"
+            className="bg-white/5 backdrop-blur-xl rounded-3xl p-6 md:p-8 shadow-glow-blue border border-white/10 relative"
           >
             <h3 className="text-2xl font-bold text-white mb-8">Send an Inquiry</h3>
-            <form className="space-y-6">
+            <form className="space-y-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-sm font-bold text-white/70">Your Name</label>

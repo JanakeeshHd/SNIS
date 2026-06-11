@@ -7,12 +7,12 @@ import { Link, useNavigate } from "react-router-dom";
 export const Industry = () => {
   const navigate = useNavigate();
   return (
-    <section className="py-32 bg-primary overflow-hidden relative">
+    <section className="py-20 bg-primary overflow-hidden relative">
       {/* Background abstract element */}
       <div className="absolute top-0 right-0 w-[50%] h-full bg-secondary/10 skew-x-12 translate-x-1/2 pointer-events-none" />
 
       <div className="container mx-auto px-4 relative z-10 flex flex-col">
-        <div className="flex justify-between items-end mb-12 lg:mb-24 gap-12">
+        <div className="flex justify-between items-end mb-8 lg:mb-12 gap-12">
           <div className="max-w-2xl">
             <div className="text-accent font-bold uppercase tracking-widest text-xs mb-4">Sector Expertise</div>
             <h2 className="text-4xl md:text-5xl font-black text-white mb-8">Solutions by Sector</h2>
@@ -90,7 +90,7 @@ export const Industry = () => {
         </div>
 
         {/* Mobile Button at the bottom */}
-        <div className="mt-12 flex justify-center lg:hidden">
+        <div className="mt-8 flex justify-center lg:hidden">
           <Button 
             size="lg" 
             variant="cta"
