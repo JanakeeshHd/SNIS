@@ -184,7 +184,7 @@ const Contact = () => {
             className="bg-white/5 backdrop-blur-xl rounded-3xl p-4 md:p-5 shadow-glow-blue border border-white/10 relative overflow-hidden"
           >
             <h3 className="text-2xl font-bold text-white mb-4">Our Office Location</h3>
-            <div className="w-full h-96 rounded-2xl overflow-hidden">
+            <div className="w-full h-96 rounded-2xl overflow-hidden relative">
               <iframe
                 width="100%"
                 height="100%"
@@ -192,8 +192,16 @@ const Contact = () => {
                 loading="lazy"
                 allowFullScreen
                 referrerPolicy="no-referrer-when-downgrade"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.297!2d77.500889!3d12.977333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae138d1a1a1a1a%3A0x1a1a1a1a1a1a1a1a!2s85%2F1%20C%20Block%20RHCS%20Layout%20Srigandadakaval%20Bangalore!5e0!3m2!1sen!2sin!4v1715340000000&q=12.977333,77.500889"
+                src="https://www.google.com/maps?q=12.977333,77.500889&z=17&output=embed"
               ></iframe>
+              <a
+                href="https://maps.app.goo.gl/nqgVPREKmpohVMKQ9"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute left-4 top-4 z-10 inline-flex items-center rounded-full bg-white/90 px-4 py-2 text-sm font-semibold text-primary shadow-lg backdrop-blur hover:bg-white"
+              >
+                Get Directions →
+              </a>
             </div>
             <div className="mt-4 p-4 bg-white/5 rounded-2xl border border-white/10">
               <p className="text-white/70 text-sm"><span className="text-accent font-bold">Address:</span> {SITE_CONTENT.contact.address}</p>
