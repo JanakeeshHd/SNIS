@@ -45,6 +45,7 @@ export const FeaturedProducts = () => {
           <div className="max-w-2xl">
             <div className="text-accent font-bold uppercase tracking-widest text-xs mb-2">Market Leading Solutions</div>
             <h2 className="text-4xl md:text-5xl font-black text-foreground mb-3">Featured Technical Products</h2>
+            <h3 className="text-2xl md:text-3xl font-bold text-secondary mb-3">Sensor Actuator Cables</h3>
             <p className="text-muted-foreground text-lg leading-relaxed font-medium">
               Precision-engineered components from global industry leaders, curated for the highest standards of reliability.
             </p>

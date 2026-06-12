@@ -8,7 +8,7 @@ import aboutImage from "@/assets/about.png";
 const stats = [
   { label: "Nature of Business", value: "Wholesaler / Distributor", icon: <Building2 className="w-5 h-5" /> },
   { label: "Total Employees", value: "Upto 10 People", icon: <Users className="w-5 h-5" /> },
-  { label: "Year of Est.", value: "2011", icon: <FileCheck className="w-5 h-5" /> },
+  { label: "Year of Est.", value: "2004", icon: <FileCheck className="w-5 h-5" /> },
   { label: "Legal Status", value: "Proprietorship", icon: <Landmark className="w-5 h-5" /> },
   { label: "Service Area", value: "Karnataka & Part of Tamil Nadu", icon: <Globe2 className="w-5 h-5" /> },
 ];
