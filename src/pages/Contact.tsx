@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Layout } from "@/components/layout/Layout";
 import { SITE_CONTENT } from "@/data/content";
-import { Phone, Mail, MapPin, Send, Clock, Globe } from "lucide-react";
+import { Phone, Mail, MapPin, Send, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -174,11 +174,32 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Map Placeholder */}
-      <section className="h-72 bg-muted w-full flex items-center justify-center relative grayscale">
-        <div className="text-muted-foreground flex flex-col items-center">
-          <Globe className="w-12 h-12 mb-4" />
-          <span className="text-lg font-medium italic">Google Maps Integration - {SITE_CONTENT.contact.address}</span>
+      {/* Map Section */}
+      <section className="py-12 bg-primary relative overflow-hidden bg-tech-grid">
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="bg-white/5 backdrop-blur-xl rounded-3xl p-4 md:p-5 shadow-glow-blue border border-white/10 relative overflow-hidden"
+          >
+            <h3 className="text-2xl font-bold text-white mb-4">Our Office Location</h3>
+            <div className="w-full h-96 rounded-2xl overflow-hidden">
+              <iframe
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                loading="lazy"
+                allowFullScreen
+                referrerPolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.297!2d77.500889!3d12.977333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae138d1a1a1a1a%3A0x1a1a1a1a1a1a1a1a!2s85%2F1%20C%20Block%20RHCS%20Layout%20Srigandadakaval%20Bangalore!5e0!3m2!1sen!2sin!4v1715340000000&q=12.977333,77.500889"
+              ></iframe>
+            </div>
+            <div className="mt-4 p-4 bg-white/5 rounded-2xl border border-white/10">
+              <p className="text-white/70 text-sm"><span className="text-accent font-bold">Address:</span> {SITE_CONTENT.contact.address}</p>
+              <p className="text-white/70 text-sm mt-2"><span className="text-accent font-bold">Coordinates:</span> 12°58'38.4"N 77°30'03.2"E</p>
+            </div>
+          </motion.div>
         </div>
       </section>
     </Layout>
