@@ -119,7 +119,7 @@ export const SITE_CONTENT: SiteContent = {
     phone: "+91 98453 73148",
     email: "info@snisindia.in",
     salesEmail: "sales@snisindia.in",
-    address: "Bangalore",
+    address: "85/1 C BLOCK RHCS LAYOUT SRIGANDADAKAVAL BANGALORE 560091",
     social: {
       twitter: "https://twitter.com/i/flow/login",
       facebook: "https://www.facebook.com/login/",
