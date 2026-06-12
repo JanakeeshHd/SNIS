@@ -124,65 +124,24 @@ export const ContactSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="bg-white/5 backdrop-blur-xl rounded-3xl p-4 md:p-5 shadow-glow-blue border border-white/10 relative"
+            className="bg-white/5 backdrop-blur-xl rounded-3xl p-4 md:p-5 shadow-glow-blue border border-white/10 relative overflow-hidden"
           >
-            <h3 className="text-2xl font-bold text-white mb-4">Send an Inquiry</h3>
-            <form className="space-y-4" onSubmit={handleSubmit}>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <label className="text-sm font-bold text-white/70">Your Name</label>
-                  <Input
-                    placeholder="John Doe"
-                    className="h-12 bg-white/5 border-white/10 text-white placeholder:text-white/20 focus:border-accent/50 focus:ring-accent/20"
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label className="text-sm font-bold text-white/70">Email Address</label>
-                  <Input
-                    type="email"
-                    placeholder="john@example.com"
-                    className="h-12 bg-white/5 border-white/10 text-white placeholder:text-white/20 focus:border-accent/50 focus:ring-accent/20"
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  />
-                </div>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <label className="text-sm font-bold text-white/70">Phone Number</label>
-                  <Input
-                    placeholder="+91 00000 00000"
-                    className="h-12 bg-white/5 border-white/10 text-white placeholder:text-white/20 focus:border-accent/50 focus:ring-accent/20"
-                    value={formData.phone}
-                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label className="text-sm font-bold text-white/70">Industry Sector</label>
-                  <Input
-                    placeholder="Automotive"
-                    className="h-12 bg-white/5 border-white/10 text-white placeholder:text-white/20 focus:border-accent/50 focus:ring-accent/20"
-                    value={formData.industry}
-                    onChange={(e) => setFormData({ ...formData, industry: e.target.value })}
-                  />
-                </div>
-              </div>
-              <div className="space-y-2">
-                <label className="text-sm font-bold text-white/70">Your Message</label>
-                <Textarea
-                  placeholder="Tell us about your requirement..."
-                  className="min-h-[120px] bg-white/5 border-white/10 text-white placeholder:text-white/20 focus:border-accent/50 focus:ring-accent/20"
-                  value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                />
-              </div>
-              <Button size="lg" variant="cta" className="w-full h-14 text-lg">
-                Submit Inquiry
-                <Send className="ml-2 w-5 h-5" />
-              </Button>
-            </form>
+            <h3 className="text-2xl font-bold text-white mb-4">Our Office Location</h3>
+            <div className="w-full h-96 rounded-2xl overflow-hidden">
+              <iframe
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                loading="lazy"
+                allowFullScreen
+                referrerPolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.297!2d77.500889!3d12.977333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae138d1a1a1a1a%3A0x1a1a1a1a1a1a1a1a!2s85%2F1%20C%20Block%20RHCS%20Layout%20Srigandadakaval%20Bangalore!5e0!3m2!1sen!2sin!4v1715340000000&q=12.977333,77.500889"
+              ></iframe>
+            </div>
+            <div className="mt-4 p-4 bg-white/5 rounded-2xl border border-white/10">
+              <p className="text-white/70 text-sm"><span className="text-accent font-bold">Address:</span> {SITE_CONTENT.contact.address}</p>
+              <p className="text-white/70 text-sm mt-2"><span className="text-accent font-bold">Coordinates:</span> 12°58'38.4"N 77°30'03.2"E</p>
+            </div>
           </motion.div>
         </div>
       </div>
