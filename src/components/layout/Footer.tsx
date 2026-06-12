@@ -117,8 +117,8 @@ export const Footer = () => {
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-medium text-white/40 uppercase tracking-widest">
           <p>© {new Date().getFullYear()} SNIS. All rights reserved.</p>
           <div className="flex space-x-8">
-            <Link to="/privacy" className="hover:text-accent transition-colors">Privacy Policy</Link>
-            <Link to="/terms" className="hover:text-accent transition-colors">Terms of Service</Link>
+            <Link to="" className="hover:text-accent transition-colors">Privacy Policy</Link>
+            <Link to="" className="hover:text-accent transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>
