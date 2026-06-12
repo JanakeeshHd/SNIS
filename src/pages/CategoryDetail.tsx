@@ -84,7 +84,7 @@ const CategoryDetail = () => {
                       <h3 className="text-xl font-black text-foreground mb-2 line-clamp-2 group-hover:text-secondary transition-colors">
                         {product.name}
                       </h3>
-                      <p className="text-sm text-muted-foreground font-medium mb-6 line-clamp-3">
+                      <p className="text-sm text-muted-foreground font-medium mb-6 leading-relaxed">
                         {product.description}
                       </p>
                       

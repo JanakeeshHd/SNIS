@@ -118,7 +118,7 @@ export const FeaturedProducts = () => {
                   <h3 className="text-xl font-black text-foreground mb-1 line-clamp-2 group-hover:text-secondary transition-colors">
                     {product.name}
                   </h3>
-                  <p className="text-sm text-muted-foreground font-medium mb-4 line-clamp-2">
+                  <p className="text-sm text-muted-foreground font-medium mb-4 leading-relaxed">
                     {getProductDescription(product.name, product.category) || "High-performance solution for industrial networking and cabinet management."}
                   </p>
                   

@@ -38,6 +38,9 @@ import masi68Img from "@/assets/products/MASI68.webp";
 import mvkMetalPofImg from "@/assets/products/MVK Metal POF.webp";
 import mvkMetalImg from "@/assets/products/MVK Metal.webp";
 import lightingElementsImg from "@/assets/products/Lighting Elements.png";
+import kdlDMonoImg from "@/assets/products/KDL-D-MONO.webp";
+import kdlJumboImg from "@/assets/products/KDL-JUMBO.webp";
+import kdtXCableGrommetImg from "@/assets/products/KDT-X Cable Grommet.webp";
 import modlinkHeavyImg from "@/assets/products/Modlink Heavy.png";
 import modlinkMsddImg from "@/assets/products/Modlink® MSDD.png";
 import modlinkMpvImg from "@/assets/products/Modlink MPV.png";
@@ -192,6 +195,9 @@ export const SITE_CONTENT: SiteContent = {
       { name: "MVK Metal", category: "I/O Systems", description: "IP67 rated fieldbus modules are an important component of machine and system installations. They replace complex parallel wiring, saving space in the cabinet.", image: mvkMetalImg },
       { name: "MVK Metal POF", category: "I/O Systems", description: "IP67 rated fieldbus modules are an important component of machine and system installations. They replace complex parallel wiring, saving space in the cabinet.", image: mvkMetalPofImg },
 
+      { name: "KDL-D-MONO", category: "Interfaces", description: "A round, splittable cable entry system for pre-assembled cables, offering easy assembly, a split seal, included lock nut, and simple strain relief with cable ties.", image: kdlDMonoImg },
+      { name: "KDL-JUMBO", category: "Interfaces", description: "A robust cable entry system for pre-assembled cables, metal pipes, and corrugated conduits with a 2-piece frame and permanent seal.", image: kdlJumboImg },
+      { name: "KDT-X Cable Grommet", category: "Interfaces", description: "A 1-piece cable entry grommet for pre-assembled cables that enables easy routing into control cabinets and supports simple retrofit installation.", image: kdtXCableGrommetImg },
       { name: "Lighting Elements", category: "Interfaces", description: "Murrelektronik's lighting systems use the best technology on the market. The LEDs are made to last and don't need much power.", image: lightingElementsImg },
       { name: "Modlink Heavy", category: "Interfaces", description: "The heavy-duty plug connectors of the Modlink Heavy series from Murrelektronik guarantee secure transmission of signals, energy, data and pneumatics", image: modlinkHeavyImg },
       { name: "Modlink MSDD", category: "Interfaces", description: "Modlink MSDD interfaces provide convenient access to the controls when diagnostics or service work is necessary.", image: modlinkMsddImg },
