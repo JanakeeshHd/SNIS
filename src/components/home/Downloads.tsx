@@ -40,6 +40,50 @@ const resources = [
     description: "Hygienic connector solutions for food & beverage applications.",
   },
   
+  // Murrplastik Catalogs
+  {
+    title: "R-Tec Liner – Robot Cable Guidance",
+    url: "https://pdf.directindustry.com/pdf/murrplastik-systemtechnik/r-tec-liner/14226-738294.html",
+    type: "PDF",
+    size: "",
+    description: "Linear system for optimal guidance of energy packages on industrial robots.",
+  },
+  {
+    title: "Cable Drag Chain Systems",
+    url: "https://pdf.directindustry.com/pdf/murrplastik-systemtechnik/cable-drag-chain-systems/14226-291273.html",
+    type: "PDF",
+    size: "",
+    description: "Comprehensive catalog of energy chain systems for dynamic applications.",
+  },
+  {
+    title: "Cable Entry and Cable Holding Systems",
+    url: "https://pdf.directindustry.com/pdf/murrplastik-systemtechnik/cable-entry-cabel-holding-systems/14226-291313.html",
+    type: "PDF",
+    size: "",
+    description: "Complete range of cable entry systems and holders for industrial applications.",
+  },
+  {
+    title: "Labelling Systems",
+    url: "https://pdf.directindustry.com/pdf/murrplastik-systemtechnik/labelling-systems/14226-291315.html",
+    type: "PDF",
+    size: "",
+    description: "Professional labelling solutions for cables, components, and systems.",
+  },
+  {
+    title: "KDT-X Cable Grommets",
+    url: "https://www.murrplastik.com/assets/Uploads/KDT-X-Grommets-data-sheet.pdf",
+    type: "PDF",
+    size: "",
+    description: "Data sheet for KDT-X cable entry grommets for pre-assembled cables.",
+  },
+  {
+    title: "FHS Flexible Holder Systems for Cobots",
+    url: "https://www.murrplastik.com/assets/Uploads/FHS-Dresspack-Brochure-Updated-Cover-compressed.pdf",
+    type: "PDF",
+    size: "",
+    description: "Flexible cable management solutions for collaborative robots.",
+  },
+  
   
 ];
 
@@ -78,7 +122,7 @@ export const Downloads = () => {
                       <div className="flex-1 w-full">
                         <div>
                           <div className="text-xs uppercase font-black text-accent mb-2">
-                            {res.url?.includes('murrelektronik') ? 'Murrelektronik' : res.url?.includes('oxomi') ? 'Oxomi' : 'External'}
+                            {res.url?.includes('murrelektronik') ? 'Murrelektronik' : res.url?.includes('murrplastik') ? 'Murrplastik' : res.url?.includes('oxomi') ? 'Oxomi' : 'External'}
                           </div>
                           <h4 className="font-black text-foreground group-hover:text-secondary transition-colors text-base">{res.title}</h4>
                           <p className="text-sm text-muted-foreground mt-1 line-clamp-2">{res.description}</p>
