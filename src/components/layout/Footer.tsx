@@ -23,16 +23,16 @@ export const Footer = () => {
             </p>
             <div className="flex space-x-4">
                 <a href={SITE_CONTENT.contact.social.twitter} className="p-2 rounded-full hover:bg-accent/10 transition-colors">
-                  <Twitter className="w-6 h-6 text-[#1DA1F2]" />
+                  <Twitter className="w-10 h-10 text-[#1DA1F2]" />
                 </a>
                 <a href={SITE_CONTENT.contact.social.facebook} className="p-2 rounded-full hover:bg-accent/10 transition-colors">
-                  <Facebook className="w-6 h-6 text-[#1877F2]" />
+                  <Facebook className="w-10 h-10 text-[#1877F2]" />
                 </a>
                 <a href={SITE_CONTENT.contact.social.instagram} className="p-2 rounded-full hover:bg-accent/10 transition-colors">
-                  <Instagram className="w-6 h-6 text-[#E1306C]" />
+                  <Instagram className="w-10 h-10 text-[#E1306C]" />
                 </a>
                 <a href={SITE_CONTENT.contact.social.linkedin} className="p-2 rounded-full hover:bg-accent/10 transition-colors">
-                  <Linkedin className="w-6 h-6 text-[#0A66C2]" />
+                  <Linkedin className="w-10 h-10 text-[#0A66C2]" />
                 </a>
             </div>
           </div>
