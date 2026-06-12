@@ -23,16 +23,16 @@ export const Footer = () => {
             </p>
             <div className="flex space-x-4">
                 <a href={SITE_CONTENT.contact.social.twitter} className="p-2 rounded-full hover:bg-accent/10 transition-colors">
-                  <Twitter className="w-4 h-4 text-[#1DA1F2]" />
+                  <Twitter className="w-6 h-6 text-[#1DA1F2]" />
                 </a>
                 <a href={SITE_CONTENT.contact.social.facebook} className="p-2 rounded-full hover:bg-accent/10 transition-colors">
-                  <Facebook className="w-4 h-4 text-[#1877F2]" />
+                  <Facebook className="w-6 h-6 text-[#1877F2]" />
                 </a>
                 <a href={SITE_CONTENT.contact.social.instagram} className="p-2 rounded-full hover:bg-accent/10 transition-colors">
-                  <Instagram className="w-4 h-4 text-[#E1306C]" />
+                  <Instagram className="w-6 h-6 text-[#E1306C]" />
                 </a>
                 <a href={SITE_CONTENT.contact.social.linkedin} className="p-2 rounded-full hover:bg-accent/10 transition-colors">
-                  <Linkedin className="w-4 h-4 text-[#0A66C2]" />
+                  <Linkedin className="w-6 h-6 text-[#0A66C2]" />
                 </a>
             </div>
           </div>
@@ -87,20 +87,20 @@ export const Footer = () => {
             <h4 className="text-lg font-semibold mb-6 border-l-4 border-accent pl-3">Contact Us</h4>
             <div className="space-y-4">
               <div className="flex items-start space-x-3 text-white/70">
-                <MapPin className="w-5 h-5 text-accent shrink-0" />
+                <MapPin className="w-6 h-6 text-accent shrink-0" />
                 <span>{SITE_CONTENT.contact.address}</span>
               </div>
               <a href={`tel:${SITE_CONTENT.contact.phone.replace(/\s+/g, "")}`} className="flex items-center space-x-3 text-white font-bold hover:text-accent transition-colors">
-                <Phone className="w-5 h-5 text-accent shrink-0" />
+                <Phone className="w-6 h-6 text-accent shrink-0" />
                 <span>{SITE_CONTENT.contact.phone}</span>
               </a>
               <div className="flex flex-col space-y-2 text-white/70">
                 <a href={`mailto:${SITE_CONTENT.contact.salesEmail}`} className="flex items-center space-x-3 text-white font-semibold hover:text-accent transition-colors">
-                  <Mail className="w-5 h-5 text-accent shrink-0" />
+                  <Mail className="w-6 h-6 text-accent shrink-0" />
                   <span>{SITE_CONTENT.contact.salesEmail}</span>
                 </a>
                 <a href={`mailto:${SITE_CONTENT.contact.email}`} className="flex items-center space-x-3 text-white font-semibold hover:text-accent transition-colors">
-                  <Mail className="w-5 h-5 text-accent shrink-0" />
+                  <Mail className="w-6 h-6 text-accent shrink-0" />
                   <span>{SITE_CONTENT.contact.email}</span>
                 </a>
               </div>
