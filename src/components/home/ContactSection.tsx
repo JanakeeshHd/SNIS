@@ -84,20 +84,22 @@ export const ContactSection = () => {
                 </div>
               </div>
 
-              <a
-                href="https://maps.app.goo.gl/kj918sTJ9hqHRKaR6"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-start space-x-4 p-6 rounded-2xl bg-white/5 border border-white/10 group hover:border-accent/50 transition-all duration-300 cursor-pointer"
-              >
+              <div className="flex items-start space-x-4 p-6 rounded-2xl bg-white/5 border border-white/10 group hover:border-accent/50 transition-all duration-300">
                 <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent shrink-0 group-hover:bg-accent group-hover:text-white transition-all duration-300">
                   <MapPin className="w-6 h-6" />
                 </div>
                 <div>
                   <h4 className="font-bold text-white mb-1">Visit Office</h4>
-                  <p className="font-bold text-accent hover:text-accent/80 transition-colors underline">{SITE_CONTENT.contact.address}</p>
+                  <a 
+                    href="https://maps.app.goo.gl/kj918sTJ9hqHRKaR6"
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="text-white font-semibold hover:text-accent transition-colors block mt-1"
+                  >
+                    {SITE_CONTENT.contact.address}
+                  </a>
                 </div>
-              </a>
+              </div>
 
               <a
                 href={whatsappUrl}
