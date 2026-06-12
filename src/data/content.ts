@@ -53,6 +53,9 @@ import fieldbusCablesImg from "@/assets/products/Fieldbus Cables.webp";
 import motorCablesImg from "@/assets/products/Motor cables.webp";
 import sensorActuatorCablesImg from "@/assets/products/Sensor Actuator Cables.webp";
 import tCouplersImg from "@/assets/products/T-Couplers.webp";
+import ewtPaSplitFlexConduitImg from "@/assets/products/EWT-PA Split-Flex Conduit.webp";
+import mp420EvochainImg from "@/assets/products/MP 420 EVOCHAIN®.webp";
+import rTecLinerImg from "@/assets/products/R-Tec Liner.webp";
 
 export interface CompanyInfo {
   name: string;
@@ -127,7 +130,7 @@ export const SITE_CONTENT: SiteContent = {
       twitter: "https://twitter.com/i/flow/login",
       facebook: "https://www.facebook.com/login/",
       instagram: "https://www.instagram.com/accounts/login/",
-      linkedin: "https://www.linkedin.com/login",
+      linkedin: "https://www.linkedin.com/login/",
     },
   },
   products: {
@@ -212,23 +215,27 @@ export const SITE_CONTENT: SiteContent = {
       { name: "Motor cables", category: "Connection Technology", description: "Servo motors are connected with compact M23 connectors. These connectors have become an established standard instead of the previously used terminal boxes. Murrelektronik offers power cables size 1.0 and signal cables in molded versions.", image: motorCablesImg },
       { name: "Sensor Actuator Cables", category: "Connection Technology", description: "Murrelektronik offers one of the largest cordset lineups on the market for connecting sensors and valves. Many of these are in stock or they can be produced within 48 hours of receipt of your order – even if you just need one piece.", image: sensorActuatorCablesImg },
       { name: "T-Couplers", category: "Connection Technology", description: "The T-Coupler doubles connection capacity by providing two connectors and simplifies installation with fixed coupling nuts.", image: tCouplersImg },
+      { name: "EWT-PA Split-Flex Conduit", category: "Connection Technology", description: "A flexible conduit made of modified polyamide 6, halogen, phosphor and cadmium-free, designed for protecting and guiding cables in static applications with light to medium mechanical loads.", image: ewtPaSplitFlexConduitImg },
+      { name: "MP 420 EVOCHAIN®", category: "Connection Technology", description: "A compact and durable chain solution for moving applications with easy installation, tool-free access, noise damping, low-vibration operation, and integrated wear control for extended service life.", image: mp420EvochainImg },
+      { name: "R-Tec Liner", category: "Connection Technology", description: "A linear system for optimal guidance of energy packages on industrial robots, with aluminium housing and patented spring return system.", image: rTecLinerImg },
     ],
     featured: [
-      { name: "Fieldbus Cables", category: "Connection Technology" },
-      { name: "Motor cables", category: "Connection Technology" },
+      { name: "MP 420 EVOCHAIN®", category: "Connection Technology" },
+      { name: "R-Tec Liner", category: "Connection Technology" },
       { name: "Sensor Actuator Cables", category: "Connection Technology" },
-      { name: "T-Couplers", category: "Connection Technology" },
-      { name: "MVK Fusion CIP Safety", category: "I/O Systems" },
+      { name: "EWT-PA Split-Flex Conduit", category: "Connection Technology" },
+      { name: "Cube67", category: "I/O Systems" },
       { name: "MVK Pro and IMPACT67 Pro", category: "I/O Systems" },
-      { name: "IO-Link analog converter", category: "I/O Systems" },
+      { name: "Impact67", category: "I/O Systems" },
+      { name: "MVK Fusion CIP Safety", category: "I/O Systems" },
+      { name: "Emparro", category: "Electronics in the Cabinet" },
+      { name: "Mico Pro", category: "Electronics in the Cabinet" },
       { name: "Eco-Rail-2", category: "Electronics in the Cabinet" },
       { name: "EMC Filters", category: "Electronics in the Cabinet" },
-      { name: "Emparro ACCUcontrol", category: "Electronics in the Cabinet" },
-      { name: "Emparro HD – Heavy Duty", category: "Electronics in the Cabinet" },
-      { name: "Lighting Elements", category: "Interfaces" },
       { name: "Modlink Heavy", category: "Interfaces" },
-      { name: "Modlink MSVD", category: "Interfaces" },
-      { name: "Modlink MPV", category: "Interfaces" },
+      { name: "KDL-JUMBO", category: "Interfaces" },
+      { name: "Modlink MSDD", category: "Interfaces" },
+      { name: "KDL-D-MONO", category: "Interfaces" },
     ],
   },
   industries: {
