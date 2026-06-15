@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 
 const Products = () => {
   const navigate = useNavigate();
-  const [searchQuery, setSearchQuery] = useState("");
+  const [searchQuery] = useState("");
   const [activeCategory, setActiveCategory] = useState("All");
 
   const filteredCategories = SITE_CONTENT.products.categories.filter(cat => {
