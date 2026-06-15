@@ -44,7 +44,7 @@ export const Hero = () => {
             </h1>
             
             <p className="text-xl text-white/70 max-w-2xl leading-relaxed font-medium">
-              Authorized partner Channel for <span className="text-white font-bold">Murr Elektronik and Murrplastik</span>, delivering premium automation infrastructure since 2011.
+              Authorized partner Channel for <span className="text-white font-bold">Murr Elektronik and Murrplastik</span>, delivering premium automation infrastructure since 2004.
             </p>
           </motion.div>
 
