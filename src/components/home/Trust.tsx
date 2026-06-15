@@ -81,15 +81,6 @@ export const Trust = () => {
                   </div>
                 </motion.div>
               ))}
-              
-              <div className="p-8 bg-primary rounded-3xl flex flex-col justify-center items-center text-center text-white relative overflow-hidden group cursor-pointer shadow-glow-blue border border-white/5">
-                 <div className="relative z-10">
-                    <MessageSquare className="w-12 h-12 mb-4 mx-auto text-accent" />
-                    <h4 className="text-xl font-black mb-2">Write a Review</h4>
-                    <p className="text-white/60 text-sm font-medium">Share your experience with us</p>
-                 </div>
-                 <div className="absolute inset-0 bg-accent opacity-0 group-hover:opacity-10 transition-opacity" />
-              </div>
             </div>
           </div>
         </div>

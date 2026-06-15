@@ -159,12 +159,6 @@ export const Header = () => {
 
         <div className="flex items-center gap-4">
           <div className="hidden md:flex relative group">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-white/50 group-focus-within:text-accent transition-colors" />
-            <input 
-              type="text" 
-              placeholder="Search products..." 
-              className="bg-white/10 border-white/10 text-white placeholder:text-white/40 rounded-full py-1.5 pl-10 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-accent/50 w-64 transition-all"
-            />
           </div>
           
           <Button 
