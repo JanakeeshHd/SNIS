@@ -111,7 +111,7 @@ export const SITE_CONTENT: SiteContent = {
   company: {
     name: "SNIS",
     tagline: "Engineering Smarter Industries with Precision and Power",
-    description: "SNIS is one of Karnataka’s leading solution providers in the field of Industrial Automation and Electrical Switchgear Marketing. With a strong legacy of delivering value-driven, high-performance solutions, we cater to a wide spectrum of industries and clients across the region.",
+    description: "SNIS is one of Karnataka's leading solution providers in the field of Automation and Electrical Switchgear Marketing. With a strong legacy of delivering value-driven, high-performance solutions, we cater to a wide spectrum of clients across the region.",
     aboutLong: "Our customer base includes Panel Builders and a wide array of industrial segments such as Steel, Paper, Water Treatment, and more. We also closely collaborate with OEMs, including Machine Tool Manufacturers, Special Purpose Machine (SPM) Builders, and Industrial Process Automation Companies, ensuring that our products and services seamlessly integrate with their engineering and automation needs.",
     aboutExtra: "At SNIS, our commitment lies in combining technical expertise, quality-assured products, and reliable after-sales support to empower industries with smarter, safer, and more efficient electrical and automation systems. With strong partnerships and a customer-centric approach, we continue to play a key role in driving the growth and innovation of India’s industrial ecosystem.",
     vision: "To be the most trusted partner in driving industrial growth through innovative automation and electrical solutions, enabling industries to operate smarter, safer, and more efficiently.",
