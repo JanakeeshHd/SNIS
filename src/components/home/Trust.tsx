@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Star, MessageSquare } from "lucide-react";
+import { Star } from "lucide-react";
 
 const reviews = [
   { name: "S. Sathish", date: "May 2026", company: "Automotive OEM", text: "Exceptional service and genuine Siemens components. Their technical team is highly knowledgeable." },

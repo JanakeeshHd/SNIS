@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import { Search, Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
@@ -160,7 +160,7 @@ export const Header = () => {
         <div className="flex items-center gap-4">
           <div className="hidden md:flex relative group">
           </div>
-          
+
           <Button 
             className="hidden md:flex bg-secondary hover:bg-accent text-white border-none shadow-glow-blue hover:shadow-glow transition-all duration-300"
             onClick={() => navigate("/contact")}
