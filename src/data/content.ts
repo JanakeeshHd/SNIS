@@ -130,7 +130,7 @@ export const SITE_CONTENT: SiteContent = {
       twitter: "https://twitter.com/i/flow/login",
       facebook: "https://www.facebook.com/login/",
       instagram: "https://www.instagram.com/accounts/login/",
-      linkedin: "https://www.linkedin.com/login/",
+      linkedin: "https://www.linkedin.com/in/snis-india-930160416/",
     },
   },
   products: {

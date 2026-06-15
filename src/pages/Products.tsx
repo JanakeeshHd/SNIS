@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { Layout } from "@/components/layout/Layout";
 import { SITE_CONTENT } from "@/data/content";
 import { Button } from "@/components/ui/button";
-import { Search } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const Products = () => {
