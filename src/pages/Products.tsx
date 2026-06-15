@@ -53,13 +53,6 @@ const Products = () => {
             ))}
           </div>
           <div className="relative w-full md:w-96">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
-            <input 
-              className="flex h-12 w-full rounded-full border-none bg-bg-light px-3 py-2 text-sm pl-10 focus:ring-2 focus:ring-accent/20 outline-none" 
-              placeholder="Search products..." 
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-            />
           </div>
         </div>
       </section>
