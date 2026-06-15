@@ -6,10 +6,15 @@ export const TopBar = () => {
     <div className="bg-primary text-white py-2.5 hidden md:block border-b border-white/10">
       <div className="container mx-auto px-4 flex justify-between items-center text-[11px] font-black uppercase tracking-[0.15em]">
         <div className="flex items-center space-x-8">
-          <div className="flex items-center text-accent">
+          <a 
+            href={`https://www.google.com/maps/search/${encodeURIComponent(SITE_CONTENT.contact.address)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center text-accent hover:text-accent/80 transition-colors no-underline"
+          >
             <MapPin className="w-3.5 h-3.5 mr-2" />
-            <span>{SITE_CONTENT.contact.address}, India</span>
-          </div>
+            <span className="no-underline">{SITE_CONTENT.contact.address}, India</span>
+          </a>
           {/* GST number removed as requested */}
         </div>
         <div className="flex items-center space-x-8">
