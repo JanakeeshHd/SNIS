@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Layout } from "@/components/layout/Layout";
 import { SITE_CONTENT } from "@/data/content";
 import { Button } from "@/components/ui/button";
-import { CheckCircle2, Download, ArrowRight } from "lucide-react";
+import { CheckCircle2, ArrowRight } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { cn } from "@/lib/utils";
