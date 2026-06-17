@@ -102,10 +102,6 @@ const Industries = () => {
                     <Button variant="default" onClick={() => navigate("/contact")}>
                       Get Sector Solution
                     </Button>
-                    <Button variant="outline" className="group">
-                      <Download className="w-4 h-4 mr-2" />
-                      Technical Guide
-                    </Button>
                   </div>
                 </motion.div>
 
