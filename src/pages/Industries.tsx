@@ -3,7 +3,7 @@ import { Layout } from "@/components/layout/Layout";
 import { SITE_CONTENT } from "@/data/content";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, ArrowRight } from "lucide-react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { cn } from "@/lib/utils";
 import automotiveImage from "@/assets/Automotive2.png";
@@ -15,16 +15,23 @@ import machineToolImage2 from "@/assets/machine tool2.png";
 
 const Industries = () => {
   const navigate = useNavigate();
+  const { hash } = useLocation();
 
   useEffect(() => {
-    const hash = window.location.hash;
     if (hash) {
-      const element = document.getElementById(hash.substring(1));
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
+      const elementId = hash.substring(1);
+      const scrollToElement = () => {
+        const element = document.getElementById(elementId);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      };
+      // Try immediately first, then again after a short delay to ensure elements are rendered
+      scrollToElement();
+      const timeoutId = setTimeout(scrollToElement, 100);
+      return () => clearTimeout(timeoutId);
     }
-  }, []);
+  }, [hash]);
 
   const sectors = SITE_CONTENT.industries.sectors.map((sector) => {
     if (sector.id === "automotive") return { ...sector, image: automotiveImage };

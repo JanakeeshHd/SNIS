@@ -17,12 +17,12 @@ import logo from "@/assets/snis-logo.png";
 
 const ListItem = React.forwardRef<
   React.ElementRef<"a">,
-  React.ComponentPropsWithoutRef<"a">
+  React.ComponentPropsWithoutRef<typeof Link>
 >(({ className, title, children, ...props }, ref) => {
   return (
     <li>
       <NavigationMenuLink asChild>
-        <a
+        <Link
           ref={ref}
           className={cn(
             "group block select-none space-y-1 rounded-xl p-3 leading-none no-underline outline-none transition-all duration-200 hover:bg-secondary/10 hover:text-secondary focus:bg-secondary/10 focus:text-secondary",
@@ -34,7 +34,7 @@ const ListItem = React.forwardRef<
           <p className="line-clamp-2 text-sm leading-snug text-muted-foreground group-hover:text-secondary/80">
             {children}
           </p>
-        </a>
+        </Link>
       </NavigationMenuLink>
     </li>
   );
@@ -106,7 +106,7 @@ export const Header = () => {
                       <ListItem
                         key={category.id}
                         title={category.title}
-                        href={`/products/${category.id}`}
+                        to={`/products/${category.id}`}
                         className="hover:bg-secondary/10 hover:text-secondary"
                       >
                         {category.description}
@@ -126,7 +126,7 @@ export const Header = () => {
                       <ListItem
                         key={sector.id}
                         title={sector.title}
-                        href={`/industries#${sector.id}`}
+                        to={`/industries#${sector.id}`}
                         className="hover:bg-secondary/10 hover:text-secondary cursor-pointer"
                       >
                         {sector.description}
